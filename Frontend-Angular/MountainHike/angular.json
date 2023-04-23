@@ -23,11 +23,13 @@
               "src/assets"
             ],
             "styles": [
-              "C:/Users/jp/OneDrive/Repos-git/ISPC-TSWAD/Proyecto_MountainHike-2023/Frontend-Angular/MountainHike/node_modules/bootstrap/dist/css/bootstrap.min.css",
+              
+              "C:/Users/Admin/Desktop/MountainHike2023/Proyecto_MountainHike-2023/Frontend-Angular/MountainHike/node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [
-              "C:/Users/jp/OneDrive/Repos-git/ISPC-TSWAD/Proyecto_MountainHike-2023/Frontend-Angular/MountainHike/node_modules/bootstrap/dist/js/bootstrap.min.js"
+              
+              "C:/Users/Admin/Desktop/MountainHike2023/Proyecto_MountainHike-2023/Frontend-Angular/MountainHike/node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
@@ -100,5 +102,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "f05338ce-99a2-4b0a-8508-488e8c41567f"
   }
 }
