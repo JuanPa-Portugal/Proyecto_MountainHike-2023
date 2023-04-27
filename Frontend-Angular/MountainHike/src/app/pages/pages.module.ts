@@ -3,13 +3,19 @@ import { CommonModule } from '@angular/common';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { HomeComponent } from './home/home.component';
+import { RecorridosComponent } from './recorridos/recorridos.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { UserPanelComponent } from './user-panel/user-panel.component';
 
 
 @NgModule({
   declarations: [
     NosotrosComponent,
     BlogsComponent,
-    HomeComponent
+    HomeComponent,
+    RecorridosComponent,
+    AdminPanelComponent,
+    UserPanelComponent
  
   ],
   imports: [
@@ -18,7 +24,10 @@ import { HomeComponent } from './home/home.component';
   exports: [
     NosotrosComponent,
     BlogsComponent,
-    HomeComponent
+    HomeComponent, 
+    AdminPanelComponent,
+    RecorridosComponent,
+    UserPanelComponent
   ]
 })
 
