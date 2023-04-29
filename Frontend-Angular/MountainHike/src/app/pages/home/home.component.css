@@ -1,12 +1,4 @@
-@font-face{
-  font-family: gadugi;
-  src: url(../../../assets/Fonts/gadugi-normal.ttf);
-}
 
-body{
-  background-color:#2d2e2f;
-  color: white ;
-}
 
 .hero{
   background-image: url(../../../assets/img/hero/imagen01.jpg);
