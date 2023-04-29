@@ -1,0 +1,155 @@
+@font-face{
+  font-family: gadugi;
+  src: url(../../../assets/Fonts/gadugi-normal.ttf);
+}
+
+body{
+  background-color:#2d2e2f;
+  color: white ;
+}
+
+.hero{
+  background-image: url(../../../assets/img/hero/imagen01.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 70vh;
+}
+
+#herobanner .carousel-inner img {
+  max-height: 70vh;
+  object-fit:cover ;
+  filter: grayscale(30%);
+}
+
+.hero{
+  position: relative;
+}
+
+.hero .overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+}
+
+.hero .overlay .container,
+.hero .overlay .row{
+  height: 100%;
+}
+
+.overlay h2{
+  text-align: start;
+}
+
+.overlay p{
+  text-align: start;
+}
+
+.title-hero{
+  color: #98ca3e;
+  font-size: 0.7em;
+}
+
+.overlay .btn-primary {
+--bs-btn-bg:#99c834b4;
+--bs-btn-border-color:none;
+--bs-btn-hover-bg:#97d11be1;
+--bs-btn-hover-border-color:none;
+--bs-btn-active-border-color:none;
+--bs-btn-active-bg: #99c834b4;
+--bs-btn-disabled-border-color: #99c834b4;
+}
+
+.collage1{
+  top: 50%;
+  left:auto;
+  width:40%;
+  margin-bottom: -10%;
+}
+.collage2{
+  margin-left: 60%;
+  top: 50%;
+  width: 40%;
+  margin-bottom: 8%;
+}
+
+.collage3{
+  margin-left: 30%;
+  margin-bottom: -15%;
+  top: 50%;
+  width: 40%;
+  height: 40%;
+}
+
+.collage{
+display: block;
+width: 100%;
+justify-content: space-around;
+flex-wrap: 100%;
+max-width: 100%;
+margin: auto;
+}
+
+.col-bg---custom{
+  background-image: url(../../../assets/img/suscripcion/imagen05.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.custom-input{
+  background: inherit;
+  color: white;
+}
+
+.btn-custom{
+  background-color: aliceblue;
+  color: black;
+  font-weight: bold;
+}
+
+.alert-gradient{
+  background: linear-gradient(to top right, #e66465, #9198e5);
+  border-radius:0px;
+  border:none;
+  color:#fff;
+}
+
+.alert-heading-gradient{
+  color:#fff;
+  font-weight:900;
+}
+
+.modal-content{
+  background-color: #2d2e2f;
+  color:#fff
+}
+
+.btn-secondary{
+  background-color: #2d2e2f;
+}
+
+/* sombras Form */
+.custom-shadow{
+  border-radius: 50px;
+  background: #2d2e2f;
+  box-shadow:  20px 20px 30px #262728,
+               -20px -20px 30px #343536;
+}
+
+
+.card-img-top {
+  height: 25rem;
+  opacity: 0.7;
+}
+
+.card-img-top:hover {
+  opacity: 1;
+}
+
+
+
+
+
