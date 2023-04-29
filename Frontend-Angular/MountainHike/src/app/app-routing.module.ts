@@ -4,8 +4,8 @@ import { HomeComponent } from './pages/home/home.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
-  
+  { path: '', component: HomeComponent}, 
+  /* Aqui ir agregando las demás rutas EJ: {path:'nosotros', component:NosotrosComponent}*/
 ];
 
 @NgModule({
