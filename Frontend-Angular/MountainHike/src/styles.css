@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-
+@font-face{
+  font-family: gadugi;
+  src: url(assets/Fonts/gadugi-normal.ttf);
+}
 
 body {
   background-color: #2d2e2f;
