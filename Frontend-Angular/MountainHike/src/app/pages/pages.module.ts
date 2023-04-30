@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { RecorridosComponent } from './recorridos/recorridos.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { UserPanelComponent } from './user-panel/user-panel.component';
+import { TiendaComponent } from './tienda/tienda.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { UserPanelComponent } from './user-panel/user-panel.component';
     HomeComponent,
     RecorridosComponent,
     AdminPanelComponent,
-    UserPanelComponent
+    UserPanelComponent,
+    TiendaComponent
  
   ],
   imports: [
@@ -27,7 +29,8 @@ import { UserPanelComponent } from './user-panel/user-panel.component';
     HomeComponent, 
     AdminPanelComponent,
     RecorridosComponent,
-    UserPanelComponent
+    UserPanelComponent,
+    TiendaComponent
   ]
 })
 
