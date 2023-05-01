@@ -1,62 +1,80 @@
-<p>inicia-secion works!</p>
+<div class="container w-75  mt-5 rounded custom-shadow">
+  <div class="row align-items-stretch">
+<!--imagen de fondo izquierda-->
+    <div class="col-bg--custom  col-xl-7  col-lg-5  d-lg-block rounded">
+    </div>
+<!--imagen de fondo izquierda-->
 
-<div class="container mt-5 rounded custom-shadow">
-    <div class="row align-items-stretch">
-      <div class="col-bg---custom col-xl-6 col-md-5  rounded">
-
+<!--login lado derecho-->
+    <div class="  col-md-5 col col-xl-5 col-md-12 p-4 rounded-end">
+<!--logo miniatura-->
+      <div class="text-end">
+        <img src="../Assets/img/logoMountainBlanco.png" width="60" alt="">
       </div>
-
-      <div class=" col-xl-6  col col-md-7 col-sm-12 p-4 rounded-end mb-5">
-        <h4 class="text-center py-5">No te pierdas las próximas salidas</h4>
-        <form class="needs-validation"novalidate>
-          <div class="mb-3">
-            <label for="exampleInputNombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control custom-input" id="exampleInputNombre"placeholder="ingrese su nombre"required/>
-            <div class="invalid-feedback">
-              debe ingresar un nombre
-            </div>
+<!--/logo miniatura-->
+      <h2 class="fw-bold text-center py-5">Bienvenido otra vez</h2>
+      <form class="needs-validation"novalidate>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Ingrese su Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ingrese acá su correo electrónico"required>
+          <div class="valid-feedback">
+            todo bien
           </div>
-          <div class="mb-3">
-            <label for="exampleInputApellido" class="form-label">Apellido</label>
-            <input type="text" class="form-control custom-input" id="exampleInputApellido"placeholder="ingrese su apellido"
-              required/>
-              <div class="invalid-feedback">
-                debe ingresar su apellido
-              </div>
+          <div class="invalid-feedback">
+            debe ingresar un correo válido
           </div>
+          <div id="emailHelp" class="form-text">Nunca compartiremos su correo con nadie más</div>
         </div>
         <div class="mb-3">
-          <label for="exampleInputEdad" class="form-label">Edad</label>
-          <input type="int" class="form-control custom-input" id="exampleInputApellido"placeholder="ingrese su edad"
-            required/>
-            <div class="invalid-feedback">
-              debe ingresar su edad
-            </div>
+          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="ingrese acá su contraseña"required>
+          <div class="valid-feedback">
+            todo bien
+          </div>
+          <div class="invalid-feedback">
+            debe ingresar su contraseña
+          </div>
         </div>
-
-          <div class="mb-3 mb-5">
-            <label for="exampleInputEmail" class="form-label">Email</label>
-            <input type="email" class="form-control custom-input" id="exampleInputEmail1" aria-describedby="emailHelp"
-              placeholder="email@dominio.com" required />
-          </div>
-          <div class="col-12">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox"  id="terms" required/>
-              <label class="form-check-label mb-3" for="terms">
-                Acepta los términos y condiciones
-              </label>
-              <div class="valid-feedback">
-                Debe estar de acuerdo antes de enviar.
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">Ingresar</button>  
+        </div>
+        <div class="my-3">
+          <span>No tienes cuenta? <a href="newAccount.html">Regístrate</a></span> <br>
+          <span><a href="">Recuperar Contraseña</a></span>
+        </div>
+      </form>
+      <!--  login con redes sociales-->
+      <div class="conatiner w-100 my-5">
+        <div class="row text-center mb-2">
+          <div class="col-12">Iniciar Sesión con</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <button class="btn btn-outline-primary w-100 my-1 ">
+              <div class="row align-items-center">
+                <div class="col">
+                  <img src="../Assets/img/icon_facebook.png" width="15" height="32" alt=" logo facebook">
+                  <span class="p-2">Facebook</span>
+                </div>
+              
               </div>
-            </div>
-          </div>
-          <div class="d-grid">
-            <button type="submit" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              Suscribite
             </button>
-            <legend class="text-center mt-3">Para recibir novedades</legend>
           </div>
-        </form>
+          <div class="col-sm-12 col-md-6">
+            <button class="btn btn-outline-danger w-100 my-1">
+              <div class="row align-items-center">
+                <div class="col">
+                  <img src="../Assets/img/icono-google.png" width="32" alt=" logo facebook">
+                  <span class="p-2">Google</span>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
       </div>
+      <!--  login con redes sociales-->
     </div>
   </div>
+</div>
+
+

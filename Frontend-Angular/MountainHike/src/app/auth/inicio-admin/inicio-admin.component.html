@@ -1,1 +1,34 @@
-<p>inicio-admin works!</p>
+
+<form  class="container rounded bg-dark col-8 col-sm-4 col-md-3 col-xs-1 col-lg-2 mt-5">
+   
+    <div>
+      <h1 class="text-white" >Inicia sesion</h1>
+      <input type="text" placeholder="username" formControlName="username" class="form-control mb-2 mt-2"
+        id="username" />
+      <div >
+        <p class="text-danger m-2">
+          El usuario es requerido.
+        </p>
+        <p  class="text-danger font-weight-bold">
+          Ingresa más de 8 caracteres.
+        </p>
+      </div>
+      <input type="password" placeholder="contraseña" formControlName="password" class="form-control mb-2"
+        id="password" />
+      <div >
+        <p  class="text-danger m-2">
+          La contraseña es requerida.
+        </p>
+        <p  class="text-danger font-weight-bold">
+          Ingresa más de 8 caracteres.
+        </p>
+      </div>
+      <button type="submit" class="btn m-2 btn-outline-light btn-hover-sesion">
+        Iniciar Sesión
+      </button>
+      <button type="submit" class="btn m-2 btn-outline-light btn-hover-sesion" >
+        Cerrar Sesión
+      </button>
+    </div>
+    
+    </form>

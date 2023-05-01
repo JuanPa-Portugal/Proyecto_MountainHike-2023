@@ -1,21 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register/register.component';
-import {IniciaSecionComponent} from './inicia-secion/inicia-secion.component'
+import { IniciaSecionComponent } from './inicia-secion/inicia-secion.component';
 import { InicioAdminComponent } from './inicio-admin/inicio-admin.component';
+
 
 
 
 @NgModule({
   declarations: [
     RegisterComponent,
-   
+   IniciaSecionComponent,
+   InicioAdminComponent
 
   ],
   imports: [
     CommonModule,
-    IniciaSecionComponent,
-    InicioAdminComponent
+    
   ],
   exports: [
     RegisterComponent,
