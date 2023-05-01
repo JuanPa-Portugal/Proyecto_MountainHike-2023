@@ -1,4 +1,6 @@
-
-  
-  
-    
+.col-bg--custom__Account {
+    background: linear-gradient(rgba(5, 7, 12, 0.4), rgba(5, 7, 12, 0.4)), url(/assets/img/register/imagen0402.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
