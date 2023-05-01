@@ -23,8 +23,7 @@ import { InicioAdminComponent } from './auth/inicio-admin/inicio-admin.component
     PagesModule,
     SharedModule,
     AuthModule,
-    InicioAdminComponent,
-    IniciaSecionComponent
+    
     ],
   providers: [],
   bootstrap: [AppComponent]
