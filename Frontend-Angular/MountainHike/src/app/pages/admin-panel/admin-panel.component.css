@@ -1,0 +1,28 @@
+h1{
+  color: #98ca3e;
+}
+
+.salto-linea{
+  white-space: pre-wrap;
+}
+
+.shadow-button{
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hover-button {
+  transition: 0.5s !important;
+}
+
+.hover-button:hover {
+  transform: scale(1.1);
+}
+
+.fixed-height {
+  height: 200px; /* ajustar a la altura deseada */
+  object-fit: cover;
+}
+
+.li-background{
+  background: #444653 !important;
+}
