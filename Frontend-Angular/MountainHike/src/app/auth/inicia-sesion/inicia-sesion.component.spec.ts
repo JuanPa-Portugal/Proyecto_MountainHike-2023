@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IniciaSecionComponent } from './inicia-secion.component';
+import { IniciaSesionComponent } from './inicia-sesion.component';
 
 describe('IniciaSecionComponent', () => {
-  let component: IniciaSecionComponent;
-  let fixture: ComponentFixture<IniciaSecionComponent>;
+  let component: IniciaSesionComponent;
+  let fixture: ComponentFixture<IniciaSesionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IniciaSecionComponent ]
+      declarations: [ IniciaSesionComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(IniciaSecionComponent);
+    fixture = TestBed.createComponent(IniciaSesionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

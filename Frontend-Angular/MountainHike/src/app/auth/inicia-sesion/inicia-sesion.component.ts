@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-inicia-secion',
-  templateUrl: './inicia-secion.component.html',
-  styleUrls: ['./inicia-secion.component.css']
+  selector: 'app-inicia-sesion',
+  templateUrl: './inicia-sesion.component.html',
+  styleUrls: ['./inicia-sesion.component.css']
 })
-export class IniciaSecionComponent  implements OnInit {
+export class IniciaSesionComponent  implements OnInit {
 
   constructor() { }
 
