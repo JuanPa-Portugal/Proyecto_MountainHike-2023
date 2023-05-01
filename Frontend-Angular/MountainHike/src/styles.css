@@ -1,0 +1,93 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face{
+  font-family: gadugi;
+  src: url(assets/Fonts/gadugi-normal.ttf);
+}
+
+body {
+  background-color: #2d2e2f;
+  color: white;
+}
+
+
+/* <--Section cards-trayectos--> */
+.reseña {
+  margin: 1.25em 15% 2.5em 10%;
+  text-align: justify;
+  font-size: 22px;
+}
+
+.title_hikeTheMountain {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+.card {
+  text-align: center;
+  background-color: rgb(51, 54, 51);
+  font-size: 18px;
+  border: none;
+}
+
+.card-img-top {
+  height: 25rem;
+  opacity: 0.7;
+}
+
+.card-img-top:hover {
+  opacity: 1;
+  
+}
+
+.btn_1 {
+  background-color: #9ba08b;
+  color: aliceblue;
+  font-size: 18px;
+  font-style: strong;
+}
+
+/* <--Section carrusel-> */
+section h1 {
+  text-align: center;
+  color: whitesmoke;
+  background-color: #2d2e2f;
+}
+
+.resena {
+  display: flexbox;
+  width: 50%;
+  margin-left: 30%;
+ 
+
+
+}
+
+section p {
+  color: rgb(252, 252, 252);
+  font-size: 15px;
+  font-family: gadugi;
+
+  text-align: center;
+
+}
+
+section h5 {
+  color: rgb(38, 245, 11);
+  font-size: x-large;
+}
+
+section img {
+  padding-bottom: 90%;
+  background-color: #2d2e2f;
+  text-align: center;
+  min-width: 50px;
+}
+
+.imagen_custom {
+  height: 400px;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
