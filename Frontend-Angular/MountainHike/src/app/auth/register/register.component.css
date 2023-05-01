@@ -1,4 +1,11 @@
-
-  
-  
-    
+.col-bg--custom__Account {
+    background: linear-gradient(rgba(5, 7, 12, 0.4), rgba(5, 7, 12, 0.4)), url(/assets/img/register/imagen0402.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.custom-shadow {
+    border-radius: 50px;
+    background: #2d2e2f;
+    box-shadow: 20px 20px 30px #262728, -20px -20px 30px #343536;
+}
