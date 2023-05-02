@@ -1,0 +1,16 @@
+h1{
+  color: #98ca3e;
+}
+
+.shadow-button{
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hover-button {
+  transition: 0.5s !important;
+}
+
+.hover-button:hover {
+  transform: scale(1.1);
+}
+

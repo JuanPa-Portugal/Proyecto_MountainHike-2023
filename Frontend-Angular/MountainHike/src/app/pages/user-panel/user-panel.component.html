@@ -1,1 +1,39 @@
-<p>user-panel works!</p>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <div class="card bg-secondary text-white">
+        <div class="card-header">
+          <h1 class="card-title">Dashboard de usuario</h1>
+        </div>
+        <div class="card-body card-background rounded">
+          <div *ngFor="let i of user" class="my-4 ">
+            <div class="d-flex flex-column flex-md-row justify-content-between">
+              <h3 class="mb-3 mb-md-0">{{i.nombre}} {{i.apellido}}</h3>
+              <div class="d-flex justify-content-center">
+                <p class="d-flex align-items-center">
+                  <span class="fa-solid fa-phone me-3"></span>{{i.telefono}}
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <p><b>Edad</b>: {{i.edad}}</p>
+              </div>
+              <div class="col-md-4">
+                <p><b>Ciudad</b>: {{i.ciudad}}</p>
+              </div>
+              <div class="col-md-6">
+                <p><b>Email</b>: {{i.email}}</p>
+              </div>
+            </div>
+            <button type="button" data-bs-target="#EditarDatosPesonalesModal" data-bs-toggle="modal" title="Editar datos personales" class="btn btn-lg m-1 fa-solid fa-pen-fancy text-white rounded bg-primary shadow-button border-0 hover-button"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TODO faltan modales y logica -->
+
+<p class="text-center">*-* Aqui Falta codigo para que el usuario pueda ver las reservas de recorridos que compro *-*</p>
