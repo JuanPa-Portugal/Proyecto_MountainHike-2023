@@ -29,3 +29,10 @@
     <p class="proximamente">Sumate a nuestro equipo</p>
     <p class="proximamente">Envíanos tu currículum</p>
   </main>
+
+  <div *ngFor="let i of guias">
+<img src="{{i.foto}}">
+<p>{{i.nombre}}</p>
+<p>{{i.apellido}}</p>
+<p>{{i.descripcion}}</p>
+  </div>

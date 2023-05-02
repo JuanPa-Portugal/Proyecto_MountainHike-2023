@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MOCK_GUIAS } from './MockGuias';
 
 @Component({
   selector: 'app-nosotros',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nosotros.component.css']
 })
 export class NosotrosComponent implements OnInit {
-
+guias:any
   constructor() { }
 
   ngOnInit(): void {
+    this.guias= MOCK_GUIAS
   }
 
 }
