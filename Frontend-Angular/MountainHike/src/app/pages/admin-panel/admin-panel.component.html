@@ -1,1 +1,166 @@
-<p>admin-panel works!</p>
+<h1 class="container">Admin Panel</h1>
+<div class="container mt-5">
+
+  <!-- inicio de blog -->
+  <div class="d-flex justify-content-start align-items-center mb-3">
+    <h2>Lista de blogs</h2>
+    <button class="btn btn-outline-secondary bg-primary ms-4 text-white hover-button" type="button"
+      data-bs-toggle="collapse" data-bs-target="#blogList" aria-expanded="false" aria-controls="blogList"><i
+        class="fas fa-chevron-down text-white "></i></button>
+    <!-- boton para abrir modal de creacion (nueva entrada de blog) -->
+    <button class="btn btn-outline-secondary bg-success ms-4 text-white hover-button" type="button"
+      data-bs-toggle="modal" data-bs-target="#NuevoBlogModal" aria-expanded="false"><i
+        class="fa-solid fa-square-plus "></i></button>
+  </div>
+  <div class="collapse" id="blogList">
+    <ul class="row list-group list-group-flush">
+      <div *ngFor="let blog of blogs">
+        <li class="col list-group-item mb-2 d-flex li-background"><!-- *ngFor="let blogs of blog" -->
+          <input #identificador style="display: none;"> <!-- para ngModel luego -->
+          <img src="{{blog.imagen}}" class="rounded mt-3 w-25 shadow-button fixed-height" alt="{{blog.titulo}}">
+          <div class="ms-4">
+            <h5 class="card-title mb-2 mt-2 text-white">{{blog.titulo}}</h5>
+            <p class="card-text mb-2 salto-linea text-white">{{blog.articulo}}</p>
+            <small class="text-muted">{{blog.fecha}}</small>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-5 d-flex align-items-center">
+              <div class="d-flex align-items-center">
+                <!-- <button type="button" title="Cambiar Imagen" class="btn btn-lg m-1 fa-regular fa-image text-white rounded bg-info shadow-button border-0 hover-button"></button>-->
+                <button type="button" data-bs-target="#EditarBlogModal" data-bs-toggle="modal"
+                  title="Editar Titulo/Textos"
+                  class="btn btn-lg m-1 fa-solid fa-pen-fancy text-white rounded bg-primary shadow-button border-0 hover-button"></button>
+                <button type="button" title="Eliminar Articulo"
+                  class="btn btn-lg m-1 fa-solid fa-trash-can text-white rounded bg-danger shadow-button border-0 hover-button"></button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+
+  <!-- inicio de Lugares  -->
+  <div class="d-flex justify-content-start align-items-center mb-3">
+    <h2>Lista de Lugares</h2>
+    <button class="btn btn-outline-secondary bg-primary ms-4 text-white hover-button" type="button"
+      data-bs-toggle="collapse" data-bs-target="#lugaresList" aria-expanded="false" aria-controls="lugaresList"><i
+        class="fas fa-chevron-down text-white "></i></button>
+    <!-- boton para abrir modal de creacion (nueva entrada de recorridos) -->
+    <button class="btn btn-outline-secondary bg-success ms-4 text-white hover-button" type="button"
+      data-bs-toggle="modal" data-bs-target="#NuevoLugarModal" aria-expanded="false"><i
+        class="fa-solid fa-square-plus "></i></button>
+  </div>
+  <div class="collapse" id="lugaresList">
+    <ul class="row list-group list-group-flush">
+      <div *ngFor="let lugar of recorridos">
+        <li class="col list-group-item mb-2 d-flex li-background"><!-- *ngFor="let blogs of blog" -->
+          <input #identificador style="display: none;"><!-- para ngModel luego -->
+          <img src="{{lugar.imagen}}" class="rounded mt-3 w-25 shadow-button fixed-height" alt="{{lugar.titulo}}">
+          <div class="ms-4">
+            <h5 class="card-title mb-2 mt-2 text-white">{{lugar.titulo}}</h5>
+            <p class="card-text mb-2  text-white">{{lugar.texto}}</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-5 d-flex align-items-center">
+              <div class="d-flex align-items-center">
+
+                <button type="button" data-bs-target="#EditarLugarModal" data-bs-toggle="modal"
+                  title="Editar Titulo/Textos"
+                  class="btn btn-lg m-1 fa-solid fa-pen-fancy text-white rounded bg-primary shadow-button border-0 hover-button"></button>
+                <button type="button" title="Eliminar lugar"
+                  class="btn btn-lg m-1 fa-solid fa-trash-can text-white rounded bg-danger shadow-button border-0 hover-button"></button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+
+  <!-- inicio de rutas de los recorridos -->
+  <div class="d-flex justify-content-start align-items-center mb-3">
+    <h2>Lista de rutas</h2>
+    <button class="btn btn-outline-secondary bg-primary ms-4 text-white hover-button" type="button"
+      data-bs-toggle="collapse" data-bs-target="#recorridosList" aria-expanded="false" aria-controls="recorridosList"><i
+        class="fas fa-chevron-down text-white "></i></button>
+    <!-- boton para abrir modal de creacion (nueva entrada de recorridos) -->
+    <button class="btn btn-outline-secondary bg-success ms-4 text-white hover-button" type="button"
+      data-bs-toggle="modal" data-bs-target="#NuevoRecorridoModal" aria-expanded="false"><i
+        class="fa-solid fa-square-plus "></i></button>
+  </div>
+  <div class="collapse" id="recorridosList">
+    <ul class="row list-group list-group-flush">
+      <div *ngFor="let recorrido of recorridos">
+        <span *ngFor="let i of recorrido.recorridos">
+          <h3>{{ i.nombre_recorrido }} </h3>
+          <p> {{ i.texto }} </p>
+          <p> {{ i.dificultad }} </p>
+          <p> {{ i.precio }} </p>
+        </span>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-5 d-flex align-items-center">
+          <div class="d-flex align-items-center">
+            <button type="button" data-bs-target="#EditarRecorridoModal" data-bs-toggle="modal"
+              title="Editar Titulo/Textos"
+              class="btn btn-lg m-1 fa-solid fa-pen-fancy text-white rounded bg-primary shadow-button border-0 hover-button"></button>
+            <button type="button" title="Eliminar recorrido"
+              class="btn btn-lg m-1 fa-solid fa-trash-can text-white rounded bg-danger shadow-button border-0 hover-button"></button>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
+
+  <!-- Lista de guias -->
+  <div class="d-flex justify-content-start align-items-center mb-3">
+    <h2>Lista de guias</h2>
+    <button class="btn btn-outline-secondary bg-primary ms-4 text-white hover-button" type="button"
+      data-bs-toggle="collapse" data-bs-target="#guiasList" aria-expanded="false" aria-controls="guiasList"><i
+        class="fas fa-chevron-down text-white "></i></button>
+    <!-- boton para abrir modal de creacion (nueva entrada de guias) -->
+    <button class="btn btn-outline-secondary bg-success ms-4 text-white hover-button" type="button"
+      data-bs-toggle="modal" data-bs-target="#NuevoGuiaModal" aria-expanded="false"><i
+        class="fa-solid fa-square-plus "></i></button>
+  </div>
+  <div class="collapse" id="guiasList">
+    <ul class="row list-group list-group-flush">
+      <div *ngFor="let guia of guias">
+        <li class="col list-group-item mb-2 d-flex li-background"><!-- *ngFor="let blogs of blog" -->
+          <input #identificador style="display: none;"> <!-- para ngModel luego -->
+          <img src="{{guia.foto}}" class="rounded mt-3 w-25 shadow-button fixed-height" alt="{{guia.titulo}}">
+          <div class="ms-4">
+            <h5 class="card-title mb-2 mt-2 text-white">{{guia.nombre}} {{guia.apellido}}</h5>
+            <p class="card-text mb-2 salto-linea text-white">{{guia.descripcion}}</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-5 d-flex align-items-center">
+              <div class="d-flex align-items-center">
+                <!-- <button type="button" title="Cambiar Imagen" class="btn btn-lg m-1 fa-regular fa-image text-white rounded bg-info shadow-button border-0 hover-button"></button>-->
+                <button type="button" data-bs-target="#EditarGuiaModal" data-bs-toggle="modal"
+                  title="Editar Titulo/Textos"
+                  class="btn btn-lg m-1 fa-solid fa-pen-fancy text-white rounded bg-primary shadow-button border-0 hover-button"></button>
+                <button type="button" title="Eliminar Guia"
+                  class="btn btn-lg m-1 fa-solid fa-trash-can text-white rounded bg-danger shadow-button border-0 hover-button"></button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+
+
+  <!-- TODO faltan modales y logica -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
