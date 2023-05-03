@@ -7,6 +7,7 @@ import { IniciaSesionComponent } from './auth/inicia-sesion/inicia-sesion.compon
 import { AdminPanelComponent } from './pages/admin-panel/admin-panel.component';
 import { UserPanelComponent } from './pages/user-panel/user-panel.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
+import { BlogsComponent } from './pages/blogs/blogs.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'adminLogin', component: InicioAdminComponent},
   { path: 'admin-panel', component: AdminPanelComponent},
   { path: 'user-panel', component: UserPanelComponent},
-  { path:'nosotros', component: NosotrosComponent}
+  { path:'nosotros', component: NosotrosComponent},
+  { path:'blog', component: BlogsComponent}
   /* Aqui ir agregando las demás rutas EJ: {path:'nosotros', component:NosotrosComponent}*/
 ];
 
