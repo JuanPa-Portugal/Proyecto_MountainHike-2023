@@ -2,16 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { MOCK_BLOGS } from './MockBlogs';
 import { MOCK_RECORRIDOS } from './MockRecorridos';
 import { MOCK_GUIAS } from './MockGuias';
+import { Guias } from './InterfaceGuias';
+import { Recorridos } from './InterfaceRecorridos';
+import { Blogs } from './InterfaceBlogs';
 @Component({
   selector: 'app-admin-panel',
   templateUrl: './admin-panel.component.html',
   styleUrls: ['./admin-panel.component.css']
 })
 export class AdminPanelComponent implements OnInit {
-  /* Deuda técnica (any) */
-blogs:any;
-recorridos:any
-guias:any
+
+blogs:Blogs[]=[];
+recorridos:Recorridos[]=[]
+guias:Guias[]=[]
 
   constructor() { }
 
