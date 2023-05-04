@@ -1,0 +1,25 @@
+<div class="container">
+  <h2 class="text-center my-4">Carrito de compra</h2>
+  <div class="row">
+    <div class="col-md-5">
+      <label for="date" class="form-label">Selecciona el dia:</label>
+      <div class="input-group mb-3">
+        <select class="form-select" id="day" name="day">
+          <option selected>Dia</option>
+          <option *ngFor="let dia of dias" [value]="dia">{{dia}}</option>
+        </select>
+        <select class="form-select" id="month" name="month">
+          <option selected>Mes</option>
+          <option *ngFor="let mes of meses" [value]="mes">{{mes}}</option>
+        </select>
+        <select class="form-select" id="year" name="year">
+          <option selected>Año</option>
+          <option *ngFor="let anio of anios" [value]="anio">{{anio}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-3 text-end">
+      <button class="btn btn-primary mt-4">Hacer compra</button>
+    </div>
+  </div>
+</div>

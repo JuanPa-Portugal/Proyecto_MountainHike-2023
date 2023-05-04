@@ -9,6 +9,8 @@ import { UserPanelComponent } from './pages/user-panel/user-panel.component';
 import { RecorridosComponent } from './pages/recorridos/recorridos.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { BlogsComponent } from './pages/blogs/blogs.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -21,8 +23,9 @@ const routes: Routes = [
   { path: 'admin-panel', component: AdminPanelComponent},
   { path: 'user-panel', component: UserPanelComponent},
   { path:'nosotros', component: NosotrosComponent},
-  { path:'blog', component: BlogsComponent}
-  /* Aqui ir agregando las demás rutas EJ: {path:'nosotros', component:NosotrosComponent}*/
+  { path:'blog', component: BlogsComponent},
+  { path:'carrito', component: CarritoComponent},
+
 ];
 
 @NgModule({
