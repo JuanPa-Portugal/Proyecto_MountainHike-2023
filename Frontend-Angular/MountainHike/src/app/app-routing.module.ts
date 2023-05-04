@@ -6,6 +6,7 @@ import { InicioAdminComponent } from './auth/inicio-admin/inicio-admin.component
 import { IniciaSesionComponent } from './auth/inicia-sesion/inicia-sesion.component';
 import { AdminPanelComponent } from './pages/admin-panel/admin-panel.component';
 import { UserPanelComponent } from './pages/user-panel/user-panel.component';
+import { RecorridosComponent } from './pages/recorridos/recorridos.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'userLogin', component: IniciaSesionComponent},
   { path: 'adminLogin', component: InicioAdminComponent},
   { path: 'admin-panel', component: AdminPanelComponent },
-  { path: 'user-panel', component: UserPanelComponent}
+  { path: 'user-panel', component: UserPanelComponent},
+  { path: 'recorridos', component: RecorridosComponent}
   /* Aqui ir agregando las demás rutas EJ: {path:'nosotros', component:NosotrosComponent}*/
 ];
 
