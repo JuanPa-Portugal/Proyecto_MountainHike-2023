@@ -55,6 +55,13 @@ header {
   color: #98ca3e;
 }
 
+.navbar a:focus,
+.mostrar-menu a:focus,
+.esconder-menu:focus {
+  color: #bfff48;
+}
+
+
 #check {
   display: none;
 }
