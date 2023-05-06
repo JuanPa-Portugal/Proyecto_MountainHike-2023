@@ -7,13 +7,60 @@ h1{
     margin: 20px 50px;
     font-size: 20px ;
 }
-.img_nosotros{
+/* .img_nosotros{
     width: 300px;
     height: 300px;
     margin: 50px;
-    border-radius: 10px;
-}
+    border-radius: 10px; 
+}*/
+
 .proximamente{
     text-align: center;
     font-size: 20px;
+}
+
+
+
+.guias{
+    display: flex;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border: 1px solid #1C9359;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 30px;
+    
+}
+
+.img-guias {
+    max-width: 15rem;
+    min-width: 15rem;
+    max-height: 15rem;
+    margin-right: 2rem;
+
+}
+.row {
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+
+
+@media only screen and (max-width: 700px){
+    
+    .guias{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .row{
+        text-align: center;
+        padding-top: 1rem;
+    }
+    .img-guias{
+        margin-right: 0;
+    }
+    
 }
