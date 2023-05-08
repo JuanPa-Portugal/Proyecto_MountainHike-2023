@@ -5,3 +5,8 @@
     background-size:cover;
     background-position:unset;
   }
+  .custom-shadow {
+    border-radius: 50px;
+    background: #2d2e2f;
+    box-shadow: 20px 20px 30px #262728, -20px -20px 30px #343536;
+}

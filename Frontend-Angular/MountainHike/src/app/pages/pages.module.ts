@@ -7,6 +7,7 @@ import { RecorridosComponent } from './recorridos/recorridos.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { UserPanelComponent } from './user-panel/user-panel.component';
 import { TiendaComponent } from './tienda/tienda.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { TiendaComponent } from './tienda/tienda.component';
     RecorridosComponent,
     AdminPanelComponent,
     UserPanelComponent,
-    TiendaComponent
+    TiendaComponent,
+    CarritoComponent
  
   ],
   imports: [
@@ -30,7 +32,8 @@ import { TiendaComponent } from './tienda/tienda.component';
     AdminPanelComponent,
     RecorridosComponent,
     UserPanelComponent,
-    TiendaComponent
+    TiendaComponent,
+    CarritoComponent
   ]
 })
 

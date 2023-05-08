@@ -24,7 +24,7 @@ export const MOCK_RECORRIDOS = [
   Luego, una vez en la base del cerro, el grupo aprovecha para dejar mochilas y cargamento en un refugio y se prepara para afrontar el último tramo hasta la cima.
   La caminata es de dificultad media/alta y lleva todo un día.`, 
   dificultad:'Gran exigencia',
-  precio:'$1000'
+  precio:1000
 },{
   id_recorrido:2,
     nombre_recorrido:'Valle de Los Lisos',
@@ -33,7 +33,7 @@ export const MOCK_RECORRIDOS = [
     En el camino se podrá escuchar el sonido de algunos arroyos de la zona y el aroma a hierbas serranas.
     El ingreso se encuentra en la Reserva Valle de Los Lisos y allí mismo se podrá contratar un guía.`, 
   dificultad:'Gran exigencia',
-  precio:'$2000'
+  precio:2000
 }]
 },
 {id:2,
@@ -57,7 +57,7 @@ recorridos:[{
   NO se requiere experiencia previa, es necesario un buen estado físico y estar listos para disfrutar 3 días en la montaña.
   Es recomendable para mayores de 12 años.`, 
   dificultad:'Exigencia Media',
-  precio:'$3000'
+  precio:3000
 }]
 },
 {id:3,
@@ -92,5 +92,5 @@ recorridos:[{
     nombre_recorrido:'Los terrones',
     texto: `Recorrido por los terrones(completar)`, 
     dificultad:'Exigencia Baja',
-    precio:'$4000'
+    precio:4000
   }]}];

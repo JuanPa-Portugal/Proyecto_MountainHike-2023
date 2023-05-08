@@ -92,7 +92,7 @@
           <h3>{{ i.nombre_recorrido }} </h3>
           <p> {{ i.texto }} </p>
           <p> {{ i.dificultad }} </p>
-          <p> {{ i.precio }} </p>
+          <p> ${{ i.precio }} </p>
         </span>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-5 d-flex align-items-center">
           <div class="d-flex align-items-center">
@@ -123,7 +123,7 @@
       <div *ngFor="let guia of guias">
         <li class="col list-group-item mb-2 d-flex li-background"><!-- *ngFor="let blogs of blog" -->
           <input #identificador style="display: none;"> <!-- para ngModel luego -->
-          <img src="{{guia.foto}}" class="rounded mt-3 w-25 shadow-button fixed-height" alt="{{guia.titulo}}">
+          <img src="{{guia.foto}}" class="rounded mt-3 w-25 shadow-button fixed-height" alt="{{guia.nombre}} {{guia.apellido}}">
           <div class="ms-4">
             <h5 class="card-title mb-2 mt-2 text-white">{{guia.nombre}} {{guia.apellido}}</h5>
             <p class="card-text mb-2 salto-linea text-white">{{guia.descripcion}}</p>

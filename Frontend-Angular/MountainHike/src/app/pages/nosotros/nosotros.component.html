@@ -14,25 +14,25 @@
       posible, pero también de que te vayas a casa con una gran sonrisa en la
       cara. Es un hecho: la aventura hace feliz a la gente. La satisfacción de
       cumplir tu meta es tu recompensa y nuestra obligación. Al contratar un
-      guía local, no sólo estarás haciendo lo que amas y viviendo una
-      experiencia memorable; también apoyará las economías locales y permitirá
-      que grandes guías se ganen la vida con su pasión.
+      guía local, estarás haciendo lo que amas y viviendo una
+      experiencia memorable.<br><br> Conocé a nuestros guias:
     </p>
-    <img class="img_nosotros" src="../Assets/img/img_nosotros/ciclista.jpg" alt="ciclista" />
+    <!-- <img class="img_nosotros" src="../Assets/img/img_nosotros/ciclista.jpg" alt="ciclista" />
     <img class="img_nosotros" src="../Assets/img/img_nosotros/escaladora.jpg" alt="escaladora" />
     <img class="img_nosotros" src="../Assets/img/img_nosotros/guiamontania.jpg" alt="guia de montaña" />
     <img class="img_nosotros" src="../Assets/img/img_nosotros/profe.jpg" alt="profesor de educación física" />
     <img class="img_nosotros" src="../Assets/img/img_nosotros/profe2.jpg" alt="profesor de educación física" />
-    <img class="img_nosotros" src="../Assets/img/img_nosotros/profe3.jpg" alt="profesora de educación física" />
-
+    <img class="img_nosotros" src="../Assets/img/img_nosotros/profe3.jpg" alt="profesora de educación física" /> -->
+ <div *ngFor="let i of guias" class="guias" >
+<img src="{{i.foto}}" class="img-guias">
+    <div class="row container">
+      <h2 class="datos-guia" class= "col-xl-4 col-md-12 col-sm-12 mb-3">{{i.nombre}} {{i.apellido}}</h2>
+      <p class="descripcion-guia" class="col-xl-10 col-md-12 col-sm-12 ">{{i.descripcion}}</p>
+    </div>
+  </div>
     <p class="proximamente">¡Próximamente!</p>
     <p class="proximamente">Sumate a nuestro equipo</p>
     <p class="proximamente">Envíanos tu currículum</p>
   </main>
 
-  <div *ngFor="let i of guias">
-<img src="{{i.foto}}">
-<p>{{i.nombre}}</p>
-<p>{{i.apellido}}</p>
-<p>{{i.descripcion}}</p>
-  </div>
+ 

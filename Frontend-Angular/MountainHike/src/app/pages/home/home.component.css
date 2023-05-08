@@ -1,5 +1,6 @@
 
 
+
 .hero{
   background-image: url(../../../assets/img/hero/imagen01.jpg);
   background-position: center center;
@@ -141,7 +142,21 @@ margin: auto;
   opacity: 1;
 }
 
+.img-avatar-size{
+  width: 150px;
+  margin-bottom: 3%;
+}
 
 
+@media (max-width: 767px) {
+  .text-size {
+   font-size: 18px;
+  }
+  .img-avatar-display,.city{
+    display: none !important;
+  }
 
+
+  
+}
 
