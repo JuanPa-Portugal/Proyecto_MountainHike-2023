@@ -1,0 +1,54 @@
+{
+  "recorridos": [
+    {
+      "id": 1,
+      "titulo": "Los Gigantes",
+      "imagen": "https://media.camptocamp.org/c2corg-active/1235222036_1390807941BI.jpg",
+      "descripcion": "Sendero muy técnico y con zonas de mucho peligro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsa perspiciatis voluptate tempora, adipisci odit. Nesciunt nam eligendi eius beatae, at ducimus dolorum facere aliquam molestias, laborum quibusdam sequi maxim",
+      "dificultad": "dificultad máxima",
+      "precio": 1000
+    },
+    {
+      "id": 2,
+      "titulo": "Paseo Los Mogotes y Paso del Indio",
+      "imagen": "https://www.cordobaturismo.gov.ar/wp-content/uploads/2020/08/Saluiendo-del-Valle-de-los-Refugios-1-1024x768.jpg",
+      "descripcion": "Entre vistas panorámicas increíbles, sitios para refrescarse y senderos para caminar, Los Mogotes es un paseo completo en Capilla del Monte. A solo dos kilómetros del área céntrica de la localidad, se puede llegar caminando, en bici o en auto.",
+      "dificultad": "dificultad mínima",
+      "precio": 2000
+    },
+    {
+      "id": 3,
+      "titulo": "Valle de los Lisos",
+      "imagen": "https://cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/2ZTGSAH5XRAC7FPQ4EPEDWJWSI.jpg",
+      "descripcion": "Caminata está enclavada en el macizo de Los Gigantes y tiene una extensión de unos 16 km aproximadamente.El paseo comienza por la ladera de una montaña, luego junto a unos pajonales y finalmente hasta la base del macizo. En el camino se podrá escuchar el sonido de algunos arroyos de la zona y el aroma a hierbas serranas.",
+      "dificultad": "dificultad media",
+      "precio": 3000
+    },
+    {
+      "id": 4,
+      "titulo": "Cerro Champaquí",
+      "imagen": "https://www.chacodiapordia.com/wp-content/uploads/2022/01/VCP-CerroChampaqui455-696x459.jpg",
+      "descripcion": "La punta más alta de esta serie de montañas y, por esto, brinda una visión 360 grados de Los Gigantes.El camino comienza por el sendero norte con una caminata intensa de 5 horas. Luego, una vez en la base del cerro, el grupo aprovecha para dejar mochilas y cargamento en un refugio y se prepara para afrontar el último tramo hasta la cima.La caminata es de dificultad media/alta y lleva todo un día.",
+      "dificultad": "dificultad máxima",
+      "precio": 4000
+    },
+    {
+      "id": 5,
+      "titulo": " algo nuevo",
+      "imagen": "https://www.cordobaturismo.gov.ar/wp-content/uploads/2018/09/Cerro-Colorado-6.jpg",
+      "descripcion": " lararlarlalralrlarlalrlarlal adsada sdsaed1qd sad 123 sdasd lararlarlalralrlarlalrlarlal adsada sdsaed1qd sad 123 sdasd lararlarlalralrlarlalrlarlal adsada sdsaed1qd sad 123 sdasd lararlarlalralrlarlalrlarlal adsada sdsaed1qd sad 123 sdasd lararlarlalralrlarlalrlarlal adsada sdsaed1qd sad 123 sdasd lararlarlalralrlarlalrlarlal adsada sdsaed1qd sad 123 sdasd lararlarlalralrlarlalrlarlal adsada sdsaed1qd sad 123 sdasd lararlarlalralrlarlalrlarlal adsada sdsaed1qd sad 123 sdasd lararlarlalralrlarlalrlarlal adsada sdsaed1qd sad 123 sdasd",
+      "dificultad": "Extrema",
+      "precio": 12000
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

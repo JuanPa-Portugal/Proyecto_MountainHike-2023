@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth/auth.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -21,7 +23,8 @@ import { AuthModule } from './auth/auth.module';
     PagesModule,
     SharedModule,
     AuthModule,
-    
+    HttpClientModule,
+
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'admin-panel', component: AdminPanelComponent },
   { path: 'user-panel', component: UserPanelComponent},
   { path: 'recorridos', component: RecorridosComponent},
-  { path: 'admin-panel', component: AdminPanelComponent},
+  
   { path: 'user-panel', component: UserPanelComponent},
   { path:'nosotros', component: NosotrosComponent},
   { path:'blog', component: BlogsComponent},
