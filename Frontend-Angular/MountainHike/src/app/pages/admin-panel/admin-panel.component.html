@@ -38,74 +38,44 @@
     </ul>
   </div>
 
-  <!-- inicio de Lugares  -->
+  <!-- inicio de Recorridos  -->
   <div class="d-flex justify-content-start align-items-center mb-3">
-    <h2>Lista de Lugares</h2>
+    <h2>Lista de Recorridos</h2>
     <button class="btn btn-outline-secondary bg-primary ms-4 text-white hover-button" type="button"
-      data-bs-toggle="collapse" data-bs-target="#lugaresList" aria-expanded="false" aria-controls="lugaresList"><i
-        class="fas fa-chevron-down text-white "></i></button>
-    <!-- boton para abrir modal de creacion (nueva entrada de recorridos) -->
-    <button class="btn btn-outline-secondary bg-success ms-4 text-white hover-button" type="button"
-      data-bs-toggle="modal" data-bs-target="#NuevoLugarModal" aria-expanded="false"><i
-        class="fa-solid fa-square-plus "></i></button>
-  </div>
-  <div class="collapse" id="lugaresList">
-    <ul class="row list-group list-group-flush">
-      <div *ngFor="let lugar of recorridos">
-        <li class="col list-group-item mb-2 d-flex li-background"><!-- *ngFor="let blogs of blog" -->
-          <input #identificador style="display: none;"><!-- para ngModel luego -->
-          <img src="{{lugar.imagen}}" class="rounded mt-3 w-25 shadow-button fixed-height" alt="{{lugar.titulo}}">
-          <div class="ms-4">
-            <h5 class="card-title mb-2 mt-2 text-white">{{lugar.titulo}}</h5>
-            <p class="card-text mb-2  text-white">{{lugar.texto}}</p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-5 d-flex align-items-center">
-              <div class="d-flex align-items-center">
-
-                <button type="button" data-bs-target="#EditarLugarModal" data-bs-toggle="modal"
-                  title="Editar Titulo/Textos"
-                  class="btn btn-lg m-1 fa-solid fa-pen-fancy text-white rounded bg-primary shadow-button border-0 hover-button"></button>
-                <button type="button" title="Eliminar lugar"
-                  class="btn btn-lg m-1 fa-solid fa-trash-can text-white rounded bg-danger shadow-button border-0 hover-button"></button>
-              </div>
-            </div>
-          </div>
-        </li>
-      </div>
-    </ul>
-  </div>
-
-  <!-- inicio de rutas de los recorridos -->
-  <div class="d-flex justify-content-start align-items-center mb-3">
-    <h2>Lista de rutas</h2>
-    <button class="btn btn-outline-secondary bg-primary ms-4 text-white hover-button" type="button"
-      data-bs-toggle="collapse" data-bs-target="#recorridosList" aria-expanded="false" aria-controls="recorridosList"><i
+      data-bs-toggle="collapse" data-bs-target="#RecorridosList" aria-expanded="false" aria-controls="RecorridosList"><i
         class="fas fa-chevron-down text-white "></i></button>
     <!-- boton para abrir modal de creacion (nueva entrada de recorridos) -->
     <button class="btn btn-outline-secondary bg-success ms-4 text-white hover-button" type="button"
       data-bs-toggle="modal" data-bs-target="#NuevoRecorridoModal" aria-expanded="false"><i
         class="fa-solid fa-square-plus "></i></button>
   </div>
-  <div class="collapse" id="recorridosList">
+  <div class="collapse" id="RecorridosList">
     <ul class="row list-group list-group-flush">
-      <div *ngFor="let recorrido of recorridos">
-        <span *ngFor="let i of recorrido.recorridos">
-          <h3>{{ i.nombre_recorrido }} </h3>
-          <p> {{ i.texto }} </p>
-          <p> {{ i.dificultad }} </p>
-          <p> ${{ i.precio }} </p>
-        </span>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-5 d-flex align-items-center">
-          <div class="d-flex align-items-center">
-            <button type="button" data-bs-target="#EditarRecorridoModal" data-bs-toggle="modal"
-              title="Editar Titulo/Textos"
-              class="btn btn-lg m-1 fa-solid fa-pen-fancy text-white rounded bg-primary shadow-button border-0 hover-button"></button>
-            <button type="button" title="Eliminar recorrido"
-              class="btn btn-lg m-1 fa-solid fa-trash-can text-white rounded bg-danger shadow-button border-0 hover-button"></button>
-          </div>
+      <div *ngFor="let i of recorridos">
+          <li class="col list-group-item mb-2 d-flex li-background"><!-- *ngFor="let blogs of blog" -->
+            <input [(ngModel)]="i.id" #identificador style="display: none;"> <!-- no olvidar agregar el ngModel -->
+            <img src="{{i.imagen}}" class="rounded mt-3 w-25 shadow-button fixed-height" alt="{{i.titulo}}">
+            <div class="ms-4">
+              <h5 class="card-title mb-2 mt-2 text-white">{{i.titulo}}</h5>
+              <p class="card-text mb-2  text-white">{{i.descripcion}}</p>
+              <p class="card-text mb-2  text-white">{{i.dificultad}}</p>
+              <p class="card-text mb-2  text-white">{{i.precio | currency}}</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-5 d-flex align-items-center">
+                <div class="d-flex align-items-center">
+                  <button type="button" data-bs-target="#EditarRecorridoModal" data-bs-toggle="modal"
+                  (click)="editar(identificador.value,i.imagen,i.titulo,i.descripcion, i.dificultad, i.precio)"
+                  title="Editar Titulo/Textos"
+                  class="btn btn-lg m-1 fa-solid fa-pen-fancy text-white rounded bg-primary shadow-button border-0 hover-button"></button>
+                  <button type="button" title="Eliminar recorrido"
+                  (click)="borrarRecorrido(identificador.value)"
+                  class="btn btn-lg m-1 fa-solid fa-trash-can text-white rounded bg-danger shadow-button border-0 hover-button"></button>
+                </div>
+              </div>
+            </div>
+          </li>
         </div>
-      </div>
-    </ul>
-  </div>
+      </ul>
+    </div>
 
   <!-- Lista de guias -->
   <div class="d-flex justify-content-start align-items-center mb-3">
@@ -142,25 +112,72 @@
       </div>
     </ul>
   </div>
-
-
-  <!-- TODO faltan modales y logica -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
+
+
+<!-- Inicio modal editar recorrido -->
+   <div class="modal fade" id="EditarRecorridoModal" tabindex="-1" aria-labelledby="RecorridoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="text-dark" id="RecorridoModalLabel">Editar Recorrido</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="form-control fw-bold border-0 p-2">
+            Imagen (URL)
+            <input class="form-control" type="text" [(ngModel)]="editarRecorrido.imagen">
+            Titulo
+            <input class="form-control" type="text" [(ngModel)]="editarRecorrido.titulo">
+            Articulo
+            <textarea class="form-control" rows="15" type="text"  [(ngModel)]="editarRecorrido.descripcion"></textarea>
+            Dificultad
+            <input class="form-control" type="text" [(ngModel)]="editarRecorrido.dificultad">
+            Precio
+            <input class="form-control" type="number" [(ngModel)]="editarRecorrido.precio">
+          </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" title="Subir cambios" class="btn btn-lg m-1 fa-solid fa-cloud-arrow-up text-white rounded bg-success shadow-button border-0 hover-button" (click)="editRecorrido()"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FINAL MODAL editar Recorrido-->
+
+  
+<!-- Inicio modal agregar nuevo recorrido -->
+<div class="modal fade" id="NuevoRecorridoModal" tabindex="-1" aria-labelledby="RecorridoNuevo" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="text-dark" id="RecorridoNuevo">Editar Recorrido</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="form-control fw-bold border-0 p-2">
+          Imagen (URL)
+          <input class="form-control" type="text" [(ngModel)]="crearRecorrido.imagen">
+          Titulo
+          <input class="form-control" type="text" [(ngModel)]="crearRecorrido.titulo">
+          Articulo
+          <textarea class="form-control" rows="15" type="text"  [(ngModel)]="crearRecorrido.descripcion"></textarea>
+          Dificultad
+          <input class="form-control" type="text" [(ngModel)]="crearRecorrido.dificultad">
+          Precio
+          <input class="form-control" type="number" [(ngModel)]="crearRecorrido.precio">
+        </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" title="Subir cambios" class="btn btn-lg m-1 fa-solid fa-cloud-arrow-up text-white rounded bg-success shadow-button border-0 hover-button" (click)="agregarRecorrido()"></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FINAL MODAL agregar nuevo Recorrido-->
+
+

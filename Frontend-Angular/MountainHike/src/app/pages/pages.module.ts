@@ -8,6 +8,8 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { UserPanelComponent } from './user-panel/user-panel.component';
 import { TiendaComponent } from './tienda/tienda.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import { CarritoComponent } from './carrito/carrito.component';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
+    FormsModule,
   ],
   exports: [
     NosotrosComponent,
