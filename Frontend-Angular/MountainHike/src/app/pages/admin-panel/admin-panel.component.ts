@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { MOCK_BLOGS } from './MockBlogs';
+/* import { MOCK_BLOGS } from './MockBlogs'; */
 import { MOCK_GUIAS } from './MockGuias';
 import { Guias } from './InterfaceGuias';
 import { Recorridos } from './InterfaceRecorridos';
 import { Blogs } from './InterfaceBlogs';
 import { AdminRecorridosService } from 'src/app/admin-recorridos.service';
+import { AdminBlogsService } from 'src/app/admin-blogs.service';
 
 
 @Component({
@@ -21,16 +22,17 @@ export class AdminPanelComponent implements OnInit {
 
   crearRecorrido:Recorridos = { id: 0, titulo: ' ', imagen:' ', descripcion: ' ', dificultad:'', precio:0};
   editarRecorrido: Recorridos = { id: 0, titulo: ' ', imagen:' ', descripcion: ' ', dificultad:'', precio:0};
-  constructor(private apiRecorridos:AdminRecorridosService) { }
+  constructor(private apiRecorridos:AdminRecorridosService, private apiBlogs:AdminBlogsService ) { }
 
   
   ngOnInit(): void {
     /* Por el momento es para una prueba muy básica de trabajo con *ngFor, y no se crea un servicio  */
-    this.blogs = MOCK_BLOGS
+    // this.blogs = MOCK_BLOGS
     this.guias = MOCK_GUIAS
 
     /* Acá esta la modificacion haciendo un get al inicio  */
     this.apiRecorridos.getRecorridos().subscribe((data: Recorridos[]) => {this.recorridos = data});
+    this.apiBlogs.getBlogs().subscribe((data: Blogs[]) => {this.blogs = data});
   }
   /*Esta funcion se usa para hacer una igualdad al momento de trabajar con los modales*/
   editar(id: any, imagen: string, titulo: string, descripcion:string, dificultad:string, precio:number) {

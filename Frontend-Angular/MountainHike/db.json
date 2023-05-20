@@ -1,22 +1,25 @@
 {
-  "publicacionesBlog": [
+  "blogs": [
     {
-      "idPublicacion": 1,
-      "tituloNota": "El Cerro Champaquí, con nieve y como nunca lo viste",
-      "cuerpoNota": "Ocurrió en la última nevada en Córdoba cuando un grupo escalaba la montaña con guías de turismo y fueron testigos privilegiados de una situación que pocas veces se ve. Cuando casi estaba terminando el mes de septiembre, los cordobeses se vieron sorprendidos por una ola de frío vinculada con nevadas registradas en las Sierras Grandes.\nUno de los sectores donde más nieve cayó fue en la zona del Champaquí. En ese cerro, el más alto de Córdoba, se encontraba el experimentado guía de montaña Damián Gauna, liderando un grupo de excursionistas de docentes y alumnos de la escuela N° 3007 de Figuera, Provincia de Santa Fe.\"Soy guía de montaña y hace unos días tuvimos una experiencia bastante particular digna de mostrar al público. Junto con una escuela subimos al Champaquí en medio de la última nevada de septiembre. Había 30 centímetros de nieve en gran parte del Cerro\", contó el profesional al diario La Voz.",
-      "fechaPublicacion":"20210601T133000"
+      "id_blog": 1,
+      "titulo": "El Cerro Champaquí con nieve, y como nunca lo viste",
+      "articulo": "Ocurrió en la última nevada en Córdoba cuando un grupo escalaba la montaña con guías de turismo y fueron testigos privilegiados de una situación que pocas veces se ve. Cuando casi estaba terminando el mes de septiembre, los cordobeses se vieron sorprendidos por una ola de frío vinculada con nevadas registradas en las Sierras Grandes.\nUno de los sectores donde más nieve cayó fue en la zona del Champaquí. En ese cerro, el más alto de Córdoba, se encontraba el experimentado guía de montaña Damián Gauna, liderando un grupo de excursionistas de docentes y alumnos de la escuela N° 3007 de Figuera, Provincia de Santa Fe.\"Soy guía de montaña y hace unos días tuvimos una experiencia bastante particular digna de mostrar al público. Junto con una escuela subimos al Champaquí en medio de la última nevada de septiembre. Había 30 centímetros de nieve en gran parte del Cerro\", contó el profesional al diario La Voz.",
+      "fecha": "20210601T133000",
+      "imagen": "https://www.lavoz.com.ar/resizer/lVcGErB24fGZxVNEek3xvenRugw=/1023x1816/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/QOUNWTXOTFBDFJENBPRU4JPZLI.jpg"
     },
     {
-      "idPublicacion": 2,
-      "tituloNota": "El paisaje milenario que podés descubrir en Córdoba",
-      "cuerpoNota": "Los Terrones: una zona de formaciones rocosas y arenisca formada en la prehistoria, que se puede conocer a pocos kilómetros de Capilla del Monte.\nSi la Tierra pudiese hablar nos contaría historias increíbles de sus eras pasadas y los habitantes que pisaron su suelo fértil. Aunque no tenga voz humana, deja el reflejo de sus milenios plasmados en las formaciones que adornan su superficie. Los Terrones, en las cercanías de Capilla del Monte es uno de esos lugares. ¿Lo conocés?\nEl Parque Autóctono Cultural y Recreativo Los Terrones, queda a las afueras de la localidad capillense, en el Valle de Punilla, y a unos 115 kilómetros de la ciudad de Córdoba. El predio del parque guarda cañadones profundos y paredones de piedra rojiza, atravesados por arroyos.\nAbre todos los días, desde las 9:00 hasta las 18.30 horas, en horario de invierno.",
-      "fechaPublicacion":"20210701T134500"
+      "id_blog": 2,
+      "titulo": "El paisaje milenario que podés descubrir en Córdoba",
+      "articulo": "Los Terrones: una zona de formaciones rocosas y arenisca formada en la prehistoria, que se puede conocer a pocos kilómetros de Capilla del Monte.\nSi la Tierra pudiese hablar nos contaría historias increíbles de sus eras pasadas y los habitantes que pisaron su suelo fértil. Aunque no tenga voz humana, deja el reflejo de sus milenios plasmados en las formaciones que adornan su superficie. Los Terrones, en las cercanías de Capilla del Monte es uno de esos lugares. ¿Lo conocés?\nEl Parque Autóctono Cultural y Recreativo Los Terrones, queda a las afueras de la localidad capillense, en el Valle de Punilla, y a unos 115 kilómetros de la ciudad de Córdoba. El predio del parque guarda cañadones profundos y paredones de piedra rojiza, atravesados por arroyos.\nAbre todos los días, desde las 9:00 hasta las 18.30 horas, en horario de invierno.",
+      "fecha": "20210701T134500",
+      "imagen": "https://www.voydeviaje.com.ar/resizer/btelNYXANHP1pIZg4YnIzkfNPW0=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/FFL3K7SDWRHCTBHSINSMT5Q3VA.jpg"
     },
     {
-      "idPublicacion": 3,
-      "tituloNota": "Los primeros copos de nieve del invierno cayeron en Los Gigantes",
-      "cuerpoNota": "Se precipitaron en la zona de las sierras grandes. La temperatura en el lugar es de 3 grados.\nEn la mañana de este sábado nevó en Los Gigantes, una zona de las sierras grandes de Córdoba. Hasta el momento este es el único punto de la provincia en el que ocurrió el fenómeno más esperado del invierno. En diálogo con Carlos Paz Vivo! una vecina contó que amaneció “todo congelado” y que alrededor de las 11 comenzaron a caer pequeños copos de nieve. También alertó que el acceso a la montaña para realizar deporte está cerrado.\nLa temperatura en el lugar es de 3 grados. “No está tan frío”, aseguró otro hombre al mismo medio. Cabe destacar que desde la madrugada de este sábado el camino de las Altas Cumbres permanece cortado por el hielo que hay en la calzada. La Policía Caminera podría habilitarla nuevamente durante la jornada.",
-      "fechaPublicacion":"20207151T123456"
+      "id_blog": 3,
+      "titulo": "Los primeros copos de nieve del invierno cayeron en Los Gigantes",
+      "articulo": "Se precipitaron en la zona de las sierras grandes. La temperatura en el lugar es de 3 grados.\nEn la mañana de este sábado nevó en Los Gigantes, una zona de las sierras grandes de Córdoba. Hasta el momento este es el único punto de la provincia en el que ocurrió el fenómeno más esperado del invierno. En diálogo con Carlos Paz Vivo! una vecina contó que amaneció “todo congelado” y que alrededor de las 11 comenzaron a caer pequeños copos de nieve. También alertó que el acceso a la montaña para realizar deporte está cerrado.\nLa temperatura en el lugar es de 3 grados. “No está tan frío”, aseguró otro hombre al mismo medio. Cabe destacar que desde la madrugada de este sábado el camino de las Altas Cumbres permanece cortado por el hielo que hay en la calzada. La Policía Caminera podría habilitarla nuevamente durante la jornada.",
+      "fecha": "20207151T123456",
+      "imagen": "https://cdn.eldoce.tv/sites/default/files/styles/site_nota_slider_contenido/public/nota/2022/06/25/nieveok.jpg?itok=sWjOUQpP"
     }
   ],
   "recorridos": [
