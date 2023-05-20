@@ -19,7 +19,9 @@ export class AdminPanelComponent implements OnInit {
   recorridos: Recorridos[] = [];
   guias: Guias[] = []
 
-
+  crearBlog:Blogs = { id: 0, titulo: '', imagen:'', articulo : '', fecha:''};
+  editarBlog:Blogs = { id: 0, titulo: ' ', imagen:' ', articulo : ' ', fecha:''};
+  
   crearRecorrido:Recorridos = { id: 0, titulo: ' ', imagen:' ', descripcion: ' ', dificultad:'', precio:0};
   editarRecorrido: Recorridos = { id: 0, titulo: ' ', imagen:' ', descripcion: ' ', dificultad:'', precio:0};
   constructor(private apiRecorridos:AdminRecorridosService, private apiBlogs:AdminBlogsService ) { }
@@ -44,6 +46,14 @@ export class AdminPanelComponent implements OnInit {
     this.editarRecorrido.precio = precio
   }
 
+  editarBlogF(id: any, imagen: string, titulo: string, articulo: string, fecha: string){
+    this.editarBlog.id = id
+    this.editarBlog.articulo = articulo
+    this.editarBlog.imagen = imagen
+    this.editarBlog.titulo = titulo
+    this.editarBlog.fecha = fecha 
+  }
+
   editRecorrido(){
     this.apiRecorridos.patchRecorrido(this.editarRecorrido, this.editarRecorrido.id).subscribe();
     window.location.reload()
@@ -58,6 +68,13 @@ export class AdminPanelComponent implements OnInit {
     this.apiRecorridos.postRecorrido(this.crearRecorrido).subscribe();
     window.location.reload()
   }
+
+
+  agregarBlog(){
+    this.apiBlogs.postBlog(this.crearBlog).subscribe();
+    window.location.reload()
+  }
+
 
 
   }

@@ -16,7 +16,7 @@
     <ul class="row list-group list-group-flush">
       <div *ngFor="let blog of blogs">
         <li class="col list-group-item mb-2 d-flex li-background"><!-- *ngFor="let blogs of blog" -->
-          <input #identificador style="display: none;"> <!-- para ngModel luego -->
+          <input [(ngModel)]="blog.id" #identificadorBlog style="display: none;"> <!-- para ngModel luego -->
           <img src="{{blog.imagen}}" class="rounded mt-3 w-25 shadow-button fixed-height" alt="{{blog.titulo}}">
           <div class="ms-4">
             <h5 class="card-title mb-2 mt-2 text-white">{{blog.titulo}}</h5>
@@ -26,6 +26,7 @@
               <div class="d-flex align-items-center">
                 <!-- <button type="button" title="Cambiar Imagen" class="btn btn-lg m-1 fa-regular fa-image text-white rounded bg-info shadow-button border-0 hover-button"></button>-->
                 <button type="button" data-bs-target="#EditarBlogModal" data-bs-toggle="modal"
+                (click)="editarBlogF(identificadorBlog.value, blog.imagen, blog.titulo, blog.articulo, blog.fecha)"
                   title="Editar Titulo/Textos"
                   class="btn btn-lg m-1 fa-solid fa-pen-fancy text-white rounded bg-primary shadow-button border-0 hover-button"></button>
                 <button type="button" title="Eliminar Articulo"
@@ -179,5 +180,36 @@
   </div>
 </div>
 <!-- FINAL MODAL agregar nuevo Recorrido-->
+
+<!-- Inicio modal agregar nuevo Blog -->
+<div class="modal fade" id="NuevoBlogModal" tabindex="-1" aria-labelledby="BlogNuevo" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="text-dark" id="BlogNuevo">Editar Blog</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="form-control fw-bold border-0 p-2">
+          Imagen (URL)
+          <input class="form-control" type="text" [(ngModel)]="crearBlog.imagen">
+          Titulo
+          <input class="form-control" type="text" [(ngModel)]="crearBlog.titulo">
+          Articulo
+          <textarea class="form-control" rows="15" type="text"  [(ngModel)]="crearBlog.articulo"></textarea>
+          Fecha
+          <input class="form-control" type="text" [(ngModel)]="crearBlog.fecha">
+        </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" title="Subir cambios" class="btn btn-lg m-1 fa-solid fa-cloud-arrow-up text-white rounded bg-success shadow-button border-0 hover-button" (click)="agregarBlog()"></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FINAL MODAL agregar nuevo Blog-->
+
 
 
