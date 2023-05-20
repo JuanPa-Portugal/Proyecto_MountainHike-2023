@@ -29,7 +29,8 @@
                 (click)="editarBlogF(identificadorBlog.value, blog.imagen, blog.titulo, blog.articulo, blog.fecha)"
                   title="Editar Titulo/Textos"
                   class="btn btn-lg m-1 fa-solid fa-pen-fancy text-white rounded bg-primary shadow-button border-0 hover-button"></button>
-                <button type="button" title="Eliminar Articulo"
+                  <button type="button" title="Eliminar Articulo"
+                  (click)="borrarBlog(identificadorBlog.value)"
                   class="btn btn-lg m-1 fa-solid fa-trash-can text-white rounded bg-danger shadow-button border-0 hover-button"></button>
               </div>
             </div>

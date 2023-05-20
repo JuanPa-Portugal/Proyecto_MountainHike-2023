@@ -46,14 +46,6 @@ export class AdminPanelComponent implements OnInit {
     this.editarRecorrido.precio = precio
   }
 
-  editarBlogF(id: any, imagen: string, titulo: string, articulo: string, fecha: string){
-    this.editarBlog.id = id
-    this.editarBlog.articulo = articulo
-    this.editarBlog.imagen = imagen
-    this.editarBlog.titulo = titulo
-    this.editarBlog.fecha = fecha 
-  }
-
   editRecorrido(){
     this.apiRecorridos.patchRecorrido(this.editarRecorrido, this.editarRecorrido.id).subscribe();
     window.location.reload()
@@ -69,6 +61,21 @@ export class AdminPanelComponent implements OnInit {
     window.location.reload()
   }
 
+
+
+
+  editarBlogF(id: any, imagen: string, titulo: string, articulo: string, fecha: string){
+    this.editarBlog.id = id
+    this.editarBlog.articulo = articulo
+    this.editarBlog.imagen = imagen
+    this.editarBlog.titulo = titulo
+    this.editarBlog.fecha = fecha 
+  }
+
+  borrarBlog(id:string){
+    this.apiBlogs.deleteBlog(id).subscribe( data => {return data});
+    window.location.reload()
+}
 
   agregarBlog(){
     this.apiBlogs.postBlog(this.crearBlog).subscribe();
