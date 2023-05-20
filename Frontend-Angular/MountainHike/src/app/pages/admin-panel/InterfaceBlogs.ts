@@ -1,5 +1,5 @@
 export interface Blogs{
-  id_blog:number;
+  id:number;
   imagen:string;
   titulo:string;
   articulo:string;
