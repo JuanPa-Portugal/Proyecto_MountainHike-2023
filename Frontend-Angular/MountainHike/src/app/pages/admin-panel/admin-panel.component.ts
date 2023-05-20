@@ -82,6 +82,10 @@ export class AdminPanelComponent implements OnInit {
     window.location.reload()
   }
 
+  editBlog(){
+    this.apiBlogs.patchBlog(this.editarBlog, this.editarBlog.id).subscribe();
+    window.location.reload()
+  }  
 
 
   }

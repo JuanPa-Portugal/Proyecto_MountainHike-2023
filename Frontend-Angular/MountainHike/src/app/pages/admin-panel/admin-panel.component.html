@@ -212,5 +212,34 @@
 </div>
 <!-- FINAL MODAL agregar nuevo Blog-->
 
+<!-- Inicio modal editar Blog -->
+<div class="modal fade" id="EditarBlogModal" tabindex="-1" aria-labelledby="BlogModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="text-dark" id="BlogModalLabel">Editar Blog</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="form-control fw-bold border-0 p-2">
+          Imagen (URL)
+          <input class="form-control" type="text" [(ngModel)]="editarBlog.imagen">
+          Titulo
+          <input class="form-control" type="text" [(ngModel)]="editarBlog.titulo">
+          Articulo
+          <textarea class="form-control" rows="15" type="text"  [(ngModel)]="editarBlog.articulo"></textarea>
+          Fecha
+          <input class="form-control" type="text" [(ngModel)]="editarBlog.fecha">
+        </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" title="Subir cambios" class="btn btn-lg m-1 fa-solid fa-cloud-arrow-up text-white rounded bg-success shadow-button border-0 hover-button" (click)="editBlog()"></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FINAL MODAL editar Blog-->
 
 
