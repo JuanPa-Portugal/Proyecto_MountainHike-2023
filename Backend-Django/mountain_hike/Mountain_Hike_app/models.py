@@ -58,9 +58,26 @@ class Recorridos(models.Model):
     precio=  models.FloatField()
 
     class Meta:
-            db_table = 'recorrido'
-            verbose_name = 'Recorrido'
-            verbose_name_plural = 'Recorridos'
+        db_table = 'recorrido'
+        verbose_name = 'Recorrido'
+        verbose_name_plural = 'Recorridos'
 
     def __str__(self):
-            return self.titulo
+        return self.titulo
+
+class Reserva(models.Model):
+    id= models.AutoField(primary_key= True)
+    fecha_reserva= models.DateTimeField()
+    nro_reserva= models.IntegerField()
+    valor = models.FloatField()
+	#id_factura = models.ForeignKey('Factura', on_delete=models.CASCADE)
+    id_usuario= models.ForeignKey('Usuario', on_delete=models.CASCADE)
+    id_recorrido = models.ForeignKey('Recorridos', on_delete=models.CASCADE)
+    class Meta:
+        db_table = 'reserva'
+        verbose_name = 'Reserva'
+        verbose_name_plural = 'Reservas'
+
+    # def __str__(self):
+    #     return self.nro_reserva
+
