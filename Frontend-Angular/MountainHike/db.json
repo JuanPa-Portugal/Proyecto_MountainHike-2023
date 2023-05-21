@@ -64,11 +64,46 @@
       "precio": 12000
     }
   ],
-  "comments": [
+  "guias": [
+    {"id":1,
+    "nombre":"Juan",
+    "apellido":"Giménez",
+    "foto":"https://ciudaddemendoza.gob.ar/wp-content/uploads/2023/04/Copa-XCO.jpg",
+    "descripcion":"Juan, su pasión principal es el ciclismo de montaña, pero amor por la naturaleza y su experiencia en rutas de trekking lo convierten en un guía ideal para nuestras aventuras en la montaña. Con su enfoque en la seguridad y su amplio conocimiento sobre la flora y fauna locales, Javier te llevará a través de las rutas de trekking más impresionantes mientras disfrutas de la belleza natural del entorno."
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+    "id":2,
+    "nombre":"Alejandra",
+    "apellido":"Villalba",
+    "foto":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSffALbOkfaL6UoDgu4C2sPVa0j8HVWXUZDwj2bkksHhiYCTX2w","descripcion":"Alejandra es escaladora profesional con experiencia en montañismo desde hace mas de 7 años, combinando su experiencia con su conocimiento de la naturaleza la convierte en una excelente guia para nuestras aventuras en el trekking, guiandote a los paisajes mas espectaculares."
+    },
+    {
+    "id":3,
+    "nombre":"Martín",
+    "apellido":"Coria",
+    "foto":"https://www.superprof.es/imagenes/anuncios/profesor-home-profesor-educacion-fisica-ofrece-sus-clases-line-para-mejorar-calidad-vida-alcanzar-tus-objetivos.jpg",
+    "descripcion":"Martin es un apasionado del running. Hace mas de 10 años se dedica al running y al trekking. Su disciplina y constancia le han llevado a competir en carreras de maraton y medio maraton y a ser reconocido en la comunidad, ademas con sus conocimientos en tecnicas lo hacen un guia excepcional."
+    },
+    {
+    "id":4,
+    "nombre":"Fernando",
+    "apellido":"Iglesias",
+    "foto":"https://www.superprof.es/imagenes/anuncios/profesor-home-tecnico-superior-actividades-montana-ofrece-clases-escalada-teoricas-practicas.jpg",
+    "descripcion":"Fernando es nuestro guia extranjero, que trae sus conocimientos desde Ecuador, con su experiencia en la escalacion de las montañas mas desafiantes podras aprender sobre tecnicas de trekking y naturaleza que haran tu viaje inolvidable."
+    },
+    {
+    "id":5,
+    "nombre":"Juan",
+    "apellido":"Swcharkopf",
+    "foto":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRPKK1kTDaRrZDMcV-NcESW92od4WeL43E2O-kHhcwaWZBCzVN0",
+    "descripcion":"Juan, como profesor de educación física,  tiene una amplia experiencia en el entrenamiento físico y la preparación de programas de ejercicio personalizados. Con su pasión por la naturaleza y su conocimiento sobre rutas de trekking, Juan te llevará a través de los senderos más impresionantes mientras te guía en una experiencia de trekking divertida y saludable. Ya sea que busques una caminata de nivel principiante o una experiencia más desafiante."
+    },
+    {
+    "id":6,
+    "nombre":"Luisana",
+    "apellido":"Ríos",
+    "foto":"https://cloudfront-us-east-1.images.arcpublishing.com/infobae/BZ4FVTHGXJCURJIF3V43SM3U7Y.jpg",
+    "descripcion":"Luisana es una ciclista de montaña apasionada, conoce las rutas y senderos más impresionantes del país. Su amor por la naturaleza y su experiencia en rutas de trekking la convierten en una guía perfecta para nuestras aventuras en la montaña. Luisana te llevará a través de los paisajes más impresionantes mientras te guía en una experiencia de trekking divertida y emocionante."
     }
   ],
   "profile": {
