@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MOCK_GUIAS } from './MockGuias';
+import { Guias } from '../admin-panel/InterfaceGuias';
+import { GuiasService } from 'src/app/guias.service';
 
 @Component({
   selector: 'app-nosotros',
@@ -7,11 +8,12 @@ import { MOCK_GUIAS } from './MockGuias';
   styleUrls: ['./nosotros.component.css']
 })
 export class NosotrosComponent implements OnInit {
-guias:any
-  constructor() { }
+guias: Guias[] = []
+
+  constructor(private apiGuias:GuiasService) { }
 
   ngOnInit(): void {
-    this.guias= MOCK_GUIAS
+    this.apiGuias.getGuias().subscribe((data:Guias[]) => {this.guias = data});
   }
 
 }
