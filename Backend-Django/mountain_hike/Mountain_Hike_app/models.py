@@ -42,6 +42,13 @@ class BlogEntrada(models.Model):
     imagen = models.CharField(max_length=250) 
     fecha = models.DateTimeField()
 
+    class Meta:
+#        db_table = 'blogEntrada'
+        verbose_name = 'Entrada del blog'
+        verbose_name_plural = 'Entradas del blog'
+
+    def __str__(self):
+        return 'Entrada "'+self.titulo+'" del '+self.fecha.strftime("%Y/%m/%d a las %H:%M:%S")
 class Recorridos(models.Model):
     id = models.AutoField(primary_key=True)
     titulo= models.CharField(max_length=100)
