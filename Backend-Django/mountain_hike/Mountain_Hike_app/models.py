@@ -71,7 +71,7 @@ class Reserva(models.Model):
     fecha_reserva= models.DateTimeField()
     nro_reserva= models.IntegerField()
     valor = models.FloatField()
-	#id_factura = models.ForeignKey('Factura', on_delete=models.CASCADE)
+    id_factura = models.ForeignKey('Factura', on_delete=models.CASCADE)
     id_usuario= models.ForeignKey('Usuario', on_delete=models.CASCADE)
     id_recorrido = models.ForeignKey('Recorridos', on_delete=models.CASCADE)
     class Meta:
@@ -96,3 +96,18 @@ class Guias(models.Model):
 
     def __str__(self):
         return self.nombre
+class Factura(models.Model):
+    id = models.AutoField(primary_key=True)
+    total = models.FloatField()
+    tipo =  models.CharField(max_length= 1)
+    fecha_apertura =  models.DateTimeField()
+    fecha_cierre = models.DateTimeField()
+    id_usuario= models.ForeignKey('Usuario', on_delete=models.CASCADE)
+
+    class Meta:
+            db_table = 'factura'
+            verbose_name = 'Factura'
+            verbose_name_plural = 'Facturas'
+
+    def __str__(self):
+            return self.tipo
