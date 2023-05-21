@@ -30,7 +30,7 @@ export class AdminPanelComponent implements OnInit {
   ngOnInit(): void {
     /* Por el momento es para una prueba muy básica de trabajo con *ngFor, y no se crea un servicio  */
     // this.blogs = MOCK_BLOGS
-    this.guias = MOCK_GUIAS
+    
 
     /* Acá esta la modificacion haciendo un get al inicio  */
     this.apiRecorridos.getRecorridos().subscribe((data: Recorridos[]) => {this.recorridos = data});
