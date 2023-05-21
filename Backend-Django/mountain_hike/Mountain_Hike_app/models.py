@@ -34,3 +34,11 @@ class Usuario(AbstractUser):
         return self.username
     
     #A partir de aqui colocar el resto de modelos.
+
+class BlogEntrada(models.Model):
+    #id = models.IntegerField()
+    titulo = models.CharField(max_length=150)
+    articulo = models.CharField(max_length=2000)
+    imagen = models.CharField(max_length=250) 
+    fecha = models.DateTimeField()
+
