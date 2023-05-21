@@ -49,3 +49,18 @@ class BlogEntrada(models.Model):
 
     def __str__(self):
         return 'Entrada "'+self.titulo+'" del '+self.fecha.strftime("%Y/%m/%d a las %H:%M:%S")
+class Recorridos(models.Model):
+    id = models.AutoField(primary_key=True)
+    titulo= models.CharField(max_length=100)
+    imagen=  models.URLField()
+    descripcion=  models.TextField(max_length=250)
+    dificultad= models.CharField(max_length=50)
+    precio=  models.FloatField()
+
+    class Meta:
+            db_table = 'recorrido'
+            verbose_name = 'Recorrido'
+            verbose_name_plural = 'Recorridos'
+
+    def __str__(self):
+            return self.titulo
