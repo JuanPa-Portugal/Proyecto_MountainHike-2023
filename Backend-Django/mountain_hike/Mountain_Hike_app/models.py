@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+
 class Usuario(AbstractUser):
     edad = models.IntegerField()
     telefono = models.CharField(max_length=20)
@@ -111,3 +112,19 @@ class Factura(models.Model):
 
     def __str__(self):
             return self.tipo
+
+
+    
+    
+class Admin(models.Model):
+    id = models.AutoField(primary_key=True)
+    correo = models.CharField(max_length=30)
+    contraseña = models.CharField(max_length=30)
+    
+    class Meta:
+            db_table = 'admin'
+            verbose_name = 'Admin'
+            verbose_name_plural = 'Admins'
+
+    def __str__(self):
+            return self.correo
