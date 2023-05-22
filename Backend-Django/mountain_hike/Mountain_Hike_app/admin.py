@@ -28,3 +28,75 @@ admin.site.register(Blog, BlogAdmin)
 class FacturaAdmin(admin.ModelAdmin):
     list_display = ['id','total','tipo','fecha_apertura','fecha_cierre', 'id_usuario']
 admin.site.register(Factura, FacturaAdmin)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class GuiasAdmin(admin.ModelAdmin):
+    list_display = ['id', 'nombre', 'apellido', 'foto', 'descripcion']
+admin.site.register(Guias, GuiasAdmin)
