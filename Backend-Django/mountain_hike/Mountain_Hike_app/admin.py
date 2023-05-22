@@ -5,6 +5,8 @@ from .models import Recorridos
 from .models import Reserva
 from .models import Guias
 from .models import Factura
+from .models import Admin
+
 class UsuarioAdmin(admin.ModelAdmin):
     list_display = ('username', 'email', 'first_name', 'last_name', 'is_staff', 'edad', 'telefono', 'ciudad', 'estado_reserva')
 admin.site.register(Usuario, UsuarioAdmin)
@@ -29,6 +31,9 @@ class FacturaAdmin(admin.ModelAdmin):
     list_display = ['id','total','tipo','fecha_apertura','fecha_cierre', 'id_usuario']
 admin.site.register(Factura, FacturaAdmin)
 
+class AdminAdmin(admin.ModelAdmin):
+    list_display = ['id', 'correo', 'contraseña']
+admin.site.register(Admin, AdminAdmin)
 
 
 
@@ -95,8 +100,3 @@ admin.site.register(Factura, FacturaAdmin)
 
 
 
-
-
-class GuiasAdmin(admin.ModelAdmin):
-    list_display = ['id', 'nombre', 'apellido', 'foto', 'descripcion']
-admin.site.register(Guias, GuiasAdmin)
