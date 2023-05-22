@@ -107,20 +107,6 @@ class Recorridos(models.Model):
         
         
         
-    class Guias(models.Model):
-    id = models.AutoField(primary_key=True)
-    nombre = models.CharField(max_length=100)
-    apellido = models.CharField(max_length=100)
-    foto=  models.URLField()
-    descripcion=  models.TextField(max_length=2500)
-    
-    class Meta:
-        db_table = 'guia'
-        verbose_name = 'guia'
-        verbose_name_plural = 'guias'
-        
-    def __str__(self):
-            return self.nombre
-        
+  
     
     

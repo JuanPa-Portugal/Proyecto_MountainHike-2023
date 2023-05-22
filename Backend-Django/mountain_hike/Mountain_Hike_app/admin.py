@@ -83,8 +83,3 @@ admin.site.register(Recorridos, RecorridosAdmin)
 
 
 
-
-
-class GuiasAdmin(admin.ModelAdmin):
-    list_display = ['id', 'nombre', 'apellido', 'foto', 'descripcion']
-admin.site.register(Guias, GuiasAdmin)
