@@ -1,18 +1,23 @@
+<div class="container">
+
 <h2 class="mx-3 m-2 recorridos">Recorridos</h2>
 
-<div class="clearfix m-4 border border-dark-subtle rounded contenedor">
-  <img src="../../../assets/img/recorridos/imagen02.jpg"  class="col-md-6 float-md-end m-3 ms-md-3 img-recorridos rounded " alt="cerro Los Gigantes">
-  <h5 class="titulo m-1">Los Gigantes</h5>
+
+<div class="clearfix m-4 border border-dark-subtle rounded contenedor" *ngFor="let recorrido of recorridos">
+  <img src="{{recorrido.imagen}}"  class="col-md-6 float-md-end m-3 ms-md-3 img-recorridos rounded " alt="cerro Los Gigantes">
+  <h5 class="titulo m-1">
+    {{recorrido.titulo}}
+  </h5>
   <p class="texto m-2">
-    Sendero muy técnico y con zonas de mucho peligro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae ipsa perspiciatis voluptate tempora, adipisci odit. Nesciunt nam eligendi eius beatae, at ducimus dolorum facere aliquam molestias, laborum quibusdam sequi maxime?    
+    {{recorrido.texto}}    
   </p>
-  <button type="button" class="btn btn-primary m-2">Seleccionar Fecha</button>
-  <button (click)="clima_LosGigantes()" type="button" class="btn btn-outline-secondary m-2">Consultá el clima</button>
-  <img class="dificultad" src="../../../assets/img/recorridos/dif-max.png" alt="dificultad máxima">
+  <button type="button" class="btn btn-primary m-2">{{recorrido.botonFecha}}</button>
+  <button (click)="clima_LosGigantes()" type="button" class="btn btn-outline-secondary m-2">{{recorrido.botonClima}}</button>
+  <img class="dificultad" src="{{recorrido.imgDificultad}}" alt="dificultad máxima">
 </div>
 
 
-<div class="clearfix m-4 border border-dark-subtle rounded contenedor">
+<!-- <div class="clearfix m-4 border border-dark-subtle rounded contenedor">
   <img src="../../../assets/img/recorridos/cerromogotes.jpg"  class="col-md-6 float-md-start m-3 ms-md-3 img-recorridos rounded" alt="Paseo Los Mogotes y Paso del Indio ">
   <h5 class="titulo m-1">Paseo Los Mogotes y Paso del Indio </h5>
   <p class="texto m-2">
@@ -36,8 +41,8 @@
 </div>
 
 
-<div class="clearfix m-4 border border-dark-subtle rounded contenedor">
-  <img src="../../../assets/img/recorridos/cerrochampaqui.jpg"  class="col-md-6 float-md-start m-3 ms-md-3 img-recorridos rounded" alt="cerro Champaquí">
+<div class="clearfix m-4 border border-dark-subtle rounded contenedor"> -->
+  <!-- <img src="../../../assets/img/recorridos/cerrochampaqui.jpg"  class="col-md-6 float-md-start m-3 ms-md-3 img-recorridos rounded" alt="cerro Champaquí">
   <h5 class="titulo m-1">Cerro Champaquí</h5>
   <p class="texto m-2">
     La punta más alta de esta serie de montañas y, por esto, brinda una visión 360 grados de Los   Gigantes.El camino comienza por el sendero norte con una caminata intensa de 5 horas. Luego, una vez en la base del cerro, el grupo aprovecha para dejar mochilas y cargamento en un refugio y se prepara para afrontar el último tramo hasta la cima.La caminata es de dificultad media/alta y lleva todo un día.    
@@ -45,7 +50,9 @@
   <button type="button" class="btn btn-primary m-1">Seleccionar Fecha</button>
   <button (click)="clima_CerroChampaqui()" type="button" class="btn btn-outline-secondary m-1">Consultá el clima</button>
   <img class="dificultad" src="../../../assets/img/recorridos/dif-max.png" alt="dificultad máxima">
+</div> -->
 </div>
+
 
 
 
