@@ -4,6 +4,7 @@ import { RegisterComponent } from './register/register.component';
 import { IniciaSesionComponent } from './inicia-sesion/inicia-sesion.component';
 import { InicioAdminComponent } from './inicio-admin/inicio-admin.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -11,13 +12,15 @@ import { AppRoutingModule } from '../app-routing.module';
 @NgModule({
   declarations: [
     RegisterComponent,
-   IniciaSesionComponent,
-   InicioAdminComponent
+    IniciaSesionComponent,
+    InicioAdminComponent
 
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
     
   ],
   exports: [
