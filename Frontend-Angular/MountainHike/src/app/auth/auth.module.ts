@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register/register.component';
 import { IniciaSesionComponent } from './inicia-sesion/inicia-sesion.component';
 import { InicioAdminComponent } from './inicio-admin/inicio-admin.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -16,6 +17,7 @@ import { InicioAdminComponent } from './inicio-admin/inicio-admin.component';
   ],
   imports: [
     CommonModule,
+    AppRoutingModule
     
   ],
   exports: [

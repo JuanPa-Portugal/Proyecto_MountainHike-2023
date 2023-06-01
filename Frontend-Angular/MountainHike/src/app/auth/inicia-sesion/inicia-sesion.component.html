@@ -16,30 +16,20 @@
       <form class="needs-validation"novalidate>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Ingrese su Email</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ingrese acá su correo electrónico"required>
-          <div class="valid-feedback">
-            todo bien
-          </div>
-          <div class="invalid-feedback">
-            debe ingresar un correo válido
-          </div>
-          <div id="emailHelp" class="form-text">Nunca compartiremos su correo con nadie más</div>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+          
+          
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="ingrese acá su contraseña"required>
-          <div class="valid-feedback">
-            todo bien
-          </div>
-          <div class="invalid-feedback">
-            debe ingresar su contraseña
-          </div>
+          <input type="password" class="form-control" id="exampleInputPassword1" >
+         
         </div>
         <div class="d-grid">
           <button type="submit" class="btn btn-primary">Ingresar</button>  
         </div>
         <div class="my-3">
-          <span>No tienes cuenta? <a href="newAccount.html">Regístrate</a></span> <br>
+          <span><a routerLink="register">No tienes cuenta? Regístrate</a> </span> <br>
           <span><a href="">Recuperar Contraseña</a></span>
         </div>
       </form>
