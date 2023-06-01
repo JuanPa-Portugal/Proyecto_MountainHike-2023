@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register/register.component';
 import { IniciaSesionComponent } from './inicia-sesion/inicia-sesion.component';
 import { InicioAdminComponent } from './inicio-admin/inicio-admin.component';
+import { AppRoutingModule } from '../app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -10,12 +12,15 @@ import { InicioAdminComponent } from './inicio-admin/inicio-admin.component';
 @NgModule({
   declarations: [
     RegisterComponent,
-   IniciaSesionComponent,
-   InicioAdminComponent
+    IniciaSesionComponent,
+    InicioAdminComponent
 
   ],
   imports: [
     CommonModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
     
   ],
   exports: [

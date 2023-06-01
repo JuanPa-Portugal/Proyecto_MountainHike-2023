@@ -90,3 +90,12 @@ section img {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* validaciones para formularios */
+
+.ng-valid:not(form) .ng-touched {
+  border-left: 5px solid #42A948;
+}
+.ng-invalid:not(form) .ng-touched {
+  border-left: 5px solid #a94442;
+}

@@ -8,14 +8,14 @@ import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-   
+    AppComponent,   
   ],
   imports: [
     BrowserModule,
@@ -24,6 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule,
     AuthModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
 
     ],
   providers: [],
