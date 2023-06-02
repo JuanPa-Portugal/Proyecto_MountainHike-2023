@@ -14,29 +14,84 @@
         
   <!--/logo miniatura-->
       <h2 class="fw-bold text-center py-5">Registro de cuenta nueva</h2>
-      <form >
-        <div class="mb-3 col-md-6">
+
+
+      <form [formGroup]="registroForm" >
+        <div class="mb-3">
           <label for="exampleInputtext" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="exampleInputtext" >
+          <input formControlName="nombre" type="text" class="form-control" id="exampleInputtext" >
+
+          <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="text-danger">
+            <div *ngIf="nombre.errors?.['required']">
+              El nombre es requerido
+            </div>
+          </div>
+
         </div>
-        <div class="mb-3 col-md-6">
+        <div class="mb-3">
           <label for="exampleInputtext1" class="form-label">Apellido</label>
-          <input type="text" class="form-control" id="exampleInputtext1">
+          <input formControlName="apellido" type="text" class="form-control" id="exampleInputtext1">
+
+          <div *ngIf="apellido.invalid && (apellido.dirty || apellido.touched)" class="text-danger">
+            <div *ngIf="apellido.errors?.['required']">
+              El apellido es requerido
+            </div>
+          </div>
+
         </div> 
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Ingrese su Email</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+          <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+            <div *ngIf="email.errors?.['required']">
+              El Email es requerido
+            </div>
+            <div *ngIf="email.errors?.['email']">
+              El Email debe tener un formato válido
+            </div>
+          </div>
+
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="exampleInputPassword" >
-        </div>        
+          <input formControlName="password" type="password" class="form-control" id="exampleInputPassword" >
+
+          <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+            <div *ngIf="password.errors?.['required']">
+              El Password es requerido
+            </div>
+            <div *ngIf="email.errors?.['minLength(8)']">
+              La contraseña debe tener 8 caracteres como mínimo
+            </div>            
+          </div>
+
+        </div> 
+
+        <div class="mb-3">
+          <label for="exampleInputPassword" class="form-label">Confirmar Contraseña</label>
+          <input formControlName="password" type="password" class="form-control" id="exampleInputPassword" >
+
+          <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+            <div *ngIf="password.errors?.['required']">
+              El Password es requerido
+            </div>
+            <div *ngIf="email.errors?.['minLength(8)']">
+              La contraseña debe tener 8 caracteres como mínimo
+            </div>            
+          </div>
+
+        </div>
+            
         <div class="form-check mb-3 ms-3">
           <input class="form-check-input" type="checkbox" id="terms"required>
-          <label for="terms" class="form-check-label ">Acepto los términos y condiciones</label>
+          <label formControlName="cb" for="terms" class="form-check-label ">Acepto los términos y condiciones</label>
+          <div *ngIf="cb.hasError('required', 'cb')"
+            ></div>
+
         </div>
           <div class="d-grid">
-            <button type="submit" class="btn btn-primary">Registrarse</button>  
+            <button type="submit" class="btn btn-primary" [disabled]="!registroForm.valid" (click)="registro()">Registrarse</button>  
           </div>
       </form>
     </div>
