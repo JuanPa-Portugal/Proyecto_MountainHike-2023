@@ -1,25 +1,21 @@
 <div class="container w-100 mb-lg-4  mt-5 rounded custom-shadow">
   <div class="row ">
-<!--imagen de fondo izquierda-->
-    <div class="col-bg--custom__Account col-md-6 col-xl-5  col-lg-5  d-lg-block rounded"></div>
-<!--imagen de fondo izquierda-->
-
-<!--login lado derecho-->
+    <div class="col-bg--custom__Account col-md-6 col-xl-5  col-lg-5  d-lg-block rounded">
+    </div>
     <div class="  col-md-6 col col-xl-7  p-4 rounded-end">
-  <!--logo miniatura-->
-        
       <div class="text-end">
         <img src="../Assets/img/logoMountainBlanco.png" width="60" alt="">
       </div>
-        
-  <!--/logo miniatura-->
       <h2 class="fw-bold text-center py-5">Registro de cuenta nueva</h2>
 
 
-      <form [formGroup]="registroForm" >
+      <form [formGroup]="registroForm" (ngSubmit)="registro()">
         <div class="mb-3">
           <label for="exampleInputtext" class="form-label">Nombre</label>
-          <input formControlName="nombre" type="text" class="form-control" id="exampleInputtext" >
+          <input formControlName="nombre"
+                type="text" 
+                class="form-control" 
+                id="exampleInputtext" >
 
           <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="text-danger">
             <div *ngIf="nombre.errors?.['required']">
@@ -30,7 +26,10 @@
         </div>
         <div class="mb-3">
           <label for="exampleInputtext1" class="form-label">Apellido</label>
-          <input formControlName="apellido" type="text" class="form-control" id="exampleInputtext1">
+          <input formControlName="apellido" 
+                type="text" 
+                class="form-control" 
+                id="exampleInputtext1">
 
           <div *ngIf="apellido.invalid && (apellido.dirty || apellido.touched)" class="text-danger">
             <div *ngIf="apellido.errors?.['required']">
@@ -41,7 +40,11 @@
         </div> 
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Ingrese su Email</label>
-          <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+          <input formControlName="email" 
+                type="email" 
+                class="form-control" 
+                id="exampleInputEmail1" 
+                aria-describedby="emailHelp" >
 
           <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
             <div *ngIf="email.errors?.['required']">
@@ -55,45 +58,57 @@
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword" class="form-label">Contraseña</label>
-          <input formControlName="password" type="password" class="form-control" id="exampleInputPassword" >
+          <input formControlName="password" 
+                type="password" 
+                class="form-control" 
+                id="pass">
+
+                
 
           <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
             <div *ngIf="password.errors?.['required']">
               El Password es requerido
             </div>
-            <div *ngIf="email.errors?.['minLength(8)']">
+            <div *ngIf="password.value != password2.value">
               La contraseña debe tener 8 caracteres como mínimo
             </div>            
           </div>
 
-        </div> 
+        
 
-        <div class="mb-3">
-          <label for="exampleInputPassword" class="form-label">Confirmar Contraseña</label>
-          <input formControlName="password" type="password" class="form-control" id="exampleInputPassword" >
+          <div class="mb-3">
+            <label for="exampleInputPassword" class="form-label">Confirmar Contraseña</label>
+            <input formControlName="password2" 
+                    type="password" 
+                    class="form-control"
+                    id="pass2">
 
-          <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
-            <div *ngIf="password.errors?.['required']">
-              El Password es requerido
+            <div *ngIf="password2.invalid && (password2.dirty || password2.touched)" class="text-danger">
+              <div *ngIf="password2.errors?.['required']">
+                El Password es requerido
+              </div>           
+              <div *ngIf="password.errors?.['mismatch']">
+                las contraseñas deben ser iguales
+              </div>            
             </div>
-            <div *ngIf="email.errors?.['minLength(8)']">
-              La contraseña debe tener 8 caracteres como mínimo
-            </div>            
           </div>
 
         </div>
             
         <div class="form-check mb-3 ms-3">
-          <input class="form-check-input" type="checkbox" id="terms"required>
-          <label formControlName="cb" for="terms" class="form-check-label ">Acepto los términos y condiciones</label>
-          <div *ngIf="cb.hasError('required', 'cb')"
-            ></div>
-
-        </div>
-          <div class="d-grid">
-            <button type="submit" class="btn btn-primary" [disabled]="!registroForm.valid" (click)="registro()">Registrarse</button>  
+          <input class="form-check-input" 
+                  type="checkbox" 
+                  id="terms"
+                  formControlName="cb">
+          <label  for="terms" class="form-check-label ">Acepto los términos y condiciones</label>
+          <div *ngIf="cb.hasError('required', 'cb')">
           </div>
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary" [disabled]="!registroForm.valid" (click)="registro()" >Registrarse</button> 
+        </div>
       </form>
+      <!-- <pre>{{registroForm.errors | json }}</pre> -->
     </div>
   </div>
 </div>
