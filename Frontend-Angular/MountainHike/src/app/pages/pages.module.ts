@@ -7,6 +7,10 @@ import { RecorridosComponent } from './recorridos/recorridos.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { UserPanelComponent } from './user-panel/user-panel.component';
 import { TiendaComponent } from './tienda/tienda.component';
+import { CarritoComponent } from './carrito/carrito.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 @NgModule({
@@ -17,11 +21,15 @@ import { TiendaComponent } from './tienda/tienda.component';
     RecorridosComponent,
     AdminPanelComponent,
     UserPanelComponent,
-    TiendaComponent
+    TiendaComponent,
+    CarritoComponent
  
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
+    FormsModule,
+    AppRoutingModule
   ],
   exports: [
     NosotrosComponent,
@@ -30,7 +38,8 @@ import { TiendaComponent } from './tienda/tienda.component';
     AdminPanelComponent,
     RecorridosComponent,
     UserPanelComponent,
-    TiendaComponent
+    TiendaComponent,
+    CarritoComponent
   ]
 })
 

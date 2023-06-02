@@ -1,0 +1,29 @@
+.recorridos{
+    text-shadow: 4px 4px 2px rgba(153,200,52,0.6);
+}
+.contenedor{
+    box-shadow: -5px 4px 53px -25px rgba(153,200,52,0.5);
+    -webkit-box-shadow: -5px 4px 53px -25px rgba(153,200,52,0.5);
+    -moz-box-shadow: -5px 4px 53px -25px rgba(153,200,52,0.5);
+}
+.img-recorridos{
+    width: 400px;
+    /* box-shadow: -5px 4px 53px -25px rgba(153,200,52,0.75);
+    -webkit-box-shadow: -5px 4px 53px -25px rgba(153,200,52,0.75);
+    -moz-box-shadow: -5px 4px 53px -25px rgba(153,200,52,0.75); */
+}
+.titulo{
+    padding-top: 17px;
+}
+.btn-primary {
+    --bs-btn-bg:#99c834b4;
+    --bs-btn-border-color:none;
+    --bs-btn-hover-bg:#97d11be1;
+    --bs-btn-hover-border-color:none;
+    --bs-btn-active-border-color:none;
+    --bs-btn-active-bg: #99c834b4;
+    --bs-btn-disabled-border-color: #99c834b4;
+    }
+    .dificultad{
+        width: 50px;
+    }

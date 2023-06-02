@@ -1,0 +1,86 @@
+<div class="container w-75  mt-5 rounded custom-shadow">
+  <div class="row align-items-stretch">
+<!--imagen de fondo izquierda-->
+    <div class="col-bg--custom  col-xl-7  col-lg-5  d-lg-block rounded">
+    </div>
+<!--imagen de fondo izquierda-->
+
+<!--login lado derecho-->
+    <div class="  col-md-5 col col-xl-5 col-md-12 p-4 rounded-end">
+<!--logo miniatura-->
+      <div class="text-end">
+        <img src="../../../assets/img/header/logoMountainBlanco.png" width="60" alt="">
+      </div>
+<!--/logo miniatura-->
+      <h2 class="fw-bold text-center py-5">Bienvenido otra vez</h2>
+      <form [formGroup]="loginForm"   >
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Ingrese su Email</label>
+          <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+
+          <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+            <div *ngIf="email.errors?.['required']">
+              El Email es requerido
+            </div>
+            <div *ngIf="email.errors?.['email']">
+              El Email debe tener un formato válido
+            </div>
+          </div>
+          
+          
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+          <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" >
+
+          <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+            <div *ngIf="password.errors?.['required']">
+              El Password es requerido
+            </div>
+            
+          </div>
+
+        </div>
+        <div class="d-grid">
+          <button (click)="login()" type="submit" class="btn btn-primary">Iniciar Sesión</button>  
+        </div>
+        <div class="my-3">
+          <p class="registrate">No tienes cuenta?<a routerLink="/register">   Regístrate</a></p> <br>
+          <!-- <span><a href="">Recuperar Contraseña</a></span> -->
+        </div>
+      </form>
+      <!--  login con redes sociales-->
+      <!-- <div class="conatiner w-100 my-5">
+        <div class="row text-center mb-2">
+          <div class="col-12">Iniciar Sesión con</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <button class="btn btn-outline-primary w-100 my-1 ">
+              <div class="row align-items-center">
+                <div class="col">
+                  <img src="../../../assets/img/login/icon_facebook.png" width="15" height="32" alt=" logo facebook">
+                  <span class="p-2">Facebook</span>
+                </div>
+              
+              </div>
+            </button>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <button class="btn btn-outline-danger w-100 my-1">
+              <div class="row align-items-center">
+                <div class="col">
+                  <img src="../../../assets/img/login/icono-google.png" width="32" alt=" logo facebook">
+                  <span class="p-2">Google</span>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div> -->
+      <!--  login con redes sociales-->
+    </div>
+  </div>
+</div>
+
+

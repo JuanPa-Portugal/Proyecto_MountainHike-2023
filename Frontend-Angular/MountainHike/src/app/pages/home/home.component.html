@@ -14,7 +14,8 @@
               <p>
                 Encuentra tu próxima ruta!!!
               </p>
-              <a class="btn btn-primary " href="register" role="button">Regístrate</a>
+              <a class="btn btn-primary " routerLink="/register" role="button">Regístrate</a>
+              
             </div>
           </div>
         </div>
@@ -57,7 +58,7 @@
               importantes del país, sus paredes poseen unas 400 rutas equipadas
               de escalada deportiva.
             </p>
-            <a href="frontend/View/loginPage.html" class="btn btn_1">Reservas</a>
+            <a routerLink="userLogin" class="btn btn_1">Reservas</a>
           </div>
         </div>
       </div>
@@ -77,7 +78,7 @@
               año. Su recorrido entre cañadones y formaciones rocosas
               multicolores es una invitación para el asombro.
             </p>
-            <a href="frontend/View/loginPage.html" class="btn_1 btn">Reservas</a>
+            <a routerLink="userLogin" class="btn_1 btn">Reservas</a>
           </div>
         </div>
       </div> 
@@ -95,7 +96,7 @@
               nuevas y únicas experiencias y aventuras. Ofrece la posibilidad de regresar las 
               innumerables veces que puedas, con todos  los climas imaginables!!!.
             </p>
-            <a href="frontend/View/loginPage.html" class="btn btn_1">Reservas</a>
+            <a routerLink="userLogin" class="btn btn_1">Reservas</a>
           </div>
         </div>
       </div>
@@ -105,112 +106,102 @@
 <div class="container">
 
 <!--Section Reseñas-Testimonios-->
-<section class="resena mb-5">
-  <h1>Reseñas</h1>
+
+  <section>
+    <h1 class="mb-2">Reseñas</h1>
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
+      aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
+      aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
+      aria-label="Slide 3"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
         aria-label="Slide 3"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
-        aria-label="Slide 3"></button>
+      aria-label="Slide 3"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
-        aria-label="Slide 3"></button>
+      aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner ">
-      <div class="carousel-item active">
-        <div class="imagen_custom">
-          <img src="../../assets/img/testimonios/avatar02.png" class="d-block w-100" alt="banner1" />
+    <div class="carousel-inner">
+      <div class="carousel-item active text-size">
+        <div class="img-avatar-size mx-auto img-fluid">
+          <img src="../../assets/img/testimonios/avatar02.png" class="p-0 m-0 img-avatar-size img-avatar-display" alt="banner1" />
         </div>
-        <div class="carousel-caption d-block d-md-block">
-          <h5>Jose Feliciano</h5>
-          <p>Córdoba</p>
-          <p>29 años</p>
-          <p>Champaquí</p>
-          <p>
+        <div class="d-flex mx-auto flex-column justify-content-center align-items-center col-md-8 ">
+          <h5 class="text-size">Jose</h5>
+          <p class="city">Córdoba Capital</p>
+          <p class="mb-5">
             El recorrido me encantó muy didáctico e informativo, se pueden
-            observar lugares hermosos súper recomendable
+            observar lugares hermosos súper recomendable, una experiencia para repetir.
           </p>
         </div>
+      
       </div>
-      <div class="carousel-item">
-        <div class="imagen_custom">
-          <img src="../../assets/img/testimonios/avatar03.png" class="d-block w-100" alt="banner2" />
+      <div class="carousel-item text-size">
+        <div class="img-avatar-size mx-auto img-fluid">
+          <img src="../../assets/img/testimonios/avatar03.png" class="p-0 m-0 img-avatar-size img-avatar-display" alt="banner2" />
         </div>
-        <div class="carousel-caption d-block d-md-block">
-          <h5>María Balcasar</h5>
-          <p>Mendoza</p>
-          <p>35 años</p>
-          <p>Los Gigantes</p>
-          <p>
+        <div class="d-flex mx-auto flex-column justify-content-center align-items-center col-md-8 ">
+          <h5 class="text-size">María</h5>
+          <p class="city">Mendoza Capital</p>
+          <p class="mb-5">
             Es la primera vez que conozco algo de Córdoba y me
             sorprendieron los paisajes, muy lindo recorrido espero poder
             realizar otros recorridos nuevos.
           </p>
         </div>
       </div>
-      <div class="carousel-item">
-        <div class="imagen_custom">
-          <img src="../../assets/img/testimonios/avatar01.png" class="d-block w-100" alt="banner3" />
+      <div class="carousel-item text-size">
+        <div class="img-avatar-size mx-auto img-fluid">
+          <img src="../../assets/img/testimonios/avatar01.png" class="p-0 m-0 img-avatar-size img-avatar-display" alt="banner3" />
         </div>
-        <div class="carousel-caption d-block d-md-block">
-          <h5>Abel y María</h5>
-          <p>Rosario</p>
-          <p>23 y 26 años</p>
-          <p>Los Terrones</p>
-          <p>
+        <div class="d-flex mx-auto flex-column justify-content-center align-items-center col-md-8 ">
+          <h5 class="text-size">Abel y Fernanda</h5>
+          <p class="city">Rosario de Santa Fe</p>
+          <p class="mb-5">
             Hermosa experiencia para disfrutar con la pareja, un lugar
-            hermoso lleno de verde y el guía nos resultó muy atento.Los
-            recomendamos.
+            hermoso lleno de verde y el guía nos resultó muy atento.
           </p>
         </div>
       </div>
-      <div class="carousel-item">
-        <div class="imagen_custom">
-          <img src="../../assets/img/testimonios/avatar02.png" class="d-block w-100" alt="banner 4" />
+      <div class="carousel-item text-size">
+        <div class="img-avatar-size mx-auto img-fluid">
+          <img src="../../assets/img/testimonios/avatar02.png" class="p-0 m-0 img-avatar-size img-avatar-display" alt="banner 4" />
         </div>
-        <div class="carousel-caption d-block d-md-block">
-          <h5>Gonzalo Sanchez</h5>
-          <p>Córdoba</p>
-          <p>27 años</p>
-          <p>Champaquí</p>
-          <p>
+        <div class="d-flex mx-auto flex-column justify-content-center align-items-center col-md-8 ">
+          <h5 class="text-size">Gonzalo</h5>
+          <p class="city">San Miguel de Tucuman</p>
+          <p class="mb-5">
             Me encantó, me tocó un grupo súper divertido y amigable, una
-            experiencia para vivirla y disfrutarla.
+            experiencia para vivirla y disfrutarla.Todo un reto que no decepciona.
           </p>
         </div>
       </div>
-      <div class="carousel-item">
-        <div class="imagen_custom">
-          <img src="../../assets/img/testimonios/avatar03.png" class="d-block w-100" alt="banner 5" />
+      <div class="carousel-item text-size">
+        <div class="img-avatar-size mx-auto img-fluid">
+          <img src="../../assets/img/testimonios/avatar03.png" class="p-0 m-0 img-avatar-size img-avatar-display" alt="banner 5" />
         </div>
-        <div class="carousel-caption d-block d-md-block">
-          <h5>Lorena Estevez</h5>
-          <p>La Rioja</p>
-          <p>20 años</p>
-          <p>Los Terrones</p>
-          <p>
+        <div class="d-flex mx-auto flex-column justify-content-center align-items-center col-md-8 ">
+          <h5 class="text-size">Lorena</h5>
+          <p class="city">La Rioja</p>
+          <p class="mb-5"> 
             Me encantaría que agreguen recorridos de mi provincia, es un
             lugar inolvidable, hermoso los descansos están muy bien
             ubicados, muy conforme con el recorrido.
           </p>
         </div>
       </div>
-      <div class="carousel-item">
-        <div class="imagen_custom">
-          <img src="../../assets/img/testimonios/avatar01.png" class="d-block w-100" alt="banner 6" />
+      <div class="carousel-item text-size">
+        <div class="img-avatar-size mx-auto img-fluid">
+          <img src="../../assets/img/testimonios/avatar01.png" class="p-0 m-0 img-avatar-size img-avatar-display" alt="banner 6" />
         </div>
-        <div class="carousel-caption d-block d-md-block">
-          <h5>Marcos y Mariela</h5>
-          <p>Córdoba</p>
-          <p>30 y 60 años</p>
-          <p>
-            Nos gustó mucho el recorrido, el lugar es un sueño y el nivel
+        <div class="d-flex mx-auto flex-column justify-content-center align-items-center col-md-8 ">
+          <h5 class="text-size">Marcos y Mariela</h5>
+          <p class="city">Buenos Aires</p>
+          <p class="mb-5">
+            Nos encantó el recorrido, el lugar es un sueño y el nivel
             de dificultad muy acorde para mi abuela, lo pudo superar sin
             problemas. Gracias!
           </p>
@@ -223,12 +214,13 @@
       <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-      data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>
 </section>
+
 
 <!--/ END Section Reseñas-->
 
