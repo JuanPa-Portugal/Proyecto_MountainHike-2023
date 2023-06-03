@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Recorridos } from './pages/admin-panel/InterfaceRecorridos';
+import { Recorridos } from '../../pages/admin-panel/InterfaceRecorridos';
 
 @Injectable({
   providedIn: 'root'
