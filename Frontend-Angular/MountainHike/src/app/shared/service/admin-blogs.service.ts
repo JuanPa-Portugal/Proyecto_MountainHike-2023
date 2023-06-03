@@ -7,7 +7,8 @@ import { Blogs } from '../../pages/admin-panel/InterfaceBlogs';
   providedIn: 'root'
 })
 export class AdminBlogsService {
-  apiBlogs = 'http://localhost:3000/blogs';
+  //apiBlogs = 'http://localhost:3000/blogs';
+  apiBlogs = 'http://localhost:8000/api/v1/Blog/';
 
   constructor(private http:HttpClient) { }
 
