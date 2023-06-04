@@ -8,7 +8,7 @@ import { Blogs } from '../../pages/admin-panel/InterfaceBlogs';
 })
 export class AdminBlogsService {
   //apiBlogs = 'http://localhost:3000/blogs';
-  apiBlogs = 'http://localhost:8000/api/v1/Blog/';
+  apiBlogs = 'http://localhost:8000/api/v1/Blogs/';
 
   constructor(private http:HttpClient) { }
 
