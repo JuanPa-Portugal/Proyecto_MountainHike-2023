@@ -1,14 +1,21 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+from django.conf import settings
+from django.dispatch import receiver
+from django.db.models.signals import post_save
+from rest_framework.authtoken.models import Token
 
-class CustomUser(AbstractUser):
+
+
+
+class User(AbstractUser):
     email = models.EmailField(max_length=150, unique=True)
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username','password']
+#    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['password']
 
     class Meta:
-        db_table = 'customUser'
+        db_table = 'User'
         verbose_name = 'Usuario'
         verbose_name_plural = 'Usuarios'
 
@@ -16,7 +23,7 @@ class CustomUser(AbstractUser):
         return self.username+" ("+self.email+")"
 
 
-class Cliente(CustomUser):
+class Cliente(User):
     edad = models.IntegerField()
     telefono = models.CharField(max_length=20)
     ciudad = models.CharField(max_length=30)
@@ -97,7 +104,7 @@ class Reserva(models.Model):
     nro_reserva= models.IntegerField()
     valor = models.FloatField()
     id_factura = models.ForeignKey('Factura', on_delete=models.CASCADE)
-    id_usuario= models.ForeignKey('CustomUser', on_delete=models.CASCADE)
+    id_usuario= models.ForeignKey('User', on_delete=models.CASCADE)
     id_recorrido = models.ForeignKey('Recorridos', on_delete=models.CASCADE)
     class Meta:
         db_table = 'reserva'
@@ -127,7 +134,7 @@ class Factura(models.Model):
     tipo =  models.CharField(max_length= 1)
     fecha_apertura =  models.DateTimeField()
     fecha_cierre = models.DateTimeField()
-    id_usuario= models.ForeignKey('CustomUser', on_delete=models.CASCADE)
+    id_usuario= models.ForeignKey('User', on_delete=models.CASCADE)
 
     class Meta:
             db_table = 'factura'
@@ -136,6 +143,15 @@ class Factura(models.Model):
 
     def __str__(self):
             return self.tipo
+
+
+
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+@receiver(post_save, sender=Cliente)
+def create_auth_token(sender, instance=None, created=False, **kwargs):
+    if created:
+        Token.objects.create(user=instance)
+
 
 
     
