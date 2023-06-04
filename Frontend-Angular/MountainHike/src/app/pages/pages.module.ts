@@ -41,7 +41,8 @@ import { Pagina404Component } from './pagina404/pagina404.component';
     RecorridosComponent,
     UserPanelComponent,
     TiendaComponent,
-    CarritoComponent
+    CarritoComponent,
+    Pagina404Component
   ]
 })
 
