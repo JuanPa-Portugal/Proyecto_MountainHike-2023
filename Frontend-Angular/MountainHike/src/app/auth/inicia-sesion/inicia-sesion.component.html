@@ -14,6 +14,7 @@
 <!--/logo miniatura-->
       <h2 class="fw-bold text-center py-5">Bienvenido otra vez</h2>
       <form [formGroup]="loginForm"   >
+        <p class="text-danger">{{loginError}}</p>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Ingrese su Email</label>
           <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
