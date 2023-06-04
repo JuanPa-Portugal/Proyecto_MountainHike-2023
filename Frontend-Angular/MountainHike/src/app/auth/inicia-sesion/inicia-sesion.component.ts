@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { IniciarSesionService } from 'src/app/shared/service/iniciar-sesion.service';
+import { iniciarSesionRequest } from 'src/app/shared/service/iniciarSesionRequest';
 
 @Component({
   selector: 'app-inicia-sesion',
@@ -15,7 +17,7 @@ export class IniciaSesionComponent  implements OnInit {
 
   })
 
-  constructor(private formBuilder:FormBuilder, private router:Router) { }
+  constructor(private formBuilder:FormBuilder, private router:Router, private loginService:IniciarSesionService) { }
 
   ngOnInit(): void {
     
@@ -29,7 +31,7 @@ export class IniciaSesionComponent  implements OnInit {
 
   login(){
     if (this.loginForm.valid){
-      console.log("llamar al servicio de login");
+      this.loginService.login(this.loginForm.value as iniciarSesionRequest)
       this.router.navigateByUrl('/recorridos');
       //me redirige hacia recorridos, me tiene que redirigir al dashboard que hay que hacer
       this.loginForm.reset();
