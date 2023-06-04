@@ -9,9 +9,21 @@ import { Guias } from '../../pages/admin-panel/InterfaceGuias';
 export class GuiasService {
 
   constructor(private http:HttpClient) { }
-  apiGuias = 'http://localhost:3000/guias';
-
+  //apiGuias = 'http://localhost:3000/guias';
+  apiGuias = 'http://localhost:8000/api/v1/Blog/';
   getGuias(): Observable<Guias[]>{
     return this.http.get<Guias[]>(this.apiGuias);
+  }
+  deleteGuias(id:any):Observable<any>{
+    return this.http.delete(`${this.apiGuias}/${id}`);
+  }
+
+  patchGuias(arr: Guias, id:any):Observable<any>{
+    console.log(arr, id)
+    return this.http.patch(`${this.apiGuias}/${id}`,arr)
+  }
+
+  postGuias(arr: Guias):Observable<any>{
+      return this.http.post(`${this.apiGuias}`,arr)
   }
 }
