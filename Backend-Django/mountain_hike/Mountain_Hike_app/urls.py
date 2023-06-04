@@ -6,10 +6,12 @@ from Mountain_Hike_app import views
 from .views import LoginView, LogoutView
 
 router= routers.DefaultRouter()
-router.register(r'Blog',views.BlogViewSet)
-router.register(r'Reserva',views.ReservaViewSet)
-router.register(r'Recorridos',views.RecorridosViewSet)
-router.register(r'Guias',views.GuiasViewSet)
+router.register(r'Blogs',views.BlogViewSet)
+router.register(r'Reservas',views.ReservaViewSet)
+router.register(r'Recorridos',views.RecorridoViewSet)
+router.register(r'Clientes',views.ClienteViewSet)
+router.register(r'Guias',views.GuiaViewSet)
+router.register(r'Users',views.UserViewSet)
 
 #----
 urlpatterns = [
