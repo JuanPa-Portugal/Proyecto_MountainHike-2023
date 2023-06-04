@@ -9,8 +9,8 @@ import { Guias } from '../../pages/admin-panel/InterfaceGuias';
 export class GuiasService {
 
   constructor(private http:HttpClient) { }
-  apiGuias = 'http://localhost:3000/guias';
-
+  //apiGuias = 'http://localhost:3000/guias';
+  apiGuias = 'http://localhost:8000/api/v1/Blog/';
   getGuias(): Observable<Guias[]>{
     return this.http.get<Guias[]>(this.apiGuias);
   }
