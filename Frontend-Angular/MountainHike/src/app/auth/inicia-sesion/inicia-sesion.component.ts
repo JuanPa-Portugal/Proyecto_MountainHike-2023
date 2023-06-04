@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { IniciarSesionService } from 'src/app/shared/service/iniciar-sesion.service';
+import { iniciarSesionRequest } from 'src/app/shared/service/iniciarSesionRequest';
 
 @Component({
   selector: 'app-inicia-sesion',
@@ -8,14 +10,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./inicia-sesion.component.css']
 })
 export class IniciaSesionComponent  implements OnInit {
-
+  loginError:string="";
   loginForm=this.formBuilder.group({
     email:['florencia@gmail.com', [Validators.required, Validators.email ]],
     password:['1234', Validators.required]
 
   })
 
-  constructor(private formBuilder:FormBuilder, private router:Router) { }
+  constructor(private formBuilder:FormBuilder, private router:Router, private loginService:IniciarSesionService) { }
 
   ngOnInit(): void {
     
@@ -29,10 +31,22 @@ export class IniciaSesionComponent  implements OnInit {
 
   login(){
     if (this.loginForm.valid){
-      console.log("llamar al servicio de login");
-      this.router.navigateByUrl('/recorridos');
-      //me redirige hacia recorridos, me tiene que redirigir al dashboard que hay que hacer
-      this.loginForm.reset();
+      this.loginService.login(this.loginForm.value as iniciarSesionRequest).subscribe({
+        next:(userData)=>{
+          console.log(userData);
+        },
+        error:(errorData)=>{
+          console.error(errorData);
+          this.loginError=errorData;
+        },
+        complete:()=>{
+          console.info("Login completo");
+          this.router.navigateByUrl('/user-panel');
+          //me redirige hacia recorridos, me tiene que redirigir al dashboard que hay que hacer
+          this.loginForm.reset();
+        }
+      })
+      
     }
     else{
       alert("error al ingresar los datos")

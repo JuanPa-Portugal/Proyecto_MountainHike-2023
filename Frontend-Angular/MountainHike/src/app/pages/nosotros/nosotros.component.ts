@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Guias } from '../admin-panel/InterfaceGuias';
-import { GuiasService } from 'src/app/guias.service';
+import { GuiasService } from 'src/app/shared/service/guias.service';
 
 @Component({
   selector: 'app-nosotros',

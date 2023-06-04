@@ -1,7 +1,9 @@
 <header class="header">
     <a href="index.html" class="logo">
       <img src="../../../assets/img/header/logoMountainBlanco.png" alt="logo de la compañia" class="logo-img" />
+      
     </a>
+    
     <input type="checkbox" id="check">
     <label for="check" class="mostrar-menu">
       &#8801;
@@ -12,7 +14,8 @@
       <a routerLink="nosotros" class="nav-menu-item nav-link">Nosotros</a>
       <a routerLink="recorridos" class="nav-menu-item nav-link">Recorridos</a>     
       <a routerLink="blog" class="nav-menu-item nav-link">Blog</a>
-      <a routerLink="userLogin" class="nav-menu-item nav-link">Iniciar sesión</a>
+      <a routerLink="userLogin" class="nav-menu-item nav-link" *ngIf="!userLoginOn">Iniciar sesión</a>
+      <a routerLink="userLogin" class="nav-menu-item nav-link" *ngIf="userLoginOn" (click)="CerrarSesion()" >Cerrar sesión</a>
       <label for="check" class="esconder-menu">
         &#215;
       </label>

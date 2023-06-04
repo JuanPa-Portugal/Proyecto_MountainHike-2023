@@ -1,14 +1,44 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+from django.conf import settings
+from django.dispatch import receiver
+from django.db.models.signals import post_save
+from rest_framework.authtoken.models import Token
 
-class Usuario(AbstractUser):
+
+
+
+class User(AbstractUser):
+    email = models.EmailField(max_length=150, unique=True)
+#    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['password']
+
+    class Meta:
+        db_table = 'User'
+        verbose_name = 'Usuario'
+        verbose_name_plural = 'Usuarios'
+
+    def __str__(self):
+        return self.username+" ("+self.email+")"
+
+
+class Cliente(User):
     edad = models.IntegerField()
     telefono = models.CharField(max_length=20)
     ciudad = models.CharField(max_length=30)
     estado_reserva = models.BooleanField(default=False)
 
+    class Meta:
+        db_table = 'cliente'
+        verbose_name = 'Cliente'
+        verbose_name_plural = 'Clientes'
+
+    def __str__(self):
+        return "Cliente "+self.username+" ("+self.email+")"
+
   # Agrega el atributo related_name a los campos groups y user_permissions, porque al estar extendiendo de AbstractUser, se pasa a usar tambien las otras clases de django, Group y Permission, solicitan este cambio, sino da error al querer hacer python manage.py makemigrations y python manage.py migrate 
+    '''
     groups = models.ManyToManyField(
         'auth.Group',
         verbose_name='groups',
@@ -33,7 +63,8 @@ class Usuario(AbstractUser):
 
     def __str__(self):
         return self.username
-    
+    '''
+
     #A partir de aqui colocar el resto de modelos.
 
 class Blog(models.Model):
@@ -73,7 +104,7 @@ class Reserva(models.Model):
     nro_reserva= models.IntegerField()
     valor = models.FloatField()
     id_factura = models.ForeignKey('Factura', on_delete=models.CASCADE)
-    id_usuario= models.ForeignKey('Usuario', on_delete=models.CASCADE)
+    id_usuario= models.ForeignKey('User', on_delete=models.CASCADE)
     id_recorrido = models.ForeignKey('Recorridos', on_delete=models.CASCADE)
     class Meta:
         db_table = 'reserva'
@@ -103,7 +134,7 @@ class Factura(models.Model):
     tipo =  models.CharField(max_length= 1)
     fecha_apertura =  models.DateTimeField()
     fecha_cierre = models.DateTimeField()
-    id_usuario= models.ForeignKey('Usuario', on_delete=models.CASCADE)
+    id_usuario= models.ForeignKey('User', on_delete=models.CASCADE)
 
     class Meta:
             db_table = 'factura'
@@ -114,8 +145,17 @@ class Factura(models.Model):
             return self.tipo
 
 
+
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+@receiver(post_save, sender=Cliente)
+def create_auth_token(sender, instance=None, created=False, **kwargs):
+    if created:
+        Token.objects.create(user=instance)
+
+
+
     
-    
+    '''
 class Admin(models.Model):
     id = models.AutoField(primary_key=True)
     correo = models.CharField(max_length=30)
@@ -128,3 +168,5 @@ class Admin(models.Model):
 
     def __str__(self):
             return self.correo
+
+            '''

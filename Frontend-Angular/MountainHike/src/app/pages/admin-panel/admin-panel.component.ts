@@ -4,8 +4,8 @@ import { MOCK_GUIAS } from './MockGuias';
 import { Guias } from './InterfaceGuias';
 import { Recorridos } from './InterfaceRecorridos';
 import { Blogs } from './InterfaceBlogs';
-import { AdminRecorridosService } from 'src/app/admin-recorridos.service';
-import { AdminBlogsService } from 'src/app/admin-blogs.service';
+import { AdminRecorridosService } from 'src/app/shared/service/admin-recorridos.service';
+import { AdminBlogsService } from 'src/app/shared/service/admin-blogs.service';
 
 
 @Component({
