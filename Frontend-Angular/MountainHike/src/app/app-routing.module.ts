@@ -21,12 +21,12 @@ const routes: Routes = [
   { path: 'admin-panel', component: AdminPanelComponent },
   { path: 'user-panel', component: UserPanelComponent},
   { path: 'recorridos', component: RecorridosComponent},
-  { path: '**', component:Pagina404Component},
   { path: 'user-panel', component: UserPanelComponent},
-  { path:'nosotros', component: NosotrosComponent},
-  { path:'blog', component: BlogsComponent},
-  { path:'carrito', component: CarritoComponent},
-
+  { path: 'nosotros', component: NosotrosComponent},
+  { path: 'blog', component: BlogsComponent},
+  { path: 'carrito', component: CarritoComponent},
+  { path: '**', component:Pagina404Component},
+ 
 ];
 
 @NgModule({
