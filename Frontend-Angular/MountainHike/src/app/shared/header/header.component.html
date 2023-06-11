@@ -8,11 +8,12 @@
     </label>
 
     <nav class="navbar">
-      <a routerLink="" class="nav-menu-item nav-link">Home</a>      
+      <a routerLink="" class="nav-menu-item nav-link">Home</a>
       <a routerLink="nosotros" class="nav-menu-item nav-link">Nosotros</a>
-      <a routerLink="recorridos" class="nav-menu-item nav-link">Recorridos</a>     
+      <a routerLink="recorridos" class="nav-menu-item nav-link">Recorridos</a>
       <a routerLink="blog" class="nav-menu-item nav-link">Blog</a>
-      <a routerLink="userLogin" class="nav-menu-item nav-link">Iniciar sesión</a>
+      <a *ngIf="!loggedUser" routerLink="userLogin" class="nav-menu-item nav-link">Iniciar sesión</a>
+      <a *ngIf="loggedUser" routerLink="userLogout" class="nav-menu-item nav-link">Cerrar sesión</a>
       <label for="check" class="esconder-menu">
         &#215;
       </label>

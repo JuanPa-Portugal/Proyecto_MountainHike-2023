@@ -6,6 +6,8 @@ from django.shortcuts import render
 
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
@@ -61,7 +63,7 @@ class ClienteViewSet(viewsets.ModelViewSet):
 
 
 class BlogViewSet(viewsets.ModelViewSet):
-    permission_classes=[]
+    permission_classes=[IsAuthenticatedOrReadOnly]
     queryset=Blog.objects.all()
     serializer_class= BlogSerializer
 
@@ -70,7 +72,7 @@ class ReservaViewSet(viewsets.ModelViewSet):
     serializer_class= ReservaSerializer
 
 class RecorridoViewSet(viewsets.ModelViewSet):
-    permission_classes=[]
+    permission_classes=[IsAuthenticatedOrReadOnly]
     queryset=Recorridos.objects.all()
     serializer_class= RecorridoSerializer
 

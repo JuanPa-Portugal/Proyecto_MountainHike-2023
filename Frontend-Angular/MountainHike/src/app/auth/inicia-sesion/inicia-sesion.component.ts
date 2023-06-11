@@ -1,66 +1,57 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators} from '@angular/forms';
+import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from "../../auth.service";
+import { LoggedInUser, UserCredentials } from "../../auth/auth";
 
 @Component({
   selector: 'app-inicia-sesion',
   templateUrl: './inicia-sesion.component.html',
   styleUrls: ['./inicia-sesion.component.css']
 })
-export class IniciaSesionComponent  implements OnInit {
 
-  loginForm=this.formBuilder.group({
-    email:['florencia@gmail.com', [Validators.required, Validators.email ]],
-    password:['1234', Validators.required]
-
-  })
-
-  constructor(private formBuilder:FormBuilder, private router:Router) { }
+export class IniciaSesionComponent implements OnInit {
+  loginForm: FormGroup = new FormGroup({});
+  token: string = '';
+  error: string | null = null;
+  //#success: string = null;
+  
+  constructor(
+      private formBuilder: FormBuilder, 
+      private router: Router,
+      private authService: AuthService
+  ) {} 
 
   ngOnInit(): void {
-    
-  }
-  get email(){
-    return this.loginForm.controls.email
-  }
-  get password(){
-    return this.loginForm.controls.password
+    this.loginForm = this.formBuilder.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required]
+    });
   }
 
-  login(){
+  onLogin() {
+    console.log(this.loginForm);
+    console.log(this.loginForm.value);
     if (this.loginForm.valid){
       console.log("llamar al servicio de login");
-      this.router.navigateByUrl('/recorridos');
-      //me redirige hacia recorridos, me tiene que redirigir al dashboard que hay que hacer
+      this.authService.logIn(this.loginForm.value).subscribe({
+        next: (data: LoggedInUser) => {
+            this.token = data.token!;
+            console.log(data);
+            this.router.navigate(['/user-panel']);
+        },
+        error: (errorRes) => {
+          this.error = errorRes;
+        },
+      });
       this.loginForm.reset();
-    }
-    else{
+    } else{
       alert("error al ingresar los datos")
     }
+    this.loginForm.reset();
   }
     
-  
- private Nombre= "Ezequiel";
- private Apellido= "Baez";
- private Edad= 0 ;
- private Email="@gmail";
 
-
-
-// --Metodoget--
- /*getNombre(){
-  return this.Nombre;
- }
- getApellido(){
-  return this.Apellido;
-  
- }
- getEdad(){
-  return this.Edad;
- }
- getEmail(){
-  return this.Email;
- }*/
 
  
   }
