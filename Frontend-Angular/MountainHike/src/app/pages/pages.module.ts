@@ -11,6 +11,7 @@ import { CarritoComponent } from './carrito/carrito.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../app-routing.module';
+import { Pagina404Component } from './pagina404/pagina404.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AppRoutingModule } from '../app-routing.module';
     AdminPanelComponent,
     UserPanelComponent,
     TiendaComponent,
-    CarritoComponent
+    CarritoComponent,
+    Pagina404Component
  
   ],
   imports: [
@@ -39,7 +41,8 @@ import { AppRoutingModule } from '../app-routing.module';
     RecorridosComponent,
     UserPanelComponent,
     TiendaComponent,
-    CarritoComponent
+    CarritoComponent,
+    Pagina404Component
   ]
 })
 

@@ -10,6 +10,7 @@ import { RecorridosComponent } from './pages/recorridos/recorridos.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { BlogsComponent } from './pages/blogs/blogs.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
+import { Pagina404Component } from './pages/pagina404/pagina404.component';
 
 
 const routes: Routes = [
@@ -20,12 +21,12 @@ const routes: Routes = [
   { path: 'admin-panel', component: AdminPanelComponent },
   { path: 'user-panel', component: UserPanelComponent},
   { path: 'recorridos', component: RecorridosComponent},
-  
   { path: 'user-panel', component: UserPanelComponent},
-  { path:'nosotros', component: NosotrosComponent},
-  { path:'blog', component: BlogsComponent},
-  { path:'carrito', component: CarritoComponent},
-
+  { path: 'nosotros', component: NosotrosComponent},
+  { path: 'blog', component: BlogsComponent},
+  { path: 'carrito', component: CarritoComponent},
+  { path: '**', component:Pagina404Component},
+ 
 ];
 
 @NgModule({

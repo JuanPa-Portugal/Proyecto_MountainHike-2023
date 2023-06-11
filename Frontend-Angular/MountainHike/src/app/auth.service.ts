@@ -55,22 +55,12 @@ export class AuthService {
     );
     this.loggedUserSubject.next(user);
     localStorage.setItem('loggedUser', JSON.stringify(user));
+    console.log("login en auth service");
   }
   logout() {
     this.loggedUserSubject.next(null);
     localStorage.removeItem('loggedUser');
-    //this.router.navigate(['/login']);
+    console.log("logut en auth service");
   }
-
-  // login(account: loginModel) {
-  //   return this.http
-  //     .post<AuthResData>('http://localhost:8000/api/v1/cuentas/login/', account)
-  //     .pipe(
-  //       catchError(this.handleError),
-  //       tap((res) => {
-  //         this.handleAuth(res);
-  //       })
-  //     );
-  // }
 
 }

@@ -14,9 +14,10 @@
 <!--/logo miniatura-->
       <h2 class="fw-bold text-center py-5">Bienvenido otra vez</h2>
       <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
         <div class="mb-3">
           <label for="exampleInputUsername1" class="form-label">Ingrese su nombre de usuario</label>
-          <input type="text" formControlName="username"  required>
+          <input formControlName="username" type="text" class="form-control" required>
           <!-- Mostrar mensaje de error si el campo username no tiene valor -->
           <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
             <small class="text-danger">El nombre de usuario es requerido.</small>
@@ -24,7 +25,7 @@
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-          <input type="password" formControlName="password" required>
+          <input formControlName="password" type="password" class="form-control" required>
           <!-- Mostrar mensaje de error si el campo password no tiene valor -->
           <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
             <small class="text-danger">La contraseña es requerida.</small>
