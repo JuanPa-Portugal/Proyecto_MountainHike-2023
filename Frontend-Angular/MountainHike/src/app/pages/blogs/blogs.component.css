@@ -1,4 +1,25 @@
+.seccion-novedades img{
+    max-width: 100%;
+    border-radius:8%;
+   }
+   
+   .titprincipal {
+    color: #98ca3e;
+    text-align: center;
+    font-size: 3rem;
+   }
 
+   .borde-noticia {
+    border: 3px solid #98ca3e;
+    border-radius: 20px;
+    background-color: #393939;
+   }
+ 
+   .h4 {
+    padding-bottom: 1rem;
+   }
+
+/* 
  .seccion-novedades img{
   max-width: 100%;
   border-radius:8%;
@@ -23,4 +44,4 @@
   padding-bottom: 1rem;
  }
  
- 
+  */

@@ -14,7 +14,7 @@ from .models import Cliente
 #admin.site.register(Usuario, UsuarioAdmin)
 
 class RecorridosAdmin(admin.ModelAdmin):
-    list_display = ['id','titulo','imagen','descripcion','dificultad','precio']
+    list_display = ['id','titulo','precio']
 admin.site.register(Recorridos, RecorridosAdmin)
 
 class ReservaAdmin(admin.ModelAdmin):
@@ -22,11 +22,11 @@ class ReservaAdmin(admin.ModelAdmin):
 admin.site.register(Reserva, ReservaAdmin)
 
 class GuiasAdmin(admin.ModelAdmin):
-    list_display = ('id','nombre', 'apellido', 'foto', 'descripcion')
+    list_display = ('id','nombre', 'apellido')
 admin.site.register(Guias, GuiasAdmin)
 
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ['id', 'titulo', 'articulo', 'imagen', 'fecha']
+    list_display = ['id', 'titulo', 'fecha']
 admin.site.register(Blog, BlogAdmin)
 
 class FacturaAdmin(admin.ModelAdmin):
@@ -38,7 +38,7 @@ class UserAdmin(admin.ModelAdmin):
 admin.site.register(User, UserAdmin)
 
 class ClienteAdmin(admin.ModelAdmin):
-    list_display = ['username','email','edad','telefono','ciudad']
+    list_display = ['username','email','telefono','ciudad']
 admin.site.register(Cliente, ClienteAdmin)
 
 '''

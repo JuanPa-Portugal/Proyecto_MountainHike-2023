@@ -23,11 +23,11 @@
     <img class="img_nosotros" src="../Assets/img/img_nosotros/profe.jpg" alt="profesor de educación física" />
     <img class="img_nosotros" src="../Assets/img/img_nosotros/profe2.jpg" alt="profesor de educación física" />
     <img class="img_nosotros" src="../Assets/img/img_nosotros/profe3.jpg" alt="profesora de educación física" /> -->
- <div *ngFor="let i of guias" class="guias" >
-<img src="{{i.foto}}" class="img-guias">
+ <div *ngFor="let guia of guias" class="guias" >
+  <img src="{{guia.foto}}" class="img-guias">
     <div class="row container">
-      <h2 class="datos-guia" class= "col-xl-4 col-md-12 col-sm-12 mb-3">{{i.nombre}} {{i.apellido}}</h2>
-      <p class="descripcion-guia" class="col-xl-10 col-md-12 col-sm-12 ">{{i.descripcion}}</p>
+      <h2 class="datos-guia" class= "col-xl-4 col-md-12 col-sm-12 mb-3">{{guia.nombre}} {{guia.apellido}}</h2>
+      <p class="descripcion-guia" class="col-xl-10 col-md-12 col-sm-12 ">{{guia.descripcion}}</p>
     </div>
   </div>
     <p class="proximamente">¡Próximamente!</p>

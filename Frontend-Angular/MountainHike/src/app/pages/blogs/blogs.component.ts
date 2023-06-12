@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminBlogsService } from 'src/app/shared/service/admin-blogs.service';
 
 @Component({
   selector: 'app-blogs',
@@ -7,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private blog:AdminBlogsService) 
+  {
+    this.blog.getBlogs().subscribe({
+      next: (blogsData: any[])=>{
+        this.blogs=blogsData
+      },
+      error:(errorData: any)=>{
+        console.error(errorData)
+      }
+    })
+  }
+
+  blogs:Array<any>=[]
 
   ngOnInit(): void {
   }

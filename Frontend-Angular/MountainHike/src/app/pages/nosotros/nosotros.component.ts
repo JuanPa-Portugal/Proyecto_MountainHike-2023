@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Guias } from '../admin-panel/InterfaceGuias';
 import { GuiasService } from 'src/app/shared/service/guias.service';
 
 @Component({
@@ -8,12 +7,21 @@ import { GuiasService } from 'src/app/shared/service/guias.service';
   styleUrls: ['./nosotros.component.css']
 })
 export class NosotrosComponent implements OnInit {
-guias: Guias[] = []
 
-  constructor(private apiGuias:GuiasService) { }
-
-  ngOnInit(): void {
-    this.apiGuias.getGuias().subscribe((data:Guias[]) => {this.guias = data});
+  constructor(private guia:GuiasService) 
+  {
+    this.guia.getGuias().subscribe({
+      next: (guiasData: any[])=>{
+        this.guias=guiasData
+      },
+      error:(errorData: any)=>{
+        console.error(errorData)
+      }
+    })
   }
+
+  guias:Array<any>=[]
+
+  ngOnInit(): void { }
 
 }

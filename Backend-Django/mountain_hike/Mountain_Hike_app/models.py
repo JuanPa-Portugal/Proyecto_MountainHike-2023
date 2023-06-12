@@ -71,7 +71,7 @@ class Blog(models.Model):
     id = models.AutoField(primary_key= True)
     titulo = models.CharField(max_length=150)
     articulo = models.TextField()
-    imagen =  models.URLField()
+    imagen =  models.ImageField(upload_to='./Frontend-Angular/MountainHike/src/assets/img/blog', blank=True)
     fecha = models.DateTimeField()
 
     class Meta:
@@ -85,9 +85,9 @@ class Blog(models.Model):
 class Recorridos(models.Model):
     id = models.AutoField(primary_key=True)
     titulo= models.CharField(max_length=100)
-    imagen=  models.URLField()
+    imagen =  models.ImageField(upload_to='./Frontend-Angular/MountainHike/src/assets/img/recorridos', blank=True)
     descripcion=  models.TextField()
-    dificultad= models.CharField(max_length=50)
+    dificultad= models.ImageField(upload_to='./Frontend-Angular/MountainHike/src/assets/img/recorridos')
     precio=  models.FloatField()
 
     class Meta:
@@ -118,7 +118,7 @@ class Guias(models.Model):
     id = models.AutoField(primary_key= True)
     nombre= models.CharField(max_length=150)
     apellido = models.CharField(max_length=150)
-    foto = models.URLField()
+    foto = models.ImageField(upload_to='./Frontend-Angular/MountainHike/src/assets/img/nosotros')
     descripcion = models.TextField()
 
     class Meta:

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminRecorridosService } from 'src/app/shared/service/admin-recorridos.service';
 
 @Component({
   selector: 'app-recorridos',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecorridosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private recorrido:AdminRecorridosService) 
+  {this.recorrido.getRecorridos().subscribe({
+    next: (recorridosData: any[])=>{
+      this.recorridos=recorridosData
+    },
+    error:(errorData: any)=>{
+      console.error(errorData)
+    }
+  })
+   }
 
   ngOnInit(): void {
   }
