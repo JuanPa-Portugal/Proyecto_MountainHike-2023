@@ -77,6 +77,7 @@ class RecorridoViewSet(viewsets.ModelViewSet):
     serializer_class= RecorridoSerializer
 
 class GuiaViewSet(viewsets.ModelViewSet):
+    permission_classes=[IsAuthenticatedOrReadOnly]
     queryset=Guias.objects.all()
     serializer_class= GuiaSerializer
 
