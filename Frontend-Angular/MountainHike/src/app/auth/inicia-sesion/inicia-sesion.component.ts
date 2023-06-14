@@ -40,7 +40,8 @@ export class IniciaSesionComponent implements OnInit {
         next: (data: LoggedInUser) => {
             this.token = data.token!;
             console.log(data);
-            this.router.navigate(['/user-panel']);
+//            this.router.navigate(['/user-panel']);
+            this.router.navigateByUrl(`/user-panel/${data.id}`)
         },
         error: (errorRes) => {
           this.error = errorRes;

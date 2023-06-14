@@ -28,6 +28,22 @@ export class AuthService {
     return this.loggedUserSubject.asObservable();
   }
 
+  recoverPreviousSessionIfPossible() {
+    const loggedUserString  = localStorage.getItem('loggedUser');
+    if (loggedUserString) {
+      const storedObj: LoggedInUser | null = JSON.parse(loggedUserString)
+    
+      if (storedObj !== null) {
+        const loadedUser: LoggedInUser = {
+          id: storedObj.id,
+          username: storedObj.username,
+          token: storedObj.token
+        };
+        this.loggedUserSubject.next(loadedUser);
+      }
+    }
+  }
+
 
   private handleError(error: HttpErrorResponse) {
     console.log(error);

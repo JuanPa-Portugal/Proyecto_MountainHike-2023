@@ -1,42 +1,35 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-// import { MOCK_USER } from './MockUser';
-
 import { User } from 'src/app/shared/service/user';
 import { IniciarSesionService } from 'src/app/shared/service/iniciar-sesion.service';
+import { UserProfile } from 'src/app/user-profile';
+import { UserPanelService } from 'src/app/user-panel.service';
+import { ActivatedRoute } from '@angular/router';
+
+
 @Component({
   selector: 'app-user-panel',
   templateUrl: './user-panel.component.html',
   styleUrls: ['./user-panel.component.css']
 })
-export class UserPanelComponent implements OnInit, OnDestroy {
-  
-  // user:User[]=[];
-  userLoginOn: boolean= false;
-  userData: User | undefined;
+export class UserPanelComponent implements OnInit {
 
-
-// user: any;
+  userProfile: UserProfile | null = null;
   
 
-  constructor(private loginService:IniciarSesionService) { }
-  ngOnDestroy(): void {
-    this.loginService.currentUserData.unsubscribe();
-    this.loginService.currentUserLoginOn.unsubscribe();
-  }
-
+  constructor(
+    private userPanelService: UserPanelService, 
+    private activatedRoute: ActivatedRoute) {}
+  
   ngOnInit(): void {
-    this.loginService.currentUserLoginOn.subscribe({
-      next:(userLoginOn)=>{
-        this.userLoginOn= userLoginOn
+    const userId = this.activatedRoute.snapshot.paramMap.get('id');
+    this.userPanelService.getUserProfile(userId).subscribe({
+      next: (data: UserProfile) => {
+        console.log(data);
+        this.userProfile = data;
+      }, 
+      error: (error) => {
+        console.log(error);
       }
-      
-    })
-    this.loginService.currentUserData.subscribe({
-      next:(userData)=>{
-        this.userData=userData;
-      }
-    })
-    // this.user = MOCK_USER
+    });
   }
-
 }

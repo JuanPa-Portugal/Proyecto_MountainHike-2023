@@ -7,8 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth/auth.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TokenInterceptor } from './token.interceptor';
 
 
 
@@ -28,7 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule
 
     ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
