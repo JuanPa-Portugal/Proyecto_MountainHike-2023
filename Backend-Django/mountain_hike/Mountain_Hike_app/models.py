@@ -118,7 +118,7 @@ class Guias(models.Model):
     id = models.AutoField(primary_key= True)
     nombre= models.CharField(max_length=150)
     apellido = models.CharField(max_length=150)
-    foto = models.ImageField(upload_to='./Frontend-Angular/MountainHike/src/assets/img/nosotros')
+    foto = models.ImageField(upload_to='./Frontend-Angular/MountainHike/src/assets/img/nosotros', blank=True)   
     descripcion = models.TextField()
 
     class Meta:

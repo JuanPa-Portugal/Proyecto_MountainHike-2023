@@ -1,7 +1,7 @@
 <main [ngClass]="'seccion-novedades'">
     <div [ngClass]="'container'">
         <h1 [ngClass]="['text-center' ,'titprincipal']"> Novedades! </h1>
-        <h4 [ngClass]="'text-center'">Últimos Meses</h4>
+        <h4 [ngClass]="['text-center', 'mb-4']">Últimos Meses</h4>
         <div [ngClass]="['row' , 'borde-noticia'  ,'mb-3']" *ngFor="let blog of blogs">
             <div [ngClass]="['col-xl-4','col-lg-6', 'col-md-6', 'col-sm-12','mb-3']" >
                 <p [ngClass]="'ms-3'"></p>

@@ -1,11 +1,18 @@
 h1{
     text-align: center;
     padding: 10px;
+    color: #98ca3e;
+    
 }
 .nosotros{
     text-align: justify;    
-    margin: 20px 50px;
+    margin: 20px ;
     font-size: 20px ;
+    
+}
+.subtit{
+    text-align: justify;
+    margin: 20px ;
 }
 /* .img_nosotros{
     width: 300px;
@@ -13,42 +20,49 @@ h1{
     margin: 50px;
     border-radius: 10px; 
 }*/
-
+.descripcion-guia{
+    text-align: justify;
+}
 .proximamente{
     text-align: center;
     font-size: 20px;
 }
-
-
-
+.foto{
+    /* padding-left: 80px; */
+    border-radius: 50px;
+    
+    
+}
+.datos-guia{
+    margin-top: 15px;
+    
+}
 .guias{
-    display: flex;
-    margin-bottom: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    border: 1px solid #1C9359;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 30px;
+
+    border: 3px solid #98ca3e;
+    border-radius: 20px;
+    background-color: #393939;
+    margin: 20px;
     
 }
 
-.img-guias {
+
+/* .img-guias {
     max-width: 15rem;
     min-width: 15rem;
     max-height: 15rem;
-    margin-right: 2rem;
+    border-radius: 15px;
+    
 
-}
-.row {
+} */
+/* .row {
     flex-wrap: wrap;
     align-content: flex-start;
-}
+} */
 
 
 
-@media only screen and (max-width: 700px){
+/* @media only screen and (max-width: 700px){
     
     .guias{
         display: flex;
@@ -63,4 +77,4 @@ h1{
         margin-right: 0;
     }
     
-}
+} */

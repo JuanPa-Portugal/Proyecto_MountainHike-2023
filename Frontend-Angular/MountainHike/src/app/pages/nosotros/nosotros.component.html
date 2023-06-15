@@ -1,4 +1,4 @@
-<main>
+<main class="container">
     <h1>Nuestra Historia</h1>
     <p class="nosotros">
       Somos un equipo de profesionales entre los que hay profes de educación
@@ -15,24 +15,23 @@
       cara. Es un hecho: la aventura hace feliz a la gente. La satisfacción de
       cumplir tu meta es tu recompensa y nuestra obligación. Al contratar un
       guía local, estarás haciendo lo que amas y viviendo una
-      experiencia memorable.<br><br> Conocé a nuestros guias:
+      experiencia memorable.
     </p>
-    <!-- <img class="img_nosotros" src="../Assets/img/img_nosotros/ciclista.jpg" alt="ciclista" />
-    <img class="img_nosotros" src="../Assets/img/img_nosotros/escaladora.jpg" alt="escaladora" />
-    <img class="img_nosotros" src="../Assets/img/img_nosotros/guiamontania.jpg" alt="guia de montaña" />
-    <img class="img_nosotros" src="../Assets/img/img_nosotros/profe.jpg" alt="profesor de educación física" />
-    <img class="img_nosotros" src="../Assets/img/img_nosotros/profe2.jpg" alt="profesor de educación física" />
-    <img class="img_nosotros" src="../Assets/img/img_nosotros/profe3.jpg" alt="profesora de educación física" /> -->
- <div *ngFor="let guia of guias" class="guias" >
-  <img src="{{guia.foto}}" class="img-guias">
-    <div class="row container">
-      <h2 class="datos-guia" class= "col-xl-4 col-md-12 col-sm-12 mb-3">{{guia.nombre}} {{guia.apellido}}</h2>
-      <p class="descripcion-guia" class="col-xl-10 col-md-12 col-sm-12 ">{{guia.descripcion}}</p>
+    <h2 class="subtit"> Conocé a nuestros guias:</h2>
+  
+ <div *ngFor="let guia of guias" class="row guias" >
+  
+      <img  [ngClass]="['col-xl-4','col-lg-4', 'col-md-11', 'col-sm-11','m-4', 'foto']"  src="{{guia.foto}}">
+      <div [ngClass]="['col-xl-6','col-lg-6', 'col-md-11', 'col-sm-11','m-3', 'datos-guia']">
+      <h2 class="datos-guia" >{{guia.nombre}} {{guia.apellido}}</h2>
+      <p class="descripcion-guia">{{guia.descripcion}}</p>
     </div>
-  </div>
-    <p class="proximamente">¡Próximamente!</p>
+    
+   
+</div>
+    <!-- <p class="proximamente">¡Próximamente!</p>
     <p class="proximamente">Sumate a nuestro equipo</p>
-    <p class="proximamente">Envíanos tu currículum</p>
+    <p class="proximamente">Envíanos tu currículum</p> -->
   </main>
 
  
