@@ -5,7 +5,7 @@
           <div class="row align-items-center">
             <div class="col-md-6 ">
               <h2>
-                MOUNTAIN HIKE CORDOBA <br> <span class="title-hero">Explora con confianza</span>
+                MOUNTAIN HIKE CÓRDOBA <br> <span class="title-hero">Explora con confianza</span>
               </h2>
               <P class="d-none d-md-block">
                 Saca al aventurero que hay en ti <br>
@@ -26,7 +26,7 @@
        <!--Section cards-trayectos-->
 
  <p class="reseña">
-  Somos un equipo de profesionales entre los que hay profes de educación
+  Somos un equipo de profesionales entre los que hay profesores de educación
   física, personal trainers, escaladores, ciclistas, guías. Nos une el
   mismo sentimiento, que es la pasión por lo que hacemos, pero por sobre
   todo amor y respeto por la naturaleza . Queremos inspirar a las personas
@@ -40,11 +40,12 @@
   <div class="row">
     <div class="col">
       <h2 class="title_hikeTheMountain">Hike the Mountain</h2>
+      <h4 class="subtitulo">Los más elegidos</h4>
     </div>
   </div>
   <div class="row mb-5">
       <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4 ">
-        <div class="card shadow ">
+        <div class="card ">
           <img src="../../assets/img/trayectos/imagen02.jpg" class="card-img-top " alt="Los Gigantes" />
           <div class="card-body">
             <h5 class="card-title">Los Gigantes</h5>
@@ -58,13 +59,13 @@
               importantes del país, sus paredes poseen unas 400 rutas equipadas
               de escalada deportiva.
             </p>
-            <a routerLink="userLogin" class="btn btn_1">Reservas</a>
+            <!-- <a routerLink="userLogin" class="btn btn_1">Reservas</a> -->
           </div>
         </div>
       </div>
       
       <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4 ">
-        <div class="card shadow">
+        <div class="card">
           <img src="../../assets/img/trayectos/imagen0302.jpg" class="card-img-top" alt="Los Terrones"/>
           <div class="card-body">
             <h5 class="card-title">Los Terrones</h5>
@@ -78,12 +79,12 @@
               año. Su recorrido entre cañadones y formaciones rocosas
               multicolores es una invitación para el asombro.
             </p>
-            <a routerLink="userLogin" class="btn_1 btn">Reservas</a>
+            <!-- <a routerLink="userLogin" class="btn_1 btn">Reservas</a> -->
           </div>
         </div>
       </div> 
       <div class=" col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4 ">
-        <div class="card shadow">
+        <div class="card">
           <img src="../../assets/img/trayectos/imagen0402.jpg" class="card-img-top" alt="Champaquí" />
           <div class="card-body">
             <h5 class="card-title">Cerro Champaquí</h5>
@@ -96,7 +97,7 @@
               nuevas y únicas experiencias y aventuras. Ofrece la posibilidad de regresar las 
               innumerables veces que puedas, con todos  los climas imaginables!!!.
             </p>
-            <a routerLink="userLogin" class="btn btn_1">Reservas</a>
+            <!-- <a routerLink="userLogin" class="btn btn_1">Reservas</a> -->
           </div>
         </div>
       </div>
@@ -253,7 +254,7 @@
 
     <div class=" col-xl-6  col col-md-7 col-sm-12 p-4 rounded-end mb-5">
       <h4 class="text-center py-5">No te pierdas las próximas salidas</h4>
-      <form class="needs-validation"novalidate>
+      <form >
         <div class="mb-3">
           <label for="exampleInputNombre" class="form-label">Nombre</label>
           <input type="text" class="form-control custom-input" id="exampleInputNombre"placeholder="ingrese su nombre"required/>
@@ -287,12 +288,35 @@
           </div>
         </div>
         <div class="d-grid">
-          <button type="submit" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <button type="submit" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
             Suscribite
           </button>
           <legend class="text-center mt-3">Para recibir novedades</legend>
         </div>
       </form>
+    
+
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <!-- <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div> -->
+            
+            <div class="modal-footer">
+              <div class="popup">
+              <p>Gracias por suscribirte!</p>
+              <p >Te vamos a mantener al tanto de las novedades</p>
+            </div>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   </div>
 </div>

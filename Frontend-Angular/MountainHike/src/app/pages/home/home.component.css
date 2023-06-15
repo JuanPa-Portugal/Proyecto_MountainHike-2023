@@ -46,6 +46,21 @@
   font-size: 0.7em;
 }
 
+.subtitulo{
+  color: #98ca3e;
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: -20px;
+  
+}
+.card{
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(20,19,20,1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(20,19,20,1);
+  box-shadow: 10px 10px 5px 0px rgba(20,19,20,1);
+
+
+}
+
 .overlay .btn-primary {
 --bs-btn-bg:#99c834b4;
 --bs-btn-border-color:none;
@@ -145,8 +160,17 @@ margin: auto;
 .img-avatar-size{
   width: 150px;
   margin-bottom: 3%;
+  
 }
-
+.modal-title{
+  text-align: center;
+}
+.modal{
+  --bs-modal-footer-border-width: 0px;
+}
+.popup{
+  margin-right: 35px;
+}
 
 @media (max-width: 767px) {
   .text-size {
@@ -159,4 +183,5 @@ margin: auto;
 
   
 }
+
 
