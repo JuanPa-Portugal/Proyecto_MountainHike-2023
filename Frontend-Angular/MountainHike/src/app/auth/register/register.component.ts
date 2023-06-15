@@ -14,9 +14,9 @@ export class RegisterComponent {
 
   constructor(private formBuilder: FormBuilder, private router: Router) {
     this.registroForm = this.formBuilder.group({
-      nombre: ['Florencia', Validators.required],
-      apellido: ['Morisse', Validators.required],
-      email: ['florencia@gmail.com', [Validators.required, Validators.email]],
+      nombre: ['', Validators.required],
+      apellido: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]],
       password2: ['', Validators.required],
       cb: [true, Validators.requiredTrue]
