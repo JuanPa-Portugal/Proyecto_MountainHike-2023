@@ -53,7 +53,7 @@
   margin-top: -20px;
   
 }
-.card{
+.card {
   -webkit-box-shadow: 10px 10px 5px 0px rgba(20,19,20,1);
   -moz-box-shadow: 10px 10px 5px 0px rgba(20,19,20,1);
   box-shadow: 10px 10px 5px 0px rgba(20,19,20,1);
@@ -133,6 +133,26 @@ margin: auto;
 .modal-content{
   background-color: #2d2e2f;
   color:#fff
+}
+.tamanio{
+  height: 800px;
+}
+.btnarecorridos{
+  color: aliceblue;
+  font-size: 25px;
+  height: 100px;
+  margin-bottom: 40px;
+  text-align: center;
+  --bs-btn-bg:#99c834b4;
+--bs-btn-border-color:none;
+--bs-btn-hover-bg:#97d11be1;
+--bs-btn-hover-border-color:none;
+--bs-btn-active-border-color:none;
+--bs-btn-active-bg: #99c834b4;
+--bs-btn-disabled-border-color: #99c834b4;
+-webkit-box-shadow: 10px 10px 5px 0px rgba(20,19,20,1);
+-moz-box-shadow: 10px 10px 5px 0px rgba(20,19,20,1);
+box-shadow: 10px 10px 5px 0px rgba(20,19,20,1);
 }
 
 .btn-secondary{

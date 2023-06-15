@@ -3,6 +3,8 @@
   font-family: gadugi;
   src: url(assets/Fonts/gadugi-normal.ttf);
 }
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
 
 body {
   background-color: #2d2e2f;

@@ -65,6 +65,10 @@ header {
 #check {
   display: none;
 }
+.btn_carrito{
+  background-color: RGBA(152,202,62,0.66);
+  border: none;
+}
 
 /* RESPONSIVE */
 @media(max-width:768px) {

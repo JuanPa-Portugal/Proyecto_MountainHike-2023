@@ -1,57 +1,19 @@
 <div class="container">
-
-<h2 class="mx-3 m-2 recorridos">Recorridos</h2>
-
-
-<div class="clearfix m-4 border border-dark-subtle rounded contenedor" *ngFor="let recorrido of recorridos">
-  <img src="{{recorrido.imagen}}"  class="col-md-6 float-md-end m-3 ms-md-3 img-recorridos rounded " alt="cerro Los Gigantes">
-  <h5 class="titulo m-1">
+  <h2 class="mx-4 m-2 recorridos">Recorridos</h2>
+  <div class="clearfix m-4 border border-dark-subtle rounded contenedor" *ngFor="let recorrido of recorridos">
+    <img src="{{recorrido.imagen}}"  class="col-md-6 float-md-end m-3 ms-md-3 img-recorridos rounded " alt="cerro Los Gigantes">
+    <h5 class="titulo m-4">
     {{recorrido.titulo}}
-  </h5>
-  <p class="texto m-2">
+    </h5>
+    <p class="texto m-4">
     {{recorrido.descripcion}}    
-  </p>
-  <button type="button" class="btn btn-primary m-2">Seleccionar Fecha</button>
-  <button (click)="clima_LosGigantes()" type="button" class="btn btn-outline-secondary m-2">Consultá el clima</button>
-  <img class="dificultad" src="{{recorrido.dificultad}}" alt="dificultad máxima">
+    </p>
+    <button type="button" class="btn btn-primary m-4"routerLink="/carrito">Seleccionar Fecha</button>
+    <button (click)="clima_LosGigantes()" type="button" class="btn btn-outline-secondary m-2">Consultá el clima</button>
+    <img class="dificultad" src="{{recorrido.dificultad}}" alt="dificultad máxima">
+  </div>
 </div>
 
-
-<!-- <div class="clearfix m-4 border border-dark-subtle rounded contenedor">
-  <img src="../../../assets/img/recorridos/cerromogotes.jpg"  class="col-md-6 float-md-start m-3 ms-md-3 img-recorridos rounded" alt="Paseo Los Mogotes y Paso del Indio ">
-  <h5 class="titulo m-1">Paseo Los Mogotes y Paso del Indio </h5>
-  <p class="texto m-2">
-    Entre vistas panorámicas increíbles, sitios para refrescarse y senderos para caminar, Los Mogotes es un paseo completo en Capilla del Monte. A solo dos kilómetros del área céntrica de la localidad, se puede llegar caminando, en bici o en auto.    
-  </p>
-  <button type="button" class="btn btn-primary m-1">Seleccionar Fecha</button>
-  <button (click)="clima_CerroMogotes()" type="button" class="btn btn-outline-secondary m-1">Consultá el clima</button>
-  <img class="dificultad" src="../../../assets/img/recorridos/dif-min.png" alt="dificultad mínima">
-</div>
-
-
-<div class="clearfix m-4 border border-dark-subtle rounded contenedor">
-  <img src="../../../assets/img/recorridos/valledeloslisos.jpg"  class="col-md-6 float-md-end m-3 ms-md-3 img-recorridos rounded" alt="Valle de los Lisos">
-  <h5 class="titulo m-1">Valle de los Lisos</h5>
-  <p class="texto m-2">
-    Caminata está enclavada en el macizo de Los Gigantes y tiene una extensión de unos 16 km aproximadamente.El paseo comienza por la ladera de una montaña, luego junto a unos pajonales y finalmente hasta la base del macizo. En el camino se podrá escuchar el sonido de algunos arroyos de la zona y el aroma a hierbas serranas.    
-  </p>
-  <button type="button" class="btn btn-primary m-1">Seleccionar Fecha</button>
-  <button (click)="clima_ValleDeLosLisos()" type="button" class="btn btn-outline-secondary m-1">Consultá el clima</button>
-  <img class="dificultad" src="../../../assets/img/recorridos/dif-media.png" alt="dificultad media">
-</div>
-
-
-<div class="clearfix m-4 border border-dark-subtle rounded contenedor"> -->
-  <!-- <img src="../../../assets/img/recorridos/cerrochampaqui.jpg"  class="col-md-6 float-md-start m-3 ms-md-3 img-recorridos rounded" alt="cerro Champaquí">
-  <h5 class="titulo m-1">Cerro Champaquí</h5>
-  <p class="texto m-2">
-    La punta más alta de esta serie de montañas y, por esto, brinda una visión 360 grados de Los   Gigantes.El camino comienza por el sendero norte con una caminata intensa de 5 horas. Luego, una vez en la base del cerro, el grupo aprovecha para dejar mochilas y cargamento en un refugio y se prepara para afrontar el último tramo hasta la cima.La caminata es de dificultad media/alta y lleva todo un día.    
-  </p>
-  <button type="button" class="btn btn-primary m-1">Seleccionar Fecha</button>
-  <button (click)="clima_CerroChampaqui()" type="button" class="btn btn-outline-secondary m-1">Consultá el clima</button>
-  <img class="dificultad" src="../../../assets/img/recorridos/dif-max.png" alt="dificultad máxima">
-</div> -->
-</div>
 
 
 
