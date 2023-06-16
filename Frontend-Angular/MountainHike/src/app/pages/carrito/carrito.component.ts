@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AdminRecorridosService } from 'src/app/shared/service/admin-recorridos.service';
+
 
 @Component({
   selector: 'app-carrito',
@@ -6,7 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./carrito.component.css']
 })
 export class CarritoComponent {
-  dias = Array.from({length: 31}, (_, i) => i + 1);
-  meses = Array.from({length: 12}, (_, i) => i + 1);
-  anios = Array.from({length: 11}, (_, i) => i + 2020);
+
+  constructor(private recorrido:AdminRecorridosService) 
+  {this.recorrido.getRecorridos().subscribe({
+    next: (recorridosData: any[])=>{
+      this.recorridos=recorridosData
+    },
+    error:(errorData: any)=>{
+      console.error(errorData)
+    }
+  })
+  }
+  recorridos:Array<any>=[]
+  
 }
+
