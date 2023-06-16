@@ -1,26 +1,64 @@
 <div class="container">
-  <h2 class="text-center my-4">Carrito de compra</h2>
-  <div class="row">
-    <p>Componente sin terminar **EN DESARROLLO** trabajará con los id de los recorridos(tienda), para agregar recorridos al carrito</p>
-    <div class="col-md-5">
-      <label for="date" class="form-label">Selecciona el dia:</label>
-      <div class="input-group mb-3">
-        <select class="form-select" id="day" name="day">
-          <option selected>Dia</option>
-          <option *ngFor="let dia of dias" [value]="dia">{{dia}}</option>
+  <h2 class="text-center my-4">Conocé Córdoba</h2>
+  <div class="container-fluid principal">
+
+    <div class="row align-items-start">
+      <div class="col secundario">
+        <p class="titulos"><i class="fa fa-map-marker"></i> Recorrido</p>
+        <select class="desplegable">
+          <option *ngFor="let recorrido of recorridos" value="{{recorrido.id}}">
+            {{recorrido.titulo}}
+          </option>
         </select>
-        <select class="form-select" id="month" name="month">
-          <option selected>Mes</option>
-          <option *ngFor="let mes of meses" [value]="mes">{{mes}}</option>
-        </select>
-        <select class="form-select" id="year" name="year">
-          <option selected>Año</option>
-          <option *ngFor="let anio of anios" [value]="anio">{{anio}}</option>
-        </select>
+        
+        
+        
+
+      </div>
+      <div class="col secundario">
+        <p class="titulos"><i class="fa fa-calendar"></i> Elegí la fecha</p>
+
+      </div>
+
+      <div class="container secundario">
+        <div class="row">
+          <div class="col-4">
+            <p class="titulos"><i class="fa fa-user"></i>+</p>
+          </div>
+          <div class="col-4">
+            <p class="titulos">Precio</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <select class="desplegable">
+              <!-- acá va los lugares disponibles según el back -->
+              <option >1</option>
+              <option >2</option>
+              <option >3</option>
+            </select>
+          </div>
+          <div class="col-4">
+            <p></p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="col-md-3 text-end">
-      <button class="btn btn-primary mt-4">Hacer compra</button>
+
+    <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner" >
+        <div class="carousel-item active" >
+          <img class="d-block w-80" src="../../../assets/img/recorridos/cerro champaquí.gif" alt="First slide">
+        </div>
+       
+      </div>
+    </div> -->
+
+    
     </div>
+
+
   </div>
-</div>
+
+
+
