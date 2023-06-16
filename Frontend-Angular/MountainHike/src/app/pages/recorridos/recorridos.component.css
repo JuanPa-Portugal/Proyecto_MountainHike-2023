@@ -2,9 +2,10 @@
     text-shadow: 4px 4px 2px rgba(153,200,52,0.6);
 } */
 .contenedor{
-    box-shadow: -5px 4px 53px -25px rgba(153,200,52,0.5);
-    -webkit-box-shadow: -5px 4px 53px -25px rgba(153,200,52,0.5);
-    -moz-box-shadow: -5px 4px 53px -25px rgba(153,200,52,0.5);
+    border: 3px solid #98ca3e;
+    border-radius: 20px;
+    background-color: #393939;
+    margin: 20px;
 }
 .img-recorridos{
     width: 400px;
