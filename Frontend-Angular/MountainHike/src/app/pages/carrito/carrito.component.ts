@@ -20,6 +20,21 @@ export class CarritoComponent {
   })
   }
   recorridos:Array<any>=[]
+
+  contador:number=0;
+  
+  
+
+  incremento(){
+    this.contador++;
+  }
+  decremento(){
+    if (this.contador>0){
+      this.contador--;
+    }
+  }
+  
+
   
 }
 

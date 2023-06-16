@@ -7,6 +7,7 @@ import { Recorridos } from '../../pages/admin-panel/InterfaceRecorridos';
   providedIn: 'root'
 })
 export class AdminRecorridosService {
+  // [x: string]: number;
   //apiRecorridos = 'http://localhost:3000/recorridos';
   apiRecorridos = 'http://127.0.0.1:8000/api/v1/Recorridos/';
 
