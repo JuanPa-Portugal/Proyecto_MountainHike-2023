@@ -32,7 +32,7 @@ box-shadow: 4px 6px 5px 0px rgba(153,200,52,0.34);
     
 }
 .name{
-    color: aquamarine;
+    color: #98ca3e;
     font-weight: 400;
 }
 img{
@@ -46,5 +46,13 @@ img{
 }
 i{
     color: bisque;
+    
+}
+.btn_reserva{
+    height: 25px;
+    margin-top: 5px;
+    /* color: antiquewhite; */
+    padding-top: 0;
+    background-color: #98ca3e;
     
 }
