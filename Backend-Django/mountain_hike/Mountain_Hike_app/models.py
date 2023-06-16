@@ -88,7 +88,7 @@ class Recorridos(models.Model):
     imagen =  models.ImageField(upload_to='./Frontend-Angular/MountainHike/src/assets/img/recorridos', blank=True)
     descripcion=  models.TextField()
     dificultad= models.ImageField(upload_to='./Frontend-Angular/MountainHike/src/assets/img/recorridos')
-    precio=  models.FloatField()
+    precio=  models.IntegerField()
 
     class Meta:
         db_table = 'recorrido'

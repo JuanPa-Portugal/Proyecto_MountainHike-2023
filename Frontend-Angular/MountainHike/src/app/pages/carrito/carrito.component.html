@@ -1,64 +1,32 @@
 <div class="container">
   <h2 class="text-center my-4">Conocé Córdoba</h2>
-  <div class="container-fluid principal">
-
-    <div class="row align-items-start">
-      <div class="col secundario">
-        <p class="titulos"><i class="fa fa-map-marker"></i> Recorrido</p>
-        <select class="desplegable">
-          <option *ngFor="let recorrido of recorridos" value="{{recorrido.id}}">
-            {{recorrido.titulo}}
-          </option>
-        </select>
-        
-        
-        
-
-      </div>
-      <div class="col secundario">
-        <p class="titulos"><i class="fa fa-calendar"></i> Elegí la fecha</p>
-
-      </div>
-
-      <div class="container secundario">
-        <div class="row">
-          <div class="col-4">
-            <p class="titulos"><i class="fa fa-user"></i>+</p>
-          </div>
-          <div class="col-4">
-            <p class="titulos">Precio</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-4">
-            <select class="desplegable">
-              <!-- acá va los lugares disponibles según el back -->
-              <option >1</option>
-              <option >2</option>
-              <option >3</option>
-            </select>
-          </div>
-          <div class="col-4">
-            <p></p>
+  <div class="container principal">
+    <div class="row mb-5">
+      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-2" *ngFor="let recorrido of recorridos">
+        <div class="card tamanio">
+          <img  src="{{recorrido.imagen}}" class="card-img-top" alt="Los Gigantes" />
+          <div class="card-body">
+            <p class="card-title name" >{{recorrido.titulo}}</p>
+            <div class="row">
+              <p class="card-title col"><i class="fas fa-tag"></i> Por persona ${{recorrido.precio}}</p>
+              <p class="card-title col"><i class="fas fa-person-walking"></i> 8 horas</p>
+            </div>
+            <div class="row">
+              <button (click)="decremento()" class="btn col" >
+                <i class="fas fa-user-minus"></i>
+              </button>
+              <span class="col">{{contador}}</span>
+              <button (click)="incremento()" class="btn col">
+              <i class="fas fa-user-plus"></i>
+              </button>
+            </div>
+            <div class="row">
+              <p class="col">Total: </p>
+              <span class="col">{{contador * recorrido.precio}}</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner" >
-        <div class="carousel-item active" >
-          <img class="d-block w-80" src="../../../assets/img/recorridos/cerro champaquí.gif" alt="First slide">
-        </div>
-       
-      </div>
-    </div> -->
-
-    
-    </div>
-
-
   </div>
-
-
-
+</div>
