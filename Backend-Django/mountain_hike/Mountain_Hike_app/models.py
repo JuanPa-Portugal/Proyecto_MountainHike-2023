@@ -89,6 +89,8 @@ class Recorridos(models.Model):
     descripcion=  models.TextField()
     dificultad= models.ImageField(upload_to='./Frontend-Angular/MountainHike/src/assets/img/recorridos')
     precio=  models.IntegerField()
+    hsDuracion = models.FloatField()
+    cantidadMaximaDeParticipantes = models.IntegerField()
 
     class Meta:
         db_table = 'recorrido'
@@ -121,6 +123,7 @@ class FechaRecorrido(models.Model):
     fecha = models.DateTimeField()
     recorrido = models.ForeignKey(Recorridos, on_delete=models.CASCADE)
     guia = models.ForeignKey(Guias, on_delete=models.PROTECT)
+    
 
     class Meta:
             db_table = 'FechaRecorrido'
