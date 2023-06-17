@@ -131,7 +131,7 @@ class FechaRecorrido(models.Model):
             verbose_name_plural = 'Fechas de Recorrido'
 
     def __str__(self):
-            return self.recorrido.__str__+' el '+self.fecha.strftime("%Y/%m/%d a las %H:%M:%S")
+            return self.recorrido.titulo+' el '+self.fecha.strftime("%Y/%m/%d a las %H:%M:%S")
 
 
 
