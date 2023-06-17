@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django_filters.rest_framework import DjangoFilterBackend
 
 # Create your views here.
 
@@ -86,6 +87,8 @@ class FechaRecorridoViewSet(viewsets.ModelViewSet):
     permission_classes=[IsAuthenticatedOrReadOnly]
     queryset=FechaRecorrido.objects.all()
     serializer_class=FechaRecorridoSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['id','recorrido','guia']
 
 
 #Siguiendo esta guia: https://mattermost.com/blog/user-authentication-with-the-django-rest-framework-and-angular/ - INICIO
