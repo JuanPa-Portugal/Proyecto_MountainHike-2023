@@ -5,6 +5,7 @@ from .models import Blog
 from .models import Reserva
 from .models import Recorridos
 from .models import Guias
+from .models import FechaRecorrido
 
 class UserSerializer(serializers.ModelSerializer):
 
@@ -45,5 +46,9 @@ class GuiaSerializer(serializers.ModelSerializer):
   fields='__all__'
   #fields=('nombre','observacion')}
 
+class FechaRecorridoSerializer(serializers.ModelSerializer):
+  class Meta:
+    model= FechaRecorrido
+    fields='__all__'
 
   

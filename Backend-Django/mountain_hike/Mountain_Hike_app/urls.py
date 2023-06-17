@@ -12,6 +12,7 @@ router.register(r'Recorridos',views.RecorridoViewSet)
 router.register(r'Clientes',views.ClienteViewSet)
 router.register(r'Guias',views.GuiaViewSet)
 router.register(r'Users',views.UserViewSet)
+router.register(r'FechaRecorridos',views.FechaRecorridoViewSet)
 
 #----
 urlpatterns = [

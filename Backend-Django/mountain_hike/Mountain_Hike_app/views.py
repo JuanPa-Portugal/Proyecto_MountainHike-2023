@@ -21,13 +21,14 @@ from .serializers import ReservaSerializer
 from .serializers import RecorridoSerializer
 from .serializers import GuiaSerializer
 from .serializers import ClienteSerializer
+from .serializers import FechaRecorridoSerializer
 
 from .models import Cliente
 from .models import Blog
 from .models import Reserva
 from .models import Recorridos
 from .models import Guias
-
+from .models import FechaRecorrido
 
 
 from django.contrib.auth import authenticate, login, logout
@@ -81,6 +82,10 @@ class GuiaViewSet(viewsets.ModelViewSet):
     queryset=Guias.objects.all()
     serializer_class= GuiaSerializer
 
+class FechaRecorridoViewSet(viewsets.ModelViewSet):
+    permission_classes=[IsAuthenticatedOrReadOnly]
+    queryset=FechaRecorrido.objects.all()
+    serializer_class=FechaRecorridoSerializer
 
 
 #Siguiendo esta guia: https://mattermost.com/blog/user-authentication-with-the-django-rest-framework-and-angular/ - INICIO
