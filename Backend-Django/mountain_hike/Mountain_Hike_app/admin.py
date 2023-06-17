@@ -18,7 +18,7 @@ class RecorridosAdmin(admin.ModelAdmin):
 admin.site.register(Recorridos, RecorridosAdmin)
 
 class ReservaAdmin(admin.ModelAdmin):
-    list_display = ['id', 'fecha_reserva', 'nro_reserva', 'valor', 'id_usuario', 'id_recorrido']
+    list_display = ['id', 'fecha_reserva', 'nro_reserva', 'valor']
 admin.site.register(Reserva, ReservaAdmin)
 
 class GuiasAdmin(admin.ModelAdmin):
@@ -30,7 +30,7 @@ class BlogAdmin(admin.ModelAdmin):
 admin.site.register(Blog, BlogAdmin)
 
 class FacturaAdmin(admin.ModelAdmin):
-    list_display = ['id','total','tipo','fecha_apertura','fecha_cierre', 'id_usuario']
+    list_display = ['id','total','tipo','fecha']
 admin.site.register(Factura, FacturaAdmin)
 
 class UserAdmin(admin.ModelAdmin):
