@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../app-routing.module';
 import { Pagina404Component } from './pagina404/pagina404.component';
+import { FechasDeRecorridoComponent } from './fechas-de-recorrido/fechas-de-recorrido.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { Pagina404Component } from './pagina404/pagina404.component';
     UserPanelComponent,
     TiendaComponent,
     CarritoComponent,
-    Pagina404Component
+    Pagina404Component,
+    FechasDeRecorridoComponent
  
   ],
   imports: [

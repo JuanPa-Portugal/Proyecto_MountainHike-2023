@@ -1,10 +1,7 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { User } from 'src/app/shared/service/user';
-import { IniciarSesionService } from 'src/app/shared/service/iniciar-sesion.service';
+import { Component, OnInit } from '@angular/core';
 import { UserProfile } from 'src/app/user-profile';
 import { UserPanelService } from 'src/app/user-panel.service';
 import { ActivatedRoute } from '@angular/router';
-
 
 @Component({
   selector: 'app-user-panel',

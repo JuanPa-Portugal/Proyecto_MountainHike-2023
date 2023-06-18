@@ -8,7 +8,7 @@
     <p class="texto m-4">
     {{recorrido.descripcion}}    
     </p>
-    <button type="button" class="btn btn-primary m-4"routerLink="/carrito">Seleccionar Fecha</button>
+    <button type="button" class="btn btn-primary m-4" routerLink="/fechas-de-recorrido/{{recorrido.id}}">Ver Fechas</button>
     <button (click)="clima_LosGigantes()" type="button" class="btn btn-outline-secondary m-2">Consultá el clima</button>
     <img class="dificultad" src="{{recorrido.dificultad}}" alt="dificultad máxima">
   </div>

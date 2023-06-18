@@ -1,0 +1,19 @@
+<div class="container">
+    <h2 class="mx-4 m-2" *ngIf="recorrido">Fechas para {{recorrido.titulo}}</h2>
+    <div class="clearfix m-4 contenedor" *ngFor="let fechaRecorrido of fechasRecorrido">
+      <div class="mx-4 m-2">
+      {{fechaRecorrido.fecha}}
+      </div>
+      <div class="mx-4 m-2">
+      Guía: {{fechaRecorrido.guia}}    
+      </div>
+      <button type="button" class="btn btn-primary m-4" routerLink="/carrito">Reservar</button>
+
+    </div>
+</div>
+  
+  
+  
+  
+  
+  
