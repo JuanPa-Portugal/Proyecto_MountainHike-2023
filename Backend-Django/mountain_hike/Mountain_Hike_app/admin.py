@@ -43,7 +43,7 @@ class UserAdmin(admin.ModelAdmin):
 admin.site.register(User, UserAdmin)
 
 class ClienteAdmin(admin.ModelAdmin):
-    list_display = ['username','email','telefono','ciudad']
+    list_display = ['username','first_name','last_name', 'email','telefono','ciudad']
 admin.site.register(Cliente, ClienteAdmin)
 
 '''

@@ -3,8 +3,9 @@ from django.db import models
 
 from django.conf import settings
 from django.dispatch import receiver
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, pre_save
 from rest_framework.authtoken.models import Token
+import logging
 
 
 
@@ -173,6 +174,17 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
         Token.objects.create(user=instance)
 
 
+@receiver(pre_save, sender=Cliente)
+def pre_save_for_cliente(sender, instance=None, created=False, **kwargs):
+    print('pre_save de cliente')
+    if not instance.password.startswith('pbkdf2'):
+        instance.set_password(instance.password)
+
+@receiver(pre_save, sender=User)
+def pre_save_for_user(sender, instance=None, created=False, **kwargs):
+    print('pre_save de cliente')
+    if not instance.password.startswith('pbkdf2'):
+        instance.set_password(instance.password)
 
     
     '''
