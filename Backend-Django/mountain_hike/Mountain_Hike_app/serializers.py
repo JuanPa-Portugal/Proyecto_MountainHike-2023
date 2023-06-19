@@ -6,6 +6,7 @@ from .models import Reserva
 from .models import Recorridos
 from .models import Guias
 from .models import FechaRecorrido
+from .models import CarritoCompras
 
 class UserSerializer(serializers.ModelSerializer):
 
@@ -51,4 +52,12 @@ class FechaRecorridoSerializer(serializers.ModelSerializer):
     model= FechaRecorrido
     fields='__all__'
 
-  
+
+class CarritoCompraSerializer(serializers.ModelSerializer):
+    producto_nombre = serializers.CharField(max_length=200)
+    producto_precio = serializers.FloatField()
+    producto_cantidad = serializers.IntegerField(required=False, default=1)
+
+    class Meta:
+        model = CarritoCompras
+        fields = ('__all__') 

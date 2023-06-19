@@ -23,6 +23,7 @@ from .serializers import RecorridoSerializer
 from .serializers import GuiaSerializer
 from .serializers import ClienteSerializer
 from .serializers import FechaRecorridoSerializer
+from .serializers import CarritoCompraSerializer
 
 from .models import Cliente
 from .models import Blog
@@ -93,6 +94,13 @@ class FechaRecorridoViewSet(viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['id','recorrido','guia']
 
+class FechaRecorridoViewSet(viewsets.ModelViewSet):
+    permission_classes=[IsAuthenticatedOrReadOnly]
+    queryset=FechaRecorrido.objects.all()
+    serializer_class=FechaRecorridoSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['id','recorrido','guia']
+
 
 #Siguiendo esta guia: https://mattermost.com/blog/user-authentication-with-the-django-rest-framework-and-angular/ - INICIO
 
@@ -153,4 +161,14 @@ class ProcessPaymentAPIView(APIView):
 class retornarPagado(APIView):  # Retornar custom json 
     def get(self, request):
         return Response({"respuesta": "aprobado"})    
+    
+class CarritoComprasVista(APIView):
+    permission_classes = [IsAuthenticated]
+    def post(self, request):
+        serializers = CarritoCompraSerializer(data=request.data)
+        if serializers.is_valid():
+            serializers.save()
+            return Response({"estado": "correcto", "data": serializers.data}, status=status.HTTP_200_OK)
+        else:
+            return Response({"estado": "error", "data": serializers.errors}, status=status.HTTP_400_BAD_REQUEST)
 #Siguiendo esta guia: https://mattermost.com/blog/user-authentication-with-the-django-rest-framework-and-angular/ - FIN

@@ -134,7 +134,10 @@ class FechaRecorrido(models.Model):
     def __str__(self):
             return self.recorrido.titulo+' el '+self.fecha.strftime("%Y/%m/%d a las %H:%M:%S")
 
-
+class CarritoCompras(models.Model):
+        producto_nombre = models.CharField(max_length=200)
+        producto_precio = models.DecimalField(max_length=10, blank=False, decimal_places=2, max_digits=10)
+        producto_cantidad = models.PositiveIntegerField()
 
 class Factura(models.Model):
     id = models.AutoField(primary_key=True)
