@@ -10,8 +10,12 @@ export class FechaRecorridosService {
 
   constructor(private http: HttpClient) { }
 
-  getFechaRecorrido(recorridoId:any): Observable<FechaRecorrido[]> {
+  getFechasDeRecorrido(recorridoId:any): Observable<FechaRecorrido[]> {
     return this.http.get<FechaRecorrido[]>(`http://127.0.0.1:8000/api/v1/FechaRecorridos/?recorrido=${recorridoId}`);
+  }
+
+  getFechaRecorrido(fechaRecorridoId:any): Observable<FechaRecorrido> {
+    return this.http.get<FechaRecorrido>(`http://127.0.0.1:8000/api/v1/FechaRecorridos/${fechaRecorridoId}/`);
   }
 
 

@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'fechas-de-recorrido/:id', component: FechasDeRecorridoComponent},
   { path: 'nosotros', component: NosotrosComponent},
   { path: 'blog', component: BlogsComponent},
-  { path: 'carrito', component: CarritoComponent},
+  { path: 'carrito/:id', component: CarritoComponent},
   { path: '**', component:Pagina404Component},
  
 ];

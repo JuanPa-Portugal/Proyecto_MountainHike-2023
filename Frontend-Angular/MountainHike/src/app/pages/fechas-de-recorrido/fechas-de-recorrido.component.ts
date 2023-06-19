@@ -40,7 +40,7 @@ export class FechasDeRecorridoComponent implements OnInit {
     })
     
     //levanto las fechas del recorrido
-    this.fechaRecorridoService.getFechaRecorrido(recorridoId).subscribe({
+    this.fechaRecorridoService.getFechasDeRecorrido(recorridoId).subscribe({
       next: (data: FechaRecorrido[]) => {
         console.log(data);
         this.fechasRecorrido = data;
