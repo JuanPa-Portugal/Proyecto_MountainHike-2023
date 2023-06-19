@@ -4,6 +4,11 @@ import { FechaRecorridosService } from 'src/app/shared/service/fecha-recorridos.
 import { AdminRecorridosService } from 'src/app/shared/service/admin-recorridos.service';
 import { ActivatedRoute } from '@angular/router';
 import { Recorridos } from '../admin-panel/InterfaceRecorridos';
+import { GuiasService } from 'src/app/shared/service/guias.service';
+import { Guias } from '../admin-panel/InterfaceGuias';
+import { Observable, of } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-fechas-de-recorrido',
@@ -18,6 +23,7 @@ export class FechasDeRecorridoComponent implements OnInit {
   constructor(
     private fechaRecorridoService: FechaRecorridosService, 
     private recorridoService: AdminRecorridosService,
+    private guiaService: GuiasService,
     private activatedRoute: ActivatedRoute) {}
   
   ngOnInit(): void {
@@ -44,4 +50,34 @@ export class FechasDeRecorridoComponent implements OnInit {
       }
     });
   }
+
+  getNombreGuia(guiaId:any):string {
+    var result = "";
+
+    this.guiaService.getGuia(guiaId).subscribe({
+      next: (data: Guias) => {
+        console.log(data);
+        result = data.nombre+' '+data.apellido        
+      },
+      error: (error) => {
+        console.log(error)
+        result = "(No se pudo determinar el nombre del guía)"
+      }
+    })
+    return result;
+  }
+
+  getNombreGuiaV2(guiaId: any): Observable<string> {
+    return this.guiaService.getGuia(guiaId).pipe(
+      map((data: Guias) => {
+        console.log(data);
+        return data.nombre + ' ' + data.apellido;
+      }),
+      catchError((error) => {
+        console.log(error);
+        return of('(No se pudo determinar el nombre del guía)' as string);
+      })
+    );
+  }
+
 }

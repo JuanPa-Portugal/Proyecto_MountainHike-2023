@@ -26,4 +26,9 @@ export class GuiasService {
   postGuias(arr: Guias):Observable<any>{
       return this.http.post(`${this.apiGuias}`,arr)
   }
+
+  getGuia(guiaId:any): Observable<Guias> {
+    return this.http.get<Guias>(this.apiGuias+guiaId+'/');
+  }
+
 }
