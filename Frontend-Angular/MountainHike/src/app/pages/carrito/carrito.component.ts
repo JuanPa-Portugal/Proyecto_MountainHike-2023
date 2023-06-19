@@ -10,6 +10,7 @@ import { AdminRecorridosService } from 'src/app/shared/service/admin-recorridos.
 export class CarritoComponent {
 
   constructor(private recorrido:AdminRecorridosService) 
+
   {this.recorrido.getRecorridos().subscribe({
     next: (recorridosData: any[])=>{
       this.recorridos=recorridosData
@@ -35,6 +36,8 @@ export class CarritoComponent {
   }
   
 
-  
+  reserva(){
+   let reserva = this.contador*this.
+  }
 }
 
