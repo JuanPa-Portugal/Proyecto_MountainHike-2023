@@ -23,7 +23,7 @@ class RecorridosAdmin(admin.ModelAdmin):
 admin.site.register(Recorridos, RecorridosAdmin)
 
 class ReservaAdmin(admin.ModelAdmin):
-    list_display = ['id', 'fecha', 'valor']
+    list_display = ['id', 'fecha', 'valor', 'cliente']
 admin.site.register(Reserva, ReservaAdmin)
 
 class GuiasAdmin(admin.ModelAdmin):
