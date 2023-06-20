@@ -40,7 +40,7 @@
       <div class="card bg-secondary text-white">
         <div class="card-header">Reservas contratadas:</div>
         <div *ngFor="let reserva of reservas">
-          Reserva realizada el día {{reserva.fecha}}, Para {{reserva.cantidadParticipantes}} participantes. Valor: ${{reserva.valor}}. Recorrido: TODO. Fecha de la excursion: TODO
+          Reserva realizada el día {{reserva.fecha | date: 'dd/MM'}} a las {{reserva.fecha | date: 'HH:mm:ss'}}, Para {{reserva.cantidadParticipantes}} participantes. Valor: ${{reserva.valor}}. Recorrido: TODO. Fecha de la excursion: TODO
         </div>
             
       </div>

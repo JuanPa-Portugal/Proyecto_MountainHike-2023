@@ -62,7 +62,7 @@ class LogoutView(APIView):
     
 
 class ClienteViewSet(viewsets.ModelViewSet):
-    permission_classes=[]
+    permission_classes=[IsAuthenticated]
     queryset=Cliente.objects.all()
     serializer_class= ClienteSerializer
 
@@ -73,6 +73,7 @@ class BlogViewSet(viewsets.ModelViewSet):
     serializer_class= BlogSerializer
 
 class ReservaViewSet(viewsets.ModelViewSet):
+    permission_classes=[IsAuthenticated]
     queryset=Reserva.objects.all()
     serializer_class= ReservaSerializer
     filter_backends = [DjangoFilterBackend]
@@ -104,7 +105,6 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticated]
 
-
 class UserLogIn(ObtainAuthToken):
 
     def post(self, request, *args, **kwargs):
@@ -118,6 +118,8 @@ class UserLogIn(ObtainAuthToken):
             'id': user.pk,
             'username': user.username
         })
+#Siguiendo esta guia: https://mattermost.com/blog/user-authentication-with-the-django-rest-framework-and-angular/ - FIN
+
 
 class ProcessPaymentAPIView(APIView):
     def post(self, request):
@@ -156,4 +158,3 @@ class ProcessPaymentAPIView(APIView):
 class retornarPagado(APIView):  # Retornar custom json 
     def get(self, request):
         return Response({"respuesta": "aprobado"})    
-#Siguiendo esta guia: https://mattermost.com/blog/user-authentication-with-the-django-rest-framework-and-angular/ - FIN

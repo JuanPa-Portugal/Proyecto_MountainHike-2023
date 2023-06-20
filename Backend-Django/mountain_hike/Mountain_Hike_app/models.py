@@ -1,3 +1,4 @@
+import datetime
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
@@ -5,7 +6,6 @@ from django.conf import settings
 from django.dispatch import receiver
 from django.db.models.signals import post_save, pre_save
 from rest_framework.authtoken.models import Token
-import logging
 
 
 
@@ -153,7 +153,7 @@ class Factura(models.Model):
 
 class Reserva(models.Model):
     id= models.AutoField(primary_key= True)
-    fecha= models.DateTimeField()
+    fecha= models.DateTimeField(auto_now_add=True, blank=True)
     valor = models.FloatField()
     factura = models.ForeignKey(Factura, on_delete=models.SET_NULL, null=True)
     vendedor = models.ForeignKey(User, on_delete=models.PROTECT, related_name="vendedorUser")
@@ -188,6 +188,18 @@ def pre_save_for_user(sender, instance=None, created=False, **kwargs):
         instance.set_password(instance.password)
 
     
+@receiver(pre_save, sender=Reserva)
+def pre_save_for_reserva(sender, instance, **kwargs):
+    print('pre_save de reserva kwargs', kwargs)
+    print('pre_save de reserva instance', instance.fechaRecorrido.recorrido.precio)
+    print('pre_save de reserva sender', sender)
+    if instance.valor==0:
+
+        #fechaRecorrido=FechaRecorrido.objects.get(pk=instance.fechaRecorrido)
+        #recorrido=Recorridos.objects.get(pk=fechaRecorrido.recorrido)
+        instance.valor=instance.fechaRecorrido.recorrido.precio*instance.cantidadParticipantes
+        print('Valor calculado para la reserva:',instance.valor)
+
     '''
 class Admin(models.Model):
     id = models.AutoField(primary_key=True)

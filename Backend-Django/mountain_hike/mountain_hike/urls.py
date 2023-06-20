@@ -21,16 +21,13 @@ from django.urls import path, re_path, include, reverse_lazy
 from django.conf.urls.static import static
 
 from django.views.generic.base import RedirectView
-from rest_framework.routers import DefaultRouter
-from Mountain_Hike_app.views import UserViewSet, UserLogIn
 
-#router = DefaultRouter()
-#router.register(r'Users', UserViewSet)
+from Mountain_Hike_app.views import UserLogIn
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('Mountain_Hike_app.urls')),   
-    #path('api/v2/', include(router.urls)),
     path('api-user-login/', UserLogIn.as_view()),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     re_path(r'^$', RedirectView.as_view(url=reverse_lazy('api-root'), permanent=False)),
