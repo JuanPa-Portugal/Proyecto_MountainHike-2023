@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AdminRecorridosService } from 'src/app/shared/service/admin-recorridos.service';
 import { FechaRecorridosService } from 'src/app/shared/service/fecha-recorridos.service';
 import { Recorridos } from '../admin-panel/InterfaceRecorridos';
@@ -22,6 +22,7 @@ export class CarritoComponent {
     private fechaRecorridoService: FechaRecorridosService,
     private recorridoService: AdminRecorridosService,
     private reservasService: ReservasService,
+    private router: Router,
     private activatedRoute: ActivatedRoute) { }
 
 
@@ -64,7 +65,8 @@ export class CarritoComponent {
   reservar() {
     this.reservasService.generarReservaParaFechaRecorrido(this.recorrido?.id, this.contador).subscribe({
       next: (data: any) => {
-        console.log(data);
+        console.log("exito", data);
+        this.router.navigateByUrl(`/user-panel/${data.cliente}`)
       },
       error: (error: any) => {
         console.log(error)
