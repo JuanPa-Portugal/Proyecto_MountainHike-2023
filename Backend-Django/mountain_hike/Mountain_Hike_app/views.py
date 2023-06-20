@@ -75,6 +75,9 @@ class BlogViewSet(viewsets.ModelViewSet):
 class ReservaViewSet(viewsets.ModelViewSet):
     queryset=Reserva.objects.all()
     serializer_class= ReservaSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['id','cliente','vendedor','fechaRecorrido']
+
 
 class RecorridoViewSet(viewsets.ModelViewSet):
     permission_classes=[IsAuthenticatedOrReadOnly]

@@ -36,10 +36,17 @@
           </div>
         </div> -->
       </div>
+    
+      <div class="card bg-secondary text-white">
+        <div class="card-header">Reservas contratadas:</div>
+        <div *ngFor="let reserva of reservas">
+          Reserva realizada el día {{reserva.fecha}}, Para {{reserva.cantidadParticipantes}} participantes. Valor: ${{reserva.valor}}. Recorrido: TODO. Fecha de la excursion: TODO
+        </div>
+            
+      </div>
     </div>
   </div>
 </div>
 
 <!-- TODO faltan modales y logica -->
 
-<p class="text-center">*-* Aqui Falta codigo para que el usuario pueda ver las reservas de recorridos que compro *-*</p>
