@@ -153,13 +153,14 @@ class Factura(models.Model):
 
 class Reserva(models.Model):
     id= models.AutoField(primary_key= True)
-    fecha_reserva= models.DateTimeField()
-    nro_reserva= models.IntegerField()
+    fecha= models.DateTimeField()
     valor = models.FloatField()
-    factura = models.ForeignKey(Factura, on_delete=models.CASCADE)
+    factura = models.ForeignKey(Factura, on_delete=models.SET_NULL, null=True)
     vendedor = models.ForeignKey(User, on_delete=models.PROTECT, related_name="vendedorUser")
     cliente = models.ForeignKey(User, on_delete=models.PROTECT, related_name="clienteUser")
     fechaRecorrido = models.ForeignKey(FechaRecorrido, on_delete=models.PROTECT)
+    cantidadParticipantes = models.IntegerField()
+
     class Meta:
         db_table = 'reserva'
         verbose_name = 'Reserva'
