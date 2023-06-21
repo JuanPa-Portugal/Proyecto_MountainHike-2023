@@ -50,7 +50,13 @@ class FechaRecorridoSerializer(serializers.ModelSerializer):
 
 class ReservaSerializer(serializers.ModelSerializer):
 
-  #fechaRecorrido = FechaRecorridoSerializer(source='fechaRecorrido')
+  class Meta:
+    model= Reserva
+    fields='__all__'
+
+
+class ReservaGetSerializer(serializers.ModelSerializer):
+
   fechaRecorrido = FechaRecorridoSerializer()
 
   class Meta:
@@ -60,4 +66,3 @@ class ReservaSerializer(serializers.ModelSerializer):
     #extra_fields=['fechaRecorridoFO']
     #fields=('nombre','observacion')}
 
-  
