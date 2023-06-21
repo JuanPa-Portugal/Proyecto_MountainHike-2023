@@ -2,12 +2,12 @@
     <h2 class="mx-4 m-2" *ngIf="recorrido">Fechas para {{recorrido.titulo}}</h2>
     <div class="clearfix m-4 contenedor" *ngFor="let fechaRecorrido of fechasRecorrido">
       <div class="mx-4 m-2">
-      {{fechaRecorrido.fecha | date: 'dd/MM'}} a las {{fechaRecorrido.fecha | date: 'HH:mm'}} hs.
-      </div>
+        <button type="button" class="btn btn-primary m-4" routerLink="/carrito/{{fechaRecorrido.id}}">Reservar</button>
+        {{fechaRecorrido.fecha | date: 'dd/MM'}} a las {{fechaRecorrido.fecha | date: 'HH:mm'}} hs, con {{fechaRecorrido.guia.nombre}} {{fechaRecorrido.guia.apellido}}
+    </div>
       <!--<div class="mx-4 m-2">
       Guía: {{getNombreGuiaV2(fechaRecorrido.guia) | async }}    
       </div>-->
-      <button type="button" class="btn btn-primary m-4" routerLink="/carrito/{{fechaRecorrido.id}}">Reservar</button>
 
     </div>
 </div>
