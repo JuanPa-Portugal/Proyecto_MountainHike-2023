@@ -1,14 +1,14 @@
-<div *ngIf="recorrido && fechaRecorrido" class="container">
-  <h2 class="text-center my-4">Reservando para {{recorrido.titulo}} para el día {{fechaRecorrido.fecha | date: 'dd/MM'}} a las {{fechaRecorrido.fecha | date: 'HH:mm'}} hs.</h2>
+<div *ngIf="fechaRecorrido" class="container">
+  <h2 class="text-center my-4">Reservando para {{fechaRecorrido.recorrido.titulo}} para el día {{fechaRecorrido.fecha | date: 'dd/MM'}} a las {{fechaRecorrido.fecha | date: 'HH:mm'}} hs.</h2>
   <div class="container principal">
     <div class="row mb-5">
       <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-2">
         <div class="card tamanio">
-          <img  src="{{recorrido.imagen}}" class="card-img-top" alt="Los Gigantes" />
+          <img  src="{{fechaRecorrido.recorrido.imagen}}" class="card-img-top" alt="Los Gigantes" />
           <div class="card-body">
-            <p class="card-title name" >{{recorrido.titulo}}</p>
+            <p class="card-title name" >{{fechaRecorrido.recorrido.titulo}}</p>
             <div class="row">
-              <p class="card-title col"><i class="fas fa-tag"></i> Por persona ${{recorrido.precio}}</p>
+              <p class="card-title col"><i class="fas fa-tag"></i> Por persona ${{fechaRecorrido.recorrido.precio}}</p>
               <p class="card-title col"><i class="fas fa-person-walking"></i> 8 horas</p>
             </div>
             <div class="row">
@@ -22,7 +22,7 @@
             </div>
             <div class="row">
               <p class="col">Total: </p>
-              <span class="col">{{contador * recorrido.precio}}</span>
+              <span class="col">{{contador * fechaRecorrido.recorrido.precio}}</span>
               <button class="btn btn_reserva" (click)="reservar()" >reservar</button>
             </div>
           </div>

@@ -25,13 +25,6 @@ class BlogSerializer(serializers.ModelSerializer):
   model= Blog
   fields='__all__'
   #fields=('nombre','observacion')}
-
-class ReservaSerializer(serializers.ModelSerializer):
- class Meta:
-  model= Reserva
-  fields='__all__'
-  #fields=('nombre','observacion')}
-
  
 class RecorridoSerializer(serializers.ModelSerializer):
  class Meta:
@@ -47,8 +40,29 @@ class GuiaSerializer(serializers.ModelSerializer):
   #fields=('nombre','observacion')}
 
 class FechaRecorridoSerializer(serializers.ModelSerializer):
+
+  recorrido = RecorridoSerializer()
+  guia = GuiaSerializer()
+
   class Meta:
     model= FechaRecorrido
     fields='__all__'
 
-  
+class ReservaSerializer(serializers.ModelSerializer):
+
+  class Meta:
+    model= Reserva
+    fields='__all__'
+
+
+class ReservaGetSerializer(serializers.ModelSerializer):
+
+  fechaRecorrido = FechaRecorridoSerializer()
+
+  class Meta:
+    model= Reserva
+    #fields='__all__'
+    fields=['id','fecha','valor','cantidadParticipantes','factura','vendedor','cliente','fechaRecorrido']
+    #extra_fields=['fechaRecorridoFO']
+    #fields=('nombre','observacion')}
+

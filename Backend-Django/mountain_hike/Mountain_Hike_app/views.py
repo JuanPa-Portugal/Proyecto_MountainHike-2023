@@ -18,7 +18,8 @@ from .serializers import UserSerializer
 #Siguiendo esta guia: https://mattermost.com/blog/user-authentication-with-the-django-rest-framework-and-angular/ - FIN
 
 from .serializers import BlogSerializer
-from .serializers import ReservaSerializer
+from .serializers import ReservaSerializer, ReservaGetSerializer
+
 from .serializers import RecorridoSerializer
 from .serializers import GuiaSerializer
 from .serializers import ClienteSerializer
@@ -76,8 +77,14 @@ class ReservaViewSet(viewsets.ModelViewSet):
     permission_classes=[IsAuthenticated]
     queryset=Reserva.objects.all()
     serializer_class= ReservaSerializer
+    def get_serializer_class(self):
+        if self.action == 'create':
+            return ReservaSerializer
+        return ReservaGetSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['id','cliente','vendedor','fechaRecorrido']
+
+
 
 
 class RecorridoViewSet(viewsets.ModelViewSet):

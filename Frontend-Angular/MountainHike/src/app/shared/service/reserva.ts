@@ -1,3 +1,5 @@
+import { FechaRecorrido } from "./fecha-recorrido";
+
 export interface Reserva {
     id: string,
     fecha: Date,
@@ -6,6 +8,6 @@ export interface Reserva {
     factura: number,
     vendedor: number,
     cliente: number,
-    fechaRecorrido: number
+    fechaRecorrido: FechaRecorrido
   }
 

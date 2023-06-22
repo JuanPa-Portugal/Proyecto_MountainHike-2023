@@ -1,6 +1,9 @@
+import { Guias } from "src/app/pages/admin-panel/InterfaceGuias";
+import { Recorridos } from "src/app/pages/admin-panel/InterfaceRecorridos";
+
 export interface FechaRecorrido {
-    id: string,
+    id: number,
     fecha: Date,
-    recorrido: string,
-    guia: string 
+    recorrido: Recorridos,
+    guia: Guias 
   }

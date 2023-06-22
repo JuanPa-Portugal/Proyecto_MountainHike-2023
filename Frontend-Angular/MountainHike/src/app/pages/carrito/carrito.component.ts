@@ -15,7 +15,6 @@ import { ReservasService } from 'src/app/shared/service/reservas.service';
 export class CarritoComponent {
 
   fechaRecorrido: FechaRecorrido | null = null;
-  recorrido: Recorridos | null = null;
   contador: number = 0;
 
   constructor(
@@ -33,17 +32,6 @@ export class CarritoComponent {
       next: (data: FechaRecorrido) => {
         console.log(data);
         this.fechaRecorrido = data;
-
-        //levanto los datos del recorrido
-        this.recorridoService.getRecorrido(this.fechaRecorrido?.recorrido).subscribe({
-          next: (data: Recorridos) => {
-            console.log(data);
-            this.recorrido = data;
-          },
-          error: (error) => {
-            console.log(error);
-          }
-        })
 
 
       },
@@ -63,7 +51,7 @@ export class CarritoComponent {
   }
 
   reservar() {
-    this.reservasService.generarReservaParaFechaRecorrido(this.recorrido?.id, this.contador).subscribe({
+    this.reservasService.generarReservaParaFechaRecorrido(this.fechaRecorrido?.id, this.contador).subscribe({
       next: (data: any) => {
         console.log("exito", data);
         this.router.navigateByUrl(`/user-panel/${data.cliente}`)
