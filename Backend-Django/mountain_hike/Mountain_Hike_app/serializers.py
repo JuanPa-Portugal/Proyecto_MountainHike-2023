@@ -6,13 +6,23 @@ from .models import Reserva
 from .models import Recorridos
 from .models import Guias
 from .models import FechaRecorrido
+from django.contrib.auth.hashers import make_password
+from django.contrib.auth import get_user_model
 
 class UserSerializer(serializers.ModelSerializer):
 
+    email = serializers.EmailField(
+        required=True)
+    username = serializers.CharField(
+        required=True)
+    password = serializers.CharField(
+        min_length=8)
+
     class Meta:
-        model = User
-        fields = ('id', 'username', 'first_name', 'last_name','email')
-        #read_only_fields = ('username', )
+        model = get_user_model()
+        fields = ('email', 'username', 'password')
+    def validate_password(self, value):
+        return make_password(value)
 
 class ClienteSerializer(serializers.ModelSerializer):
     class Meta:
