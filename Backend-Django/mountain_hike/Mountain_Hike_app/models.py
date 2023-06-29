@@ -12,8 +12,8 @@ from rest_framework.authtoken.models import Token
 
 class User(AbstractUser):
     email = models.EmailField(max_length=150, unique=True)
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username', 'password']
+#    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['password']
 
     class Meta:
         db_table = 'User'
